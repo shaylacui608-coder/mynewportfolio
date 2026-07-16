@@ -1,0 +1,10 @@
+.DS_Store
+**/.DS_Store
+
+# Local/generated exports
+outputs/
+*.gif
+
+# Oversized intermediate animation source
+动效4-前.json
+
