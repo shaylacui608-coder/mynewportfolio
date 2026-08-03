@@ -1,0 +1,229 @@
+style_name: warm_traditional_soup_catering_kv
+style_cn: 温补汤品
+style_cn_full: 传统温补汤品餐饮 KV 风
+style_type: 汤品餐饮海报 / 秋冬温补 KV / 传统手作餐饮品牌视觉
+
+source_folder: /Users/bytedance/desktop/中式清新_风格参考
+representative_files:
+  - 中式清新风_1.jpg
+  - 中式清新风_2.jpg
+  - 中式清新风_3.jpg
+related_boundary_files:
+  - 中式清新风_6.jpg
+
+style_essence:
+  visual_type:
+    - warm traditional catering KV
+    - soup hero poster
+    - Chinese heritage food branding
+    - textured commercial food poster
+  not:
+    - clean fresh tea menu
+    - minimalist editorial product layout
+    - flat abstract graphic poster
+    - clay-like 3D rendering
+
+core_visual_logic:
+  - 用汤锅、热汤、碗和蒸汽感建立温补食欲
+  - 用棕金、砂纸纹理、书法大字和印章传达传统与手作
+  - 画面重点不是清新留白，而是温暖、厚重、烟火气和滋补感
+  - 大标题压住画面，汤品摄影提供真实质感和品类识别
+
+design_quality_logic:
+  design_sense_from:
+    - 暖棕背景与汤品色相统一，形成温补氛围
+    - 书法或粗宋体大字建立传统餐饮记忆点
+    - 食物摄影和手作场景强化真实可信
+    - 纸张、旧报、印章和徽章细节共同制造老店感
+  key_design_decisions:
+    - 使用深暖色而非清浅绿色
+    - 让大字成为视觉锚点
+    - 保留汤品热气、器皿和手作场景
+    - 用徽章或印章表达招牌和匠心
+  hierarchy_control:
+    - 大书法标题第一层
+    - 汤锅或碗中食物第二层
+    - 品牌名、卖点和小字说明第三层
+    - 旧报纹理、印章、徽章为背景层
+  layout_intention:
+    - 以大标题和主食物形成强冲击
+    - 通过横幅、分栏或中心主视觉承载餐饮品牌故事
+    - 信息密度高于清新菜单风，但要围绕主菜组织
+  restraint:
+    - 不使用过多现代几何边框
+    - 不使用清爽浅绿作为主情绪
+    - 不让怀旧纹理盖过食物
+    - 不把画面变成杂乱夜市拼贴
+  theme_form_relationship:
+    - 秋冬、滋补、手作通过汤、热气、棕金纸感、书法和印章表达
+    - 匠心和老店感通过旧报、木器、手部动作和招牌徽章表达
+  avoid_losing_design_sense:
+    - 避免把汤品处理成普通菜单小图
+    - 避免背景过暗导致食物不干净
+    - 避免文字层级失控
+    - 避免加入不相关中式符号
+  most_valuable_reusable_decision:
+    - 用暖色传统材质和大字标题把汤品摄影转译成有老店记忆点的温补餐饮 KV
+
+composition_system:
+  layout_skeleton:
+    - large title plus hero soup image
+    - horizontal brand-banner composition or centered bowl composition
+    - textured background with controlled side copy
+  focal_point:
+    - soup bowl, soup pot, pouring broth, or steaming claypot
+  rhythm:
+    - heavy title mass balanced by warm food photography
+    - small seals and badges punctuate the composition
+  whitespace:
+    - limited whitespace; texture is acceptable but must stay readable
+
+element_system:
+  core_elements:
+    - soup bowl
+    - claypot or metal pot
+    - pouring broth
+    - handcraft scene
+    - seal or award badge
+  supporting_elements:
+    - old newspaper texture
+    - kraft paper
+    - steam
+    - wood table
+    - handwritten vertical copy
+  element_abstraction:
+    - heritage cues should feel tactile and food-related, not generic ancient symbols
+  element_density:
+    - medium to high, but organized around the title and soup hero
+
+typography_system:
+  typography_role:
+    - big Chinese title creates memory and appetite cue
+    - smaller vertical copy adds craft and story
+  font_style:
+    - bold brush lettering
+    - heavy Songti or calligraphic Chinese
+    - small condensed supporting English only if readable
+  scale_relationship:
+    - exaggerated title scale against smaller story text
+  type_image_relationship:
+    - typography and food should interlock; title should not hide the appetite area
+
+color_system:
+  primary_colors:
+    - warm brown
+    - soup beige
+    - kraft tan
+    - deep umber
+  secondary_colors:
+    - muted gold
+    - off white
+    - dark soy brown
+  accent_colors:
+    - seal red
+    - cream highlight
+  color_logic:
+    - warm autumn and soup-toned palette with traditional texture
+
+texture_and_material:
+  material:
+    - kraft paper
+    - aged paper
+    - ceramic bowl
+    - warm broth
+    - wooden table
+  texture:
+    - grain
+    - paper stains
+    - old poster patina
+  lighting:
+    - warm directional food lighting
+  avoid_material:
+    - glossy plastic
+    - neon
+    - clean white tech background
+    - cute 3D clay
+
+information_density:
+  density: medium_high
+  whitespace_strategy:
+    - use negative space only around the title or bowl; the rest can carry warm texture
+  decoration_density:
+    - medium; use seals, badges, and paper texture with discipline
+
+mood:
+  keywords:
+    - warm
+    - nourishing
+    - traditional
+    - handcrafted
+    - autumnal
+    - savory
+  commercial_feeling:
+    - heritage restaurant promotion with strong appetite appeal
+  audience_feeling:
+    - reliable, warm, old-shop craft, filling, seasonal comfort
+
+theme_transfer_rule:
+  principle: >
+    Transfer the warm traditional soup logic: large Chinese title, hero soup photography,
+    brown-gold textured background, seal/badge accents, and handcrafted food memory.
+    New themes should become warm tactile food scenes, not clean fresh menu layouts.
+  transferable_design_relationships:
+    - bold_calligraphic_title_as_memory_anchor
+    - hero_soup_or_hot_food_as_appetite_anchor
+    - warm_paper_texture_as_tradition
+    - seal_badge_as_craft_signal
+    - side_copy_as_storytelling
+  replaceable_surface_elements:
+    - soup type
+    - seasonal ingredient
+    - heritage badge
+    - paper texture
+    - handcraft prop
+  avoid_when_transferring:
+    - pale_green_clean_menu_style
+    - generic_chinese_symbols
+    - cold_minimal_background
+    - too_many_unrelated_food_items
+    - unreadable_brush_text
+
+anti_ai_rules:
+  - Do not use fake illegible Chinese brush text.
+  - Do not add random old objects that do not support the food story.
+  - Do not make the entire image muddy brown; food must remain appetizing.
+  - Do not mix clean jade menu borders with heavy soup-poster texture unless intentionally hybridizing.
+  - Keep the title hierarchy strong and the soup hero clearly readable.
+
+production_profile:
+  production_template: production_templates/banner_4_1_production.yaml
+  supported_outputs:
+    - banner_4_1
+    - poster_3_4
+  default_output: banner_4_1
+  title_style: large readable Chinese brush lettering or heavy Songti title with warm heritage feeling
+  subtitle_style: vertical craft copy, small seal note, or framed heritage badge near the title
+  background_style: warm brown, kraft, aged paper, old-shop scene, or textured soup-toned surface; never clean flat color
+  composition_preference: bold title plus hero soup image, centered or strong horizontal brand-banner composition
+  decoration_requirements: red seal, muted gold badge, paper texture, warm steam, old-shop detail, optional bottom story band
+  information_density: medium_high, warm and populated but title-led
+  anti_ai_emphasis:
+    - no muddy food photography
+    - no random antique props
+    - no unreadable brush text
+    - keep soup hero appetizing and clear
+
+final_image_prompt: >
+  Create a warm traditional Chinese soup restaurant key visual poster for an autumn nourishing
+  soup campaign. Visual style: heritage food branding, warm brown and muted gold palette, textured
+  kraft paper background, bold Chinese brush-style title, realistic appetizing soup photography,
+  handcrafted old-shop atmosphere. Composition: large calligraphic Chinese title as the memory
+  anchor, hero bowl or claypot of steaming soup as the appetite anchor, side story copy, small red
+  seal and muted gold badge, controlled paper texture, warm directional food lighting. Key visual
+  system: soup bowl, claypot, pouring broth, ceramic texture, wood table, old newspaper or aged
+  paper details, subtle steam. Typography: strong readable Chinese headline, smaller vertical
+  craft copy, disciplined brand and product information, no fake unreadable text. Color and
+  material: warm brown, kraft tan, soup beige, deep umber, muted gold, small seal red, tactile
+  paper grain and ceramic bowl. Design quality constraints: traditional and nourishing, not cute,
+  not clean jade menu style, no neon, no glossy 3D, no random antique props, keep the food clean
+  and appetizing.

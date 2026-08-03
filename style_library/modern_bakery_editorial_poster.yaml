@@ -1,0 +1,372 @@
+_meta:
+  source: hand_extracted_from_6_reference_images
+  reference_path: ~/Desktop/头图参考图/烘焙编辑/
+  reference_files:
+    - 1ae56d4fb91625d42581bb6184ad9631.jpg  # 少油低卡健康新选择（脆皮可颂）/ 5.22 上新
+    - 1cea17cd0de9ecbe0cba0a6adb13ac3d.jpg  # 黄油酥皮可颂 ONEDAY
+    - 7368c7a8fdfe3d8aaff58932e31f99f3.jpg  # 自然「好」店 Holiland 好利来 11.28 盛大开业
+    - ac97a6eb00bf0cf95040597cd2e11380.jpg  # 云朵鲜面包 CLOUD FRESH BREAD
+    - cf310815143cd813b658c2552c94aa9e.jpg  # 高甜预警 520·JUSTSWEET（蜜桃黑巧味）
+    - e31d6475adc22defdab4b96a8fd7cb44.jpg  # CROISSANT 奶油蛋糕牛角包系列
+  status: ready
+  extracted_by: claude_code
+  notes: |
+    Replaces the prior thin "western_bakery_cafe_editorial.yaml" extraction.
+    The prior YAML mis-named this style as Western editorial; of 6 references
+    only 1 is truly Western-editorial (image 6). The other 5 are modern Chinese
+    bakery promotional posters (health-concept new-launch, store opening
+    campaign, themed metaphor scene). All 6 share: real bakery photography +
+    mixed-language oversized typography + role-based info ornament system +
+    intentional warm background. Four variants preserve sub-tone differences.
+
+style_name: modern_bakery_editorial_poster
+style_cn: 烘焙编辑
+style_cn_full: 现代烘焙编辑海报风（中英混排 + 真实摄影 + 结构化信息）
+style_type: 烘焙海报 / 新品上新 / 门店开业 / 节日营销 / 产品系列目录 / 品牌活动
+
+usage_scenes:
+  - 烘焙品牌新品上市
+  - 健康概念 / 低卡 / 古早味 / 古法等概念营销
+  - 门店开业 / 全新店型推广
+  - 节气节日营销（520 / 圣诞 / 中秋 / 季节限定）
+  - 单品系列目录推广（如可颂系列、蛋糕系列）
+  - 跨品牌联名（与黄油 / 巧克力品牌联名）
+  - 小红书烘焙封面
+  - 门店头图 / 公众号头图 / 大众点评门头
+
+mood_keywords:
+  - 现代烘焙品牌
+  - 中英混排
+  - 编辑感
+  - 信息系统化
+  - 真实摄影
+  - 暖色基调
+  - 弧形色块
+  - 有意图背景
+  - 角色化装饰
+  - 上新感
+  - 概念营销
+  - 品牌温度
+
+one_liner: 用真实烘焙摄影 + 大字中英文混排标题 + 结构化角色化信息系统（徽章 / 编号 / 价签 / 箭头）+ 有意图的暖色背景（纯色 / 弧形色块 / 主题场景 / 渐变），构建一种现代烘焙品牌的编辑感海报。
+
+output_ratio_options:
+  banner: '4:1'
+  poster: '3:4'
+  square: '1:1'
+
+style_essence:
+  visual_type:
+    - real bakery product photography as the hero
+    - mixed Chinese + English oversized editorial typography
+    - role-based information ornament system (badges / bullets / arrows / price tags)
+    - intentional warm-tone background (solid / curved color block / themed scene / gradient)
+    - modern Chinese bakery brand poster language
+  not:
+    - cute cartoon bakery
+    - clay-like 3D pastry
+    - commercial 3D food rendering
+    - Chinese 宋体 / 书法 / 明朝体 typography
+    - heritage Chinese restaurant ornament (印章 / 卷草 / 花纹)
+    - flat sale-sticker promo KV with high-saturation red banners
+    - sparse Japanese minimalist negative-space layout
+    - generic e-commerce product shot on plain white
+    - random AI doodle decoration
+
+core_visual_logic:
+  - 真实烘焙产品摄影永远是视觉主角, 居中或近中央, 占画面 30-50%
+  - 大字标题用现代字体（粗黑中文 + 西文 caps 或 decorated serif）作为信息锚点, 绝不用宋体/书法
+  - 中英文（偶尔日文）混排建立现代烘焙品牌语言
+  - 信息系统结构化: 每个徽章 / 编号 / 价签 / 箭头都有信息角色, 不是空泛装饰
+  - 背景永远是"有意图的"（纯色 + 弧形色块 / 主题场景 / 渐变）, 绝不随机噪点或脏色
+  - 暖色基调（米 / 奶 / 橙 / 棕 / 黄 / 主题暖色）建立烘焙温度感
+  - 信息密度中-高, 饱满有序而非空白
+
+design_quality_logic:
+  design_sense_from:
+    - 真实产品摄影质感（酥皮纹理 / 奶油光泽 / 巧克力 melt / 面包温度）
+    - 大字标题作为视觉锚点, 中英文混排建立现代感
+    - 结构化信息系统（badge + bullet + arrow + price tag + numbered list）
+    - 有意图的背景设计（纯色 + 弧形色块 / 主题场景 / 渐变）
+    - 每个装饰元素都有"信息角色", 不是空泛装饰
+    - 暖色基调建立烘焙温度感
+    - 主体与装饰之间有清晰的视觉层级
+  key_design_decisions:
+    - 用真实摄影, 绝不用插画 / 3D / 卡通
+    - 用现代粗体或西文衬线, 绝不用宋体 / 书法
+    - 中英文混排作为现代烘焙品牌的字体语言
+    - 信息系统结构化, 每个装饰元素必须有角色
+    - 背景有意图（弧形色块 / 主题场景 / 渐变）, 绝不用随机纹理
+    - 主体居中或近中央, 周围信息有序环绕
+    - 暖色基调统一画面（绝不用高饱和促销红）
+  hierarchy_control:
+    - 第一层: 真实烘焙产品（视觉主角, 占画面 30-50%）
+    - 第二层: 巨大标题（中文大字 + 英文小字 OR 英文大字 + 中文中字）
+    - 第三层: 信息徽章 / 标签 / 价签 / 编号列表
+    - 第四层: 背景弧形色块 / 装饰线条 / 品牌信息条
+  layout_intention:
+    primary: hero-centric centered（产品居中, 标题在产品上方或叠加）
+    variant_1: editorial_stacked（左侧 stacked 文字 + 右侧产品, 或上下 stacked）
+    variant_2: catalog_grid（一个 hero + 一排 secondary items, 像产品目录, 适合系列）
+    variant_3: themed_scene（产品融入主题场景, 如云朵 / 巧克力背景延伸主题）
+    rule: 产品永远是主角, 文字与装饰围绕产品组织, 不允许文字喧宾夺主
+  restraint:
+    - 不用宋体 / 书法体（要现代粗体或西文衬线）
+    - 不用 3D / 卡通 / 黏土烘焙
+    - 不用中式装饰（印章 / 花纹 / 卷草）
+    - 不用高饱和促销红 / 荧光色
+    - 不用空白堆叠（信息密度要中-高, 不能日系编辑那样稀薄）
+    - 不用随机贴纸（每个徽章都要有角色）
+    - 不用脏背景或纯白电商底（背景必须"有意图"）
+  theme_form_relationship:
+    - 「新品 / 上新」→ NEW 椭圆徽章 + 上新日期（如 5.22 / 11.28）+ ">>>" 箭头标记
+    - 「健康 / 低卡」→ 健康100% 圆形徽章 + 暖色干净背景 + 弧形色块
+    - 「概念 / 古早味」→ 椭圆框徽章「古早味」+ 米奶油底 + watermark 英文文字
+    - 「节日 / 营销」→ 主题色背景 + 主题英文标语（如 JUSTSWEET）+ 对称圆形徽章
+    - 「门店开业」→ 编号列表 01/02/03 + 门店名 + 优惠信息层 + 城市名小字
+    - 「高端 / 系列目录」→ 深色背景 + 西文 serif 大标题 + 品牌印章 + serif 描述
+    - 「主题场景」→ 背景成为主题隐喻（云 = 柔软 / 巧克力 = 浓郁 / 桃色 = 甜蜜）
+  avoid_losing_design_sense:
+    - 不要把字体改成宋体 / 圆体（毁现代烘焙气质）
+    - 不要把背景换成纯白或脏色（毁有意图感, 变电商感）
+    - 不要让产品变成插画 / 3D（毁烘焙温度感）
+    - 不要堆乱装饰（要"每个有角色"原则）
+    - 不要把信息密度降到很低（变日系编辑, 不是烘焙编辑）
+    - 不要中文标题用书法（毁现代烘焙品牌感）
+    - 不要加 AI 涂鸦图标（毁系统化）
+  most_valuable_reusable_decision:
+    - 「真实摄影主角 + 中英文大字标题 + 结构化信息系统 + 有意图的暖色背景」四要素结构
+    - 装饰角色化原则（每个 badge / arrow / tag 必须有信息角色）
+    - 暖色基调 + 弧形色块或主题场景的背景策略
+    - 中英文混排作为现代烘焙品牌的字体语言
+
+theme_transfer_rule:
+  principle: >
+    主题迁移时必须保留: 真实烘焙摄影质感、大字中英文混排标题、结构化信息系统、
+    有意图的暖色背景、装饰角色化原则。新主题元素必须保持真实摄影质感, 不能改成
+    插画 / 3D, 背景必须有结构（纯色 + 弧形色块 / 主题场景 / 渐变）, 不能变随机或脏色。
+    字体必须保持现代粗体 / 西文衬线 / 中英混排, 绝不退化为宋体 / 书法 / 中式装饰。
+  transferable_design_relationships:
+    - real_photo_as_hero
+    - oversized_mixed_language_typography
+    - role_based_info_ornament_system
+    - intentional_warm_background
+    - role_based_decoration_grammar
+    - structured_medium_to_high_density
+  replaceable_surface_elements:
+    - 具体烘焙品类（可颂 / 蛋糕 / 面包 / 冰淇淋 / 司康 / 麻薯 / 甜点）
+    - 背景主题（云 / 巧克力 / 自然色 / 节日色 / 季节色）
+    - 徽章文字（NEW / 限定 / 健康 / 古早味 / 门店名 / 联名品牌）
+    - 主标语（健康新选择 / 自然好店 / 高甜预警 / 云朵鲜面包）
+    - 价格 / 日期 / 编号 / 优惠细节
+  avoid_when_transferring:
+    - calligraphy_or_song_typography
+    - chinese_traditional_ornament
+    - clay_or_3d_pastry
+    - sparse_minimalist_layout
+    - high_saturation_promo_red
+    - random_decorative_stickers_without_role
+    - plain_white_e_commerce_background
+    - chinese_heritage_seal_or_pattern
+  object_translation_map:
+    new_bakery_item: real photographed pastry / cake / bread / ice cream on a clean prop surface or floating against the intentional background
+    new_theme: themed warm background (scene-driven illustration OR solid + curved color block) appropriate to the concept
+    new_brand: small brand logo top-corner, optionally a circular brand seal badge for premium variant
+    new_promotion: NEW pill badge + price tag + date marker (e.g., 5.22 上新) + bullet feature list
+    new_concept_callout: oval framed Chinese badge (古早味 / 健康100% / 限定 / 联名) near the title
+  must_keep:
+    - 真实烘焙摄影质感
+    - 大字中英文混排标题（非宋体非书法）
+    - 结构化信息系统（badge / bullet / arrow / price tag）
+    - 有意图的暖色背景
+    - 装饰每个都有角色
+    - 信息密度中-高
+  must_not_happen:
+    - 用插画 / 3D / 卡通代替摄影
+    - 用宋体 / 书法 / 中式装饰
+    - 背景变随机噪点或纯白电商底
+    - 装饰堆砌无角色
+    - 信息密度过低（变日系编辑）
+    - 高饱和促销红覆盖
+
+# NOTE: variant subfields are dumped verbatim into SELECTED VARIANT in the
+# assembled prompt. Any concrete Chinese text, brand name, or poster headline
+# embedded here will be copied by the model into the generated image as if it
+# were an instruction. Use format descriptions, NOT concrete examples.
+# Concrete reference-image mappings live in _meta and the analysis MD.
+variants:
+  clean_editorial_minimal:
+    when_to_use: 高端品牌 / 单品上新 / 编辑感强 / 日系烘焙品牌 / 米色奶油色场景
+    palette:
+      - cream
+      - beige
+      - warm grey
+      - dark brown or black type
+    background_treatment: clean cream / beige solid, optionally with a single layer of large faded English watermark typography behind the product as the only background pattern; the specific watermark words must be chosen by the model to match the user-provided title, not invented from this YAML
+    typography_emphasis: oversized English caps headline + medium-weight Chinese body + small-caps English annotations underneath, all derived from the user-provided title and subtitle
+    decoration_emphasis: minimal — price tag with thin string, hashtag-style copy line, oval framed concept badge, heavy arrow markers
+    information_density: medium
+
+  warm_promo_campaign:
+    when_to_use: 新品上市 / 健康概念 / 上新日期营销 / 门店开业 / 现代烘焙品牌活动
+    palette:
+      - warm orange
+      - warm yellow
+      - cream
+      - dark brown type
+    background_treatment: warm solid color with curved arc or blob shapes behind the product, optionally with a contrasting color column or geometric panel
+    typography_emphasis: oversized rounded heavy Chinese headline plus small English or Chinese annotations
+    decoration_emphasis: short bullet feature lists (4-character benefit phrases), arrow markers, circular promo badges, numbered list pills (01 / 02 / 03), dotted bottom info band repeating a brand or campaign line
+    information_density: medium-high
+
+  themed_metaphor_scene:
+    when_to_use: 节日营销 / 品类概念 / 强主题情绪 / 跨界活动 / 季节限定
+    palette:
+      - theme-driven (sky blue with white clouds, or warm peach with chocolate brown, or themed pastel matching the campaign concept)
+      - dark brown or black type
+    background_treatment: themed illustrative scene that extends the metaphor (e.g., sky and clouds for softness, chocolate texture for richness, hearts and pastels for love); the specific scene must match the user-provided title and subtitle, not a fixed example
+    typography_emphasis: multilingual stack (Chinese + English + optional Japanese kana), mixed weights, style chosen to fit the campaign theme
+    decoration_emphasis: themed mascot or brand IP, symmetric circular event badges, themed bracket markers in the literal format > short-flavor-or-concept-name < (model fills the bracket content from the user-provided title or subtitle, never invents extra flavor text), NEW pill, asterisk ingredient call-outs
+    information_density: medium-high
+
+  premium_dark_serif:
+    when_to_use: 高端单品 / 系列产品目录 / 进口品牌联名 / 礼盒 / 旗舰新品
+    palette:
+      - dark chocolate brown
+      - cream
+      - gold accents
+      - dark wine red or black type
+    background_treatment: dark chocolate gradient or dark solid, sometimes with subtle warm vignette or fine paper grain
+    typography_emphasis: huge Western serif all-caps title with decorated letterforms (striped patterns inside the letters) plus serif italic descriptors plus small Chinese subtitle in medium weight
+    decoration_emphasis: circular gold-rimmed brand seals styled like real product-certification stamps (no specific brand name copied from this YAML), elegant "&" ornaments, item descriptor stacks beside each product, premium bottom band
+    information_density: high
+
+anti_ai_rules:
+  - dishes MUST be real bakery photography with natural酥皮 / 奶油 / 巧克力 / 面包 texture; no AI-style food illustration; no clay or 3D pastry; no glossy plastic food
+  - typography MUST be modern (bold sans-serif Chinese OR decorated Western serif); NEVER use Chinese 宋体 / 明朝体 / 书法 / calligraphy
+  - background MUST be intentional — clean solid, curved color block, themed scene, or gradient; NEVER random texture, NEVER plain bleached white, NEVER dirty noise
+  - decoration MUST have a defined info role (badge / bullet / arrow / tag / price / numbered list / call-out); NEVER use random AI doodle stickers
+  - keep all typography legible; no garbled or pseudo-Chinese characters; no fake-looking script
+  - this style needs medium-to-high info density; no sparse Japanese minimalist negative-space layout
+  - no high-saturation promo red / pink / hot magenta banners; warm palette only (cream / beige / orange / brown / yellow / themed earth tones)
+  - no Chinese traditional ornament (印章 / 花纹 / 卷草 / 祥云); this is modern bakery, NOT heritage Chinese
+  - no fake premium gold gradients; brand seals must look like real product-certification stamps with believable text
+  - no random floating AI icons disconnected from product features
+  - mix at most one watermark-typography background layer (English faded words) OR one themed scene — never both
+  - when using foreground decorative props, they must connect to product (price tag near product, ingredient asterisk near product, etc.), not float randomly
+  - keep info density orderly, not chaotic — every bullet / badge / arrow must be readable and aligned
+
+style_dna: |
+  STYLE: modern_bakery_editorial_poster — modern Chinese bakery brand poster combining real photographed pastries as the hero subject with oversized mixed-language editorial typography (Chinese bold + English caps or decorated serif), a role-based information ornament system (badges, bullet feature lists, price tags, numbered call-outs, arrow markers), and an intentional warm-tone background (clean solid, curved color block, themed metaphor scene, or premium dark gradient).
+
+  STYLE ESSENCE: modern Chinese bakery brand promotion. NOT heritage Chinese restaurant poster, NOT cute cartoon bakery, NOT 3D/clay pastry render, NOT sparse Japanese minimalist editorial, NOT flat high-saturation sale KV, NOT plain-white e-commerce shot, NOT AI-style food illustration.
+
+  CORE VISUAL LOGIC: a real photographed bakery product occupies the visual center (30-50% of frame), supported by oversized mixed-language typography (Chinese heavy sans OR Western decorated serif, NEVER 宋体/calligraphy), surrounded by a role-based ornament ecosystem (every badge, bullet, arrow, tag, numbered call-out serves an info role), all unified by an intentional warm-tone background (clean cream/beige solid, curved color blocks, themed metaphor scene, or premium dark chocolate gradient). Information density is medium-to-high — orderly populated, never sparse.
+
+  ROLE-BASED ORNAMENT GRAMMAR (must include at least 4 categories, choreographed not random; all concrete text inside these slots MUST be derived from the user-provided title and subtitle, NEVER copied from this prompt):
+  - oversized title typography (mixed Chinese + English, occasionally Japanese): the dominant visual anchor; never thin generic sans, never Chinese 宋体/书法
+  - structural color-block panel: curved arc, blob shape, geometric column, or background gradient zone that organizes layout — clean inside when text sits on it
+  - role-defined badges and seals: circular promo badge (with short generic English or Chinese label appropriate to the campaign, e.g. NEW or 限定), oval concept badge with one short concept word fitting the user title, brand-seal badge styled like a real product-certification stamp for premium variant, numbered-list pills (01 / 02 / 03) for store-opening or multi-item campaigns, optional themed mascot icon coherent with the campaign concept
+  - bullet feature list with markers: 2-3 short 4-character benefit phrases derived from or coherent with the user-provided title, paired with arrow markers (">>>" or "→") connecting to the product
+  - price tag / pill / call-out: ¥-prefixed price tag, NEW or 限定 pill, asterisk (*) ingredient call-outs, themed bracket markers in the literal format > short-flavor-or-concept-word < where the bracket content is drawn from the user-provided title or subtitle, never from this prompt
+  - watermark typography or themed background layer: large faded English words behind product matching the user-provided title or campaign concept (ONE pattern mode only — translucent watermark typography OR themed scene, not both)
+  - bottom info band: dotted divider + repeating brand tagline OR a short Chinese subtitle stack coherent with the user-provided title
+
+  ELEMENTS: real bakery product photography (1-N items — single hero, stacked pair, 2x2 cluster, or hero + bottom row of secondary items), clean prop surface or floating against background, oversized mixed-language title, role-defined badges, bullet lists with arrow markers, price tag / pill, numbered call-outs, asterisk ingredient notes, themed mascot, brand seal for premium variant, dotted bottom info band.
+
+  TYPOGRAPHY: OVERSIZED modern Chinese heavy sans-serif (粗黑 / 圆黑) OR decorated Western serif (all-caps with striped or ornamented letterforms) as the dominant headline. English support in caps small-caps, italic, or decorative serif. Occasional Japanese kana as accent. Mixed-language stacks are characteristic. ABSOLUTELY NO Chinese 宋体 / 明朝体 / 书法 / calligraphy. NO thin generic sans-serif as the main headline.
+
+  COLOR: warm-tone family with theme-specific accents — pick one variant:
+  - clean editorial: cream / beige / warm grey with black or dark-brown type
+  - warm promo campaign: warm orange / yellow / cream with dark-brown or black type
+  - themed metaphor scene: theme-driven (sky blue + cloud white / peach + chocolate brown / themed pastel)
+  - premium dark serif: dark chocolate brown gradient / cream / gold seal accents
+  Low-to-medium saturation. Always warm. NO neon. NO high-saturation promo red. NO fluorescent.
+
+  TEXTURE: background MUST be intentional — clean solid color, curved color-block panel, themed illustrative scene, or premium dark gradient. NEVER random noise, NEVER plain bleached white, NEVER dirty paper grain. Product surfaces must look like real photographed pastry (酥皮 / 奶油 / 巧克力 melt / 面包 texture), with natural lighting and believable shadows. NO glossy plastic, NO 3D render finish.
+
+  INFORMATION DENSITY: medium-to-high. Orchestrated, not sparse. Hero product, oversized title, ornament ecosystem, and info band form a coherent populated composition.
+
+  ANTI-AI RULES: real bakery photography only; no AI-style food illustration; no 3D/clay pastry; modern typography only (NEVER 宋体/calligraphy); intentional background only (NEVER random noise/plain white); role-based decoration only (NEVER random AI doodles); warm palette only (NEVER high-saturation promo red); no Chinese traditional ornament; no garbled pseudo-Chinese; no sparse minimalist negative space; no fake premium gold gradient.
+
+design_quality_checklist:
+  - 产品是否真实摄影质感（酥皮 / 奶油 / 巧克力 / 面包纹理可见）？(插画 / 3D / 卡通 = 不及格)
+  - 标题字体是否现代（粗黑 / 圆黑 / 西文 serif / 装饰 serif）？(宋体 / 书法 / 明朝体 = 不及格)
+  - 标题是否中英文混排或大字主导？(纯单语种小字 = 不及格)
+  - 背景是否有意图（纯色 / 弧形色块 / 主题场景 / 渐变）？(随机纹理 / 净白 / 脏色 = 不及格)
+  - 装饰是否每个都有角色（信息 / 卖点 / 引导 / 概念）？(随机贴纸 = 不及格)
+  - 是否有结构化信息系统（badge + bullet + arrow + price tag 至少 4 类）？
+  - 色调是否暖色基调？(高饱和红 / 冷蓝主色 = 不及格)
+  - 信息密度是否中-高、饱满有序？(过稀变日系编辑 = 不及格)
+  - 产品占画面是否 30-50%、清晰为视觉主角？
+  - 是否避免中式装饰 / AI 涂鸦 / 塑料质感 / 镀金渐变？
+  - 是否最多一种背景图案模式（watermark 文字 OR 主题场景, 不混用）？
+  - 字体是否清晰可读、无伪中文 / 乱码字符？
+
+production_profile:
+  production_template: production_templates/banner_4_1_production.yaml
+  supported_outputs:
+    - banner_4_1
+  default_output: banner_4_1
+  title_style: |
+    Oversized modern Chinese heavy sans-serif (粗黑 / 圆黑) OR decorated Western serif (all-caps with striped or ornamented letterforms) as the dominant headline.
+    Often mixed with English caps small-caps OR Japanese kana as accent.
+    ABSOLUTELY NEVER use Chinese 宋体 / 明朝体 / 书法 / calligraphy.
+    NEVER use thin generic Western serif as the main Chinese-equivalent headline.
+  subtitle_style: |
+    Small English caps or serif (FRESHLY BAKED / CLOUD FRESH BREAD / 520 JUSTSWEET style),
+    OR small Chinese annotation in framed oval (古早味 / 柔软 / 蓬松),
+    OR hashtag style (# 新鲜出炉),
+    OR italic Western descriptor (Pistachio Blackberry Cream Cake CROISSANT).
+  background_style: |
+    Warm intentional background — pick the variant:
+    - clean cream / beige solid with optional watermark typography
+    - warm orange / yellow solid with curved arc / blob color block behind product
+    - themed metaphor scene (sky + clouds / chocolate / peach / themed pastel)
+    - premium dark chocolate gradient
+    NEVER random texture, NEVER plain bleached white, NEVER dirty noise, NEVER high-saturation promo red.
+  composition_preference: |
+    Hero-centric — real bakery product centered or near-center, occupying 30-50% of the frame.
+    Oversized mixed-language title stacked ABOVE the product OR overlapping the product's top edge.
+    Structured info satellites (badges, bullets, price tags, arrows) arranged around the product with intentional placement, not random sprinkling.
+    For premium variant, can switch to catalog-grid: one hero pair + bottom row of secondary items.
+  decoration_requirements: |
+    Role-based decoration — every decorative element MUST have a defined info role.
+    Pick 4-6 categories per banner from this slot grammar.
+    All concrete text inside any decorative slot MUST be derived from the user-provided title and subtitle; NEVER copy specific Chinese phrases, brand names, dish names, or example text from this prompt.
+    - oversized title typography (Chinese + English mixed) using the user-provided title and subtitle verbatim
+    - structural color-block panel (curved arc / blob / column / gradient zone) — clean inside when text sits on it
+    - circular promo badge with a short generic English or Chinese campaign label (NEW or 限定 style words only; otherwise derive from the user title)
+    - oval framed concept badge containing one short concept word coherent with the user-provided title
+    - bullet feature list of 2-3 short 4-character benefit phrases derived from or coherent with the user title, with arrow markers (">>>" / "→")
+    - price tag with ¥ price OR NEW pill OR a short callout drawn from the user title
+    - numbered list pills (01 / 02 / 03) for store-opening or multi-item series
+    - asterisk (*) ingredient or origin call-out with brief generic copy (model fills based on the campaign context, not from this prompt)
+    - themed bracket markers in the literal format > short-flavor-or-concept-word < where the bracket content comes from the user title or subtitle
+    - watermark typography behind product matching the user title or campaign concept (ONE pattern mode only — never mix with themed scene)
+    - themed mascot icon coherent with the campaign concept (no specific named character copied from this prompt)
+    - brand-seal badge with gold rim styled as a generic product-certification stamp (premium variant only; do NOT copy any specific brand name from this prompt)
+    - bottom info band (dotted divider + repeating brand tagline OR a short Chinese subtitle stack coherent with the user title)
+    NEVER repeat one prop family as the whole decorative system.
+    NEVER use Chinese traditional ornament (印章 / 卷草 / 祥云 / 花纹).
+    NEVER use random AI doodle stickers floating without an info role.
+    NEVER copy any specific Chinese phrase, dish name, brand name, or example word from this prompt into the image; all rendered text must come from the user title and subtitle.
+  information_density: medium_to_high
+  anti_ai_emphasis:
+    - "MUST: real bakery photography with natural 酥皮 / 奶油 / 巧克力 / 面包 texture"
+    - "MUST: modern typography (bold sans-serif Chinese OR decorated Western serif)"
+    - "MUST: intentional background (clean solid / curved color block / themed scene / premium dark gradient)"
+    - "MUST: role-based decoration — every badge / arrow / tag / numbered call-out serves an info role"
+    - "MUST: warm palette (cream / beige / orange / brown / yellow / themed earth tones)"
+    - "MUST: mixed-language typography (Chinese + English at minimum, occasionally Japanese)"
+    - "MUST: medium-to-high info density, orderly populated composition"
+    - "NEVER: Chinese 宋体 / 书法 / 明朝体 / calligraphy typography"
+    - "NEVER: AI-style food illustration / clay 3D / glossy plastic / commercial 3D render"
+    - "NEVER: Chinese traditional ornament (印章 / 卷草 / 祥云 / 花纹)"
+    - "NEVER: random AI doodle stickers floating without an info role"
+    - "NEVER: high-saturation promo red / pink / hot magenta banners"
+    - "NEVER: dirty random background noise / plain bleached white / e-commerce plain backdrop"
+    - "NEVER: sparse Japanese minimalist negative space (this style needs density)"
+    - "NEVER: garbled or pseudo-Chinese characters / fake script"
+    - "NEVER: fake premium gold gradients (brand seals must look like real product certification)"
+    - "NEVER: mix watermark typography background AND themed scene in the same banner (pick one)"

@@ -1,0 +1,230 @@
+style_name: chinese_fresh_catering_menu_poster
+style_cn: 清新菜单
+style_cn_full: 中式清新餐饮菜单海报风
+style_type: 中式餐饮菜单 / 茶点套餐海报 / 清新商业餐饮 KV
+
+source_folder: /Users/bytedance/desktop/中式清新_风格参考
+representative_files:
+  - 中式清新风_5.jpg
+  - 中式清新风_7.jpg
+  - 中式清新风_8.jpg
+  - 中式清新风_9.jpg
+related_boundary_files:
+  - d019c4a00402aac69e6a787319d83eba.jpg
+  - 中式清新风_6.jpg
+
+style_essence:
+  visual_type:
+    - catering menu poster
+    - clean Chinese-inspired graphic design
+    - food photography with decorative frame system
+    - menu information layout
+  not:
+    - heavy street-food documentary poster
+    - dark realistic restaurant scene
+    - clay-like 3D rendering
+    - hyper-sale ecommerce collage
+
+core_visual_logic:
+  - 用奶油白或浅米色背景承接餐品摄影，让食物真实但不显沉重
+  - 用墨绿、淡金、中式窗棂边框、云纹或植物枝叶建立东方感
+  - 主标题和菜单信息形成清晰层级，食物图像负责食欲，装饰纹样负责风格
+  - 画面气质来自克制留白、细线边框和浅色呼吸感，而不是强促销冲击
+
+design_quality_logic:
+  design_sense_from:
+    - 奶油白背景与墨绿/淡金构成清爽中式高级感
+    - 食物摄影被整理进版式，而不是任意堆放
+    - 中式纹样只做边框、底纹或轻装饰，不抢主视觉
+    - 标题、价格、套餐说明和餐品标签有明确阅读顺序
+  key_design_decisions:
+    - 保留大面积干净背景
+    - 用真实餐品摄影作为信任感来源
+    - 用细线框、窗棂纹、云纹、植物枝叶承载中式气质
+    - 控制装饰数量，避免节庆化和大促化
+  hierarchy_control:
+    - 品牌或活动标题是第一信息层
+    - 主餐品或套餐组合是第一视觉层
+    - 价格、套餐名和菜品说明是第二信息层
+    - 纹样、植物和印章是第三装饰层
+  layout_intention:
+    - 垂直海报以中心轴或轻微分区组织信息
+    - 菜单型参考使用上下分区或多餐品散点，但仍保持网格秩序
+    - 边框和留白把餐饮信息收束成精致菜单感
+  restraint:
+    - 不使用强烈霓虹色
+    - 不堆满促销贴纸
+    - 不加入过多拟物道具
+    - 不把背景做成复杂真实餐厅空间
+  theme_form_relationship:
+    - 中式感通过边框、纹样、书法字、印章、植物和茶器进入版式
+    - 清新感通过低饱和浅底、留白、绿色点缀和柔和摄影实现
+    - 餐饮主题通过真实食物摄影和菜单信息建立可信度
+  avoid_losing_design_sense:
+    - 避免把所有菜品等大排列，导致菜单超市化
+    - 避免中式纹样过密，变成传统老气背景
+    - 避免强促销红黄配色破坏清新感
+    - 避免假文字、错误英文和不可读菜单标签
+  most_valuable_reusable_decision:
+    - 用浅色留白和细中式纹样包装真实餐品摄影，让餐饮海报同时有食欲、东方感和呼吸感
+
+composition_system:
+  layout_skeleton:
+    - vertical poster
+    - centered hero food or structured menu grid
+    - decorative border framing
+    - spacious top title area
+  focal_point:
+    - plated food, tea set, dim sum, meal set, or seasonal menu spread
+  rhythm:
+    - large clean title area balanced with clustered food photography
+    - small labels and price cards placed as controlled accents
+  whitespace:
+    - generous ivory or pale green negative space
+
+element_system:
+  core_elements:
+    - Chinese food photography
+    - tea set or dim sum steamer
+    - thin geometric Chinese border
+    - subtle window lattice pattern
+    - small seal or price card
+  supporting_elements:
+    - foliage
+    - cloud pattern
+    - pale pattern texture
+    - fine divider lines
+  element_abstraction:
+    - Chinese motifs should be simplified into linework, frames, or light background pattern
+  element_density:
+    - medium density; food can be abundant but decorative motifs must stay restrained
+
+typography_system:
+  typography_role:
+    - title establishes elegance and theme
+    - smaller labels explain menu items and pricing
+  font_style:
+    - elegant serif
+    - Songti-inspired Chinese type
+    - occasional calligraphic accent
+  scale_relationship:
+    - one large title, several small disciplined menu labels
+  type_image_relationship:
+    - typography should frame and organize the food, not overpower it
+
+color_system:
+  primary_colors:
+    - ivory white
+    - warm cream
+    - pale jade green
+    - deep ink green
+  secondary_colors:
+    - muted gold
+    - light tea brown
+    - soft beige
+  accent_colors:
+    - small seal red
+    - food natural colors
+  color_logic:
+    - low-saturation Chinese palette with green-gold accents and food warmth
+
+texture_and_material:
+  material:
+    - clean paper-like background
+    - realistic food photography
+    - light gold linework
+  texture:
+    - subtle paper grain or pale geometric pattern
+  lighting:
+    - soft commercial food lighting
+  avoid_material:
+    - glossy 3D
+    - heavy grunge
+    - metallic luxury texture
+    - dark smoky restaurant background
+
+information_density:
+  density: medium
+  whitespace_strategy:
+    - keep large calm areas around title and border
+    - group menu details near food rather than scattering everywhere
+  decoration_density:
+    - low to medium; decoration should feel like framing, not filling
+
+mood:
+  keywords:
+    - fresh
+    - refined
+    - elegant
+    - appetizing
+    - light Chinese
+    - premium but approachable
+  commercial_feeling:
+    - restaurant menu promotion with a polished brand tone
+  audience_feeling:
+    - clean, trustworthy, seasonal, comfortable, not noisy
+
+theme_transfer_rule:
+  principle: >
+    Transfer the clean Chinese menu system first: ivory whitespace, restrained green-gold palette,
+    real food photography, elegant border, and disciplined menu hierarchy. New themes should enter
+    through food, seasonal motifs, subtle line patterns, and small seals rather than through loud
+    promotional badges or heavy scene backgrounds.
+  transferable_design_relationships:
+    - food_photography_as_appetite_anchor
+    - border_as_style_container
+    - green_gold_palette_as_chinese_freshness
+    - title_menu_price_hierarchy
+    - restrained_motif_as_cultural_signal
+  replaceable_surface_elements:
+    - food category
+    - seasonal plant
+    - border pattern
+    - price card shape
+    - small Chinese seal
+  avoid_when_transferring:
+    - hyper_sale_badges
+    - dense_red_gold_festival_palette
+    - random_chinese_symbols
+    - overly_realistic_restaurant_scene
+    - 3d_cartoon_food
+
+anti_ai_rules:
+  - Do not invent unreadable menu text or fake English labels.
+  - Do not make all food items the same size and importance.
+  - Do not overuse Chinese patterns until the background becomes busy.
+  - Do not add glossy 3D props, neon lighting, or heavy luxury materials.
+  - Keep the composition airy; do not fill every blank area.
+
+production_profile:
+  production_template: production_templates/banner_4_1_production.yaml
+  supported_outputs:
+    - banner_4_1
+    - poster_3_4
+  default_output: banner_4_1
+  title_style: elegant Songti-style Chinese title or refined serif lockup, calm and premium
+  subtitle_style: small disciplined menu label, price card, or framed seasonal callout
+  background_style: ivory, cream, or pale jade paper background with subtle Chinese line pattern; clean negative space is allowed
+  composition_preference: centered or lightly segmented menu layout with food photography as appetite anchor and border as style container
+  decoration_requirements: thin gold border, subtle window-lattice pattern, small seal, restrained foliage, fine divider lines
+  information_density: medium, menu-readable, airy
+  anti_ai_emphasis:
+    - no unreadable menu text
+    - no overfilled Chinese pattern background
+    - no glossy 3D props
+    - keep whitespace and hierarchy
+
+final_image_prompt: >
+  Create a vertical Chinese fresh catering menu poster for a refined restaurant seasonal set meal.
+  Visual style: clean Chinese-inspired commercial menu design, ivory paper background, deep ink
+  green and muted gold accents, elegant Songti-style typography, subtle window-lattice border,
+  refined and appetizing. Composition: spacious vertical layout with a calm top title area,
+  realistic food photography as the main appetite anchor, controlled menu labels and price cards,
+  generous whitespace, fine divider lines, subtle Chinese motifs used only as framing. Key visual
+  system: plated Chinese dishes, dim sum or tea set, thin gold geometric border, small seal mark,
+  pale jade decorative pattern, restrained foliage. Typography: one elegant large Chinese title,
+  smaller disciplined menu details, readable price information, no fake text. Color and material:
+  ivory, cream, pale jade green, deep ink green, muted gold, soft food photography lighting,
+  subtle paper texture. Design quality constraints: fresh and premium but not noisy, no hyper-sale
+  badges, no random decoration, no glossy 3D props, no crowded background, keep the Chinese motifs
+  delicate and controlled.

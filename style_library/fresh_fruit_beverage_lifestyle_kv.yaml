@@ -1,0 +1,110 @@
+style_name: fresh_fruit_beverage_lifestyle_kv
+style_cn: 鲜果茶饮
+style_cn_full: 清新水果饮品生活方式 KV
+style_type: 果饮新品海报 / 茶饮活动 KV / 健康果蔬饮品视觉
+
+source_folder: /Users/bytedance/Desktop/头图参考图/06:18参考
+representative_files:
+  - 03032884e6f3319927addd2ed6680945.jpg
+  - 26262323cc46256404aaa20c9baef7d0.jpg
+  - 7227a49830aeb0a0c894ce3e379d7e5c.jpg
+  - 853db8286750be996222a11ba69a2120.jpg
+  - b0488e819c765f02ce95f416f4ec78d5.jpg
+  - ff445f59e2c41685a26086766e3bcc6e.jpg
+
+style_essence:
+  visual_type:
+    - fresh beverage product KV
+    - fruit lifestyle set design
+    - soft commercial photography
+    - poetic product poster
+  not:
+    - hyper-sale beverage poster
+    - flat illustration
+    - dark restaurant scene
+    - 3D rendered drink props
+
+core_visual_logic:
+  - 用真实饮品瓶杯作为主体，用水果、花草、草地或柔和纸感场景解释口味和新鲜感
+  - 标题通常是诗意手写体或轻盈衬线体，承担情绪而不是硬促销
+  - 背景有生活方式场景，粉色、绿色、暖橙或棕金承接不同水果主题
+  - 道具不是随机装饰，而是围绕水果产地、口味、季节和健康感形成叙事
+
+design_quality_logic:
+  design_sense_from:
+    - 饮品主体与真实水果道具建立口味可信度
+    - 大标题轻盈、诗意，和果饮清新感一致
+    - 色彩从水果本身提取，形成主题统一
+    - 场景化背景让饮品有生活方式氛围
+  key_design_decisions:
+    - 用产品瓶杯作为第一视觉层
+    - 用水果切面、花草、草地、木块、织物等解释自然感
+    - 标题保持轻盈，不使用大促粗字
+    - 保留柔和光线和浅景深
+  hierarchy_control:
+    - 饮品产品是第一视觉层
+    - 诗意标题是第一信息层
+    - 水果和花草是第二视觉层
+    - 口味说明、卖点和小标签是第三信息层
+  layout_intention:
+    - 竖版以产品和水果道具形成中心陈列
+    - 横幅可用产品居中或左右分布，水果道具围绕主体
+    - 背景负责气氛，不能抢走产品
+  restraint:
+    - 不使用强促销贴纸
+    - 不把水果铺满成杂乱拼盘
+    - 不使用塑料高光 3D 材质
+    - 不使用过多不可读小字
+  theme_form_relationship:
+    - 水果主题通过真实水果、色彩、花草和手写标题进入画面
+    - 健康主题通过草地、自然光、蔬果筐和轻盈排版表达
+    - 季节主题通过花枝、阳光、暖色或清凉绿色表达
+  avoid_losing_design_sense:
+    - 避免把饮品变成普通电商商品图
+    - 避免高饱和大促背景
+    - 避免随机水果漂浮
+    - 避免让背景比产品更重要
+
+theme_transfer_rule:
+  principle: >
+    迁移时保留真实饮品产品、对应水果道具、轻盈标题、柔和生活方式场景和水果色彩逻辑。
+    新口味应通过水果、花草、光线和背景气氛进入，不要变成促销海报或纯产品白底图。
+  transferable_design_relationships:
+    - beverage_product_as_hero
+    - fruit_props_as_flavor_story
+    - soft_lifestyle_scene
+    - poetic_light_typography
+    - fruit_derived_palette
+  replaceable_surface_elements:
+    - fruit type
+    - flower or plant motif
+    - background scene
+    - bottle or cup shape
+  avoid_when_transferring:
+    - neon_sale_background
+    - random_floating_fruit
+    - fake_3d_drink
+    - crowded_price_tags
+
+anti_ai_rules:
+  - Do not invent unreadable product labels on the bottle or cup.
+  - Keep fruit props physically grounded and related to the flavor.
+  - Avoid glossy plastic-looking fruit and artificial neon colors.
+  - Do not add unrelated brand marks or logo text.
+
+production_profile:
+  production_template: production_templates/banner_4_1_production.yaml
+  supported_outputs:
+    - banner_4_1
+  default_output: banner_4_1
+  title_style: poetic handwritten Chinese or elegant light serif title, airy and fresh
+  subtitle_style: small flavor note or seasonal callout near the product
+  background_style: soft lifestyle background, grass, paper texture, warm fruit-toned surface, or blurred natural scene
+  composition_preference: product-centered or balanced product-and-fruit arrangement with clear hero drink
+  decoration_requirements: real fruit props, flower or leaf accents, soft shadows, gentle texture, restrained small labels
+  information_density: medium_low, fresh and breathable
+  anti_ai_emphasis:
+    - no invented bottle labels
+    - no random floating fruit
+    - no hyper-sale badges
+    - keep product and fruit physically believable

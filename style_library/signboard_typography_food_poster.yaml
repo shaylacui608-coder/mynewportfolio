@@ -1,0 +1,413 @@
+_meta:
+  source: hand_extracted_from_16_reference_images
+  reference_path: ~/Desktop/头图参考图/招牌字形/
+  reference_files:
+    - 0aceb3f4d4d7abaffa1fc320d739f95c.jpg  # 招牌高汤现切牛肉粉 SHIYAN POWDER → classic_chinese_signboard
+    - 148c4b0c685bd07639be231a1ab21f2f.jpg  # 焼肉丼食堂 通化限定 胡麻醬鲑魚海鲜丼 → japanese_izakaya_brush
+    - 3d8d91ad516e60644e470a07719a2078.jpg  # 优可然 潮汕牛肉丸 手作肉丸 → classic_chinese_signboard
+    - 3e7949a86cd637273dacbe5b1bc1d74e.jpg  # 宝贝蒸饺 The Winter Solstice 冬至 → festive_campaign_brush_kv
+    - 4380e02cfb2ef2eaceb9afe5411df3d8.jpg  # FUI DESIGN 海鮮うどん SEAFOOD NOODLE → japanese_izakaya_brush
+    - 705f9eeaa5ec9253174abea1683a8054.jpg  # 焼肉丼食堂 炙燒鮭魚親子丼 → japanese_izakaya_brush
+    - 787d2e8de01bb54fcc0d121d5e921682.jpg  # 哦该 烟火味er的长沙 寻找风味八城 → festive_campaign_brush_kv
+    - 8b778f077c50e8a397b5aa31e726f164.jpg  # 武侍 年終最強 海陸雙人龍蝦饗宴 → japanese_izakaya_brush
+    - 907d1856b3742798799dee8912c14c17.jpg  # 油潑酸菜魚 經典川味 → classic_chinese_signboard
+    - 9b2325128c1405c0e777b289f3cfc3eb.jpg  # 太兴 如花绽放 茶皇豉油鸡 → classic_chinese_signboard
+    - 9b7722b72ca8a0cee1ad08b3ad3c910b.jpg  # 中江挂面 传统特色美食 → classic_chinese_signboard
+    - d5e48cbd40c680253a6a51e2828fad7e_round2.jpg  # 豚骨拉面 美味しいラーメン → japanese_izakaya_brush
+    - d664a8a81959c7e594c4e19c83144eec.jpg  # MASTER LANZHOU 舌尖上的兰州味 → classic_chinese_signboard
+    - f6a005c37c721fa388ed922dfcf9be21.jpg  # KFC 早餐 风火闯江湖 武汉 → festive_campaign_brush_kv
+    - fd553bec202edcb14b354a1494d473e2.jpg  # 焼肉丼食堂 通化限定 咖哩双拼丼 → japanese_izakaya_brush
+    - 截屏2026-06-22 00.03.32.png  # 鲜捞海味面 promo strip → japanese_izakaya_brush
+    # NOTE: 148c4b0c..._副本.jpg (duplicate of 148c4b0c) skipped
+  status: ready
+  extracted_by: claude_code
+  notes: |
+    Replaces the prior 43.4KB extraction. Applies all accumulated lessons from
+    bakery + clean_menu + green_natural extractions (variant leak prevention,
+    when_to_use English, decoration_requirements anti-leak red line, style_dna
+    role-based grammar with derive-from-user rule).
+
+    Differentiates from sibling styles:
+    - vs chinese_fresh_lifestyle: title is even MORE dominant (40-60% vs
+      30-45%), more "street-signboard hand-painted" rather than "Chinese
+      editorial"
+    - vs modern_bakery_editorial_poster: completely different typography
+      language (brush calligraphy vs modern bold sans / decorated serif)
+    - vs fresh_green_natural_lifestyle: background is textured paper signboard
+      vs immersive nature, signboard-restaurant tone vs storytelling-tea-brand
+    - vs clean_fresh_menu_grid_poster: single hero (not multi-dish array),
+      title DOMINANT (not supportive)
+
+    Uses banner_4_1_production.yaml (single-hero typography-led style), NOT
+    multi_dish_menu_production.yaml.
+
+style_name: signboard_typography_food_poster
+style_cn: 招牌字形
+style_cn_full: 手写招牌字形餐饮海报风（巨大手写毛笔字 + 单 hero 菜品 + textured 纸面 + 街边手写招牌调）
+style_type: 餐饮单品海报 / 招牌菜推广 / 限定菜品 KV / 地域美食营销 / 节日餐饮 / 街边手写招牌风格
+
+usage_scenes:
+  - 餐饮品牌招牌菜推广（招牌牛肉面 / 招牌酸菜鱼 / 招牌烧鸡 / 招牌粉丝）
+  - 日式居酒屋 / 拉面店 / 丼饭单品上市
+  - 地域特色美食营销（潮汕 / 兰州 / 武汉 / 长沙 / 川味）
+  - 限定时令菜品 KV（冬至 / 节日 / 月限定）
+  - 街边连锁餐厅菜品海报
+  - 大众点评门头 / 美团商详 / 小红书餐饮封面
+  - 餐厅菜单页 hero 海报
+
+mood_keywords:
+  - 招牌字形
+  - 手写毛笔
+  - 巨大主标题
+  - 街边招牌
+  - 地域美食
+  - 真实菜品
+  - 暖色textured 纸面
+  - 多支撑元素
+  - 混排语言（中 + 日 + 英）
+  - 椭圆徽章
+  - 价签
+
+one_liner: 用巨大手写毛笔 signboard 中文标题（占画面 40-60%, 字 LED）+ 单 hero 真实菜品摄影 + textured 纸面背景（带 watermark 食材线稿 / 古早纹 / 水波）+ 多支撑元素（椭圆徽章 / 品牌 emblem / 价签 / vertical 小字 / 印章）, 构建一种街边手写招牌餐厅菜品海报。
+
+output_ratio_options:
+  banner: '4:1'
+  poster: '3:4'
+  square: '1:1'
+
+style_essence:
+  visual_type:
+    - typography-led signboard food poster
+    - hand-painted brush calligraphy Chinese title as protagonist
+    - single hero dish photography supporting the title
+    - textured paper background with optional faint watermark pattern
+    - multi-supporting-element layout (badges / brand mark / price tag / small copy)
+    - mixed-language Chinese + optional Japanese kanji + small English
+  not:
+    - multi-dish menu array of 3+ equal-weight dishes
+    - clean editorial layout with supportive small title
+    - product-led layout where title is just a small caption
+    - 3D rendered dish / clay food / glossy plastic finish
+    - cute cartoon mascot-led poster
+    - sparse Japanese minimalist single-frame
+    - heritage Chinese ornament-heavy poster (印章 / 卷草 / 祥云 / 花纹 dense)
+    - storytelling premium tea-brand zen aesthetic (different from green_natural)
+
+core_visual_logic:
+  - 巨大手写毛笔 signboard 中文标题占画面 40-60%, 字 LED 风格（标题是 protagonist, 不是 supporting）
+  - 单 hero 真实菜品摄影占画面 25-40%, 在标题下方或交叠
+  - 标题字体特征: 手写毛笔感, 笔触有顿挫 / 飞白 / 风化感, 不是干净 Ming, 不是现代圆体
+  - 背景永远是 textured 纸面（cream / beige / peach / orange / yellow base）+ optional faint watermark pattern（食材线稿 / 古早纹 / 水波 / 品牌 watermark typography）
+  - 必有多支撑元素: 椭圆徽章 + 品牌 emblem + 价签 + vertical 小字 + 印章 + 小 hashtag, 共同烘托招牌感
+  - 调色: 暖基底（cream / peach / orange / yellow）+ 深字色（黑 / 深棕 / 暗红）+ 偶尔色 panel（蓝 / 绿 / 红）做对比
+  - 混排语言常见: 简中 + 繁中 + 日文 (kanji + hiragana) + small English
+  - 街边手写招牌街市感, 不是 editorial 精致感
+
+design_quality_logic:
+  design_sense_from:
+    - 巨大手写毛笔字本身的"街边招牌"气韵（笔触飞白 / 顿挫 / 风化质感）
+    - 真实菜品摄影质感（汤色 / 肉质 / 蔬菜鲜 / 蒸汽）
+    - textured 纸面背景（米色 / 桃色 / 米黄 / 暖橙）+ faint watermark pattern 烘托
+    - 多支撑元素层级清晰（徽章 / 品牌 / 价签 / 小字各司其职）
+    - 暖色基调 + 红黑字色 + 偶尔色 panel 对比的色彩系统
+    - 混排语言（中 / 日 / 英）增加正宗 / 异域 / 国际感
+    - 街边招牌街市感（不是 editorial 精致, 是热闹烟火气）
+
+  key_design_decisions:
+    - 让手写毛笔标题占据画面 40-60%, 成为 protagonist
+    - 标题必须有手写顿挫 / 飞白质感, 不能用干净印刷字
+    - 用真实菜品摄影, 绝不用 3D / 卡通 / 插画
+    - 背景必须 textured 纸面, 绝不纯色或脏底
+    - 必有多支撑元素围绕标题, 单标题 + 单菜品的空荡 layout = 失败
+    - 暖色基底 + 红黑字, 不用高饱和促销红铺底
+    - 混排语言展现正宗感（如日式用 kanji + hiragana, 中式用 简中 + 繁中）
+
+  hierarchy_control:
+    - 第一层: 巨大手写毛笔标题（40-60% 画面, 视觉绝对主导）
+    - 第二层: 单 hero 真实菜品摄影（25-40% 画面）
+    - 第三层: 椭圆徽章 / 价签 / 品牌 emblem
+    - 第四层: vertical 小字 / hashtag / 印章 / 小副标语
+
+  layout_intention:
+    primary: title_over_dish（标题在上 / 居中, 菜品在下方或居中交叠）
+    variant_1: vertical_pillar_title（标题竖排 pillar 在一侧, 菜品在另一侧或下方）
+    variant_2: panel_block_title（色块 panel 内放标题, 菜品在 panel 外 / 下）
+    variant_3: collage_scatter_with_central_title（多元素散布 + 中央巨字 + 多菜品 cutout）
+    rule: 字永远是主角, 菜品是支撑, 多元素围绕不喧宾
+
+  restraint:
+    - 不用现代圆体 / 印刷干净 Ming / 卡通字（标题必须手写毛笔感）
+    - 不用 3D / 卡通 / 插画菜品（必须真实摄影）
+    - 不用纯白电商底 / 纯净色（必须 textured 纸面）
+    - 不用高饱和促销红铺满（红字 / 红色 panel 可, 红色铺底不可）
+    - 不用 minimalist 空荡 layout（必须有多支撑元素）
+    - 不用 ornament 堆砌（单红印章 OK, 卷草 / 祥云 / 花纹堆砌 NO）
+    - 不用 elegant editorial small caps（这是街边招牌, 不是精致 editorial）
+
+  theme_form_relationship:
+    - 「中式餐厅招牌菜」→ cream 纸 + 黑/深棕/红毛笔字 + 椭圆/印章徽章 + 简中 + 西文 small caps
+    - 「日式居酒屋」→ kanji + hiragana 混排 + 水波 / 鱼图 watermark + 蓝/橙色 panel + 红价签
+    - 「地域美食」→ 当地建筑/食材线稿 watermark + 地域名 vertical 标签 + 当地特色色（武汉樱花 / 长沙烟火 / 兰州青花碗）
+    - 「节日限定」→ 节日大字 + 节日色（冬至红 / 春节金 / 中秋月）+ 节日 motif 椭圆徽章
+    - 「限时促销」→ 价签突出 + 时间窗 + 限定徽章, 但维持手写招牌感
+    - 「街市风味」→ 食材 cutout 散布 + hashtag 标签 + 暖黄色块 + 手写涂鸦
+
+  avoid_losing_design_sense:
+    - 不要把标题字号变小（必须 DOMINANT, 占 40-60%）
+    - 不要把字体换成印刷 Ming / 圆体（毁手写招牌感）
+    - 不要让菜品占画面 > 50%（毁字 LED 关系）
+    - 不要把背景换成纯白电商底（毁街边招牌感）
+    - 不要砍掉支撑元素（毁招牌感, 变成空荡 hero）
+    - 不要用插画或 3D 代替真实菜品（毁餐饮真实感）
+    - 不要用高饱和促销红铺底（变成促销 KV, 不是招牌海报）
+    - 不要用 elegant editorial small caps（这是街招, 不是杂志）
+
+  most_valuable_reusable_decision:
+    - 「手写毛笔大字 40-60% + 单 hero 真菜品 + textured 纸底 + 多支撑元素」四要素结构
+    - 标题做 protagonist 而非 supporting / dominant 的角色（字 LED 而非 product LED）
+    - 手写顿挫 / 飞白 / 风化质感作为"街边招牌"的视觉签名
+    - 混排语言（中 + 日 + 英）展现地域 / 异域 / 正宗感
+
+theme_transfer_rule:
+  principle: >
+    主题迁移时必须保留: 巨大手写毛笔 signboard 标题（40-60% 画面）、单 hero 真实菜品摄影
+    （25-40% 画面）、textured 纸面背景（带 watermark pattern）、多支撑元素层级（徽章 / 品牌
+    emblem / 价签 / vertical 小字 / 印章）、暖色基调 + 深字色色彩系统、混排语言能力。
+    新主题元素必须保持手写毛笔字体, 不能换成印刷字; 必须真实菜品摄影, 不能改插画 / 3D;
+    必须 textured 纸面, 不能纯白; 必须有多支撑元素, 不能空荡 hero。
+  transferable_design_relationships:
+    - oversized_handpainted_brush_calligraphy_as_protagonist
+    - single_hero_real_dish_photography_as_supporting
+    - textured_warm_paper_background_with_watermark_pattern
+    - multi_supporting_element_hierarchy
+    - warm_base_with_dark_type_color_system
+    - mixed_language_typography_capability
+    - street_signboard_tone_not_editorial_refined
+  replaceable_surface_elements:
+    - 具体菜品类型（牛肉面 / 拉面 / 酸菜鱼 / 烧鸡 / 蒸饺 / 海鲜丼 / 牛肉丸）
+    - 标题文字（招牌菜名 / 限定名 / 地域特色名）
+    - 背景纸色（cream / beige / peach / orange / yellow / kraft）
+    - Ghost pattern 内容（食材线稿 / 古早纹 / 水波 / 当地建筑 / 品牌 watermark typography）
+    - 调色子分支（中式暖红 / 日式蓝橙 / 地域特色色 / 节日色）
+    - 语言混排组合（简 + 繁 / 简 + 日 / 简 + 英 / 简 + 繁 + 日）
+    - 支撑徽章内容（地域限定 / 正宗 / 第N代 / 价签 / 时间窗）
+  avoid_when_transferring:
+    - clean_printed_song_or_modern_sans_typography
+    - illustration_or_3d_or_clay_food
+    - pure_white_e_commerce_background
+    - dominant_high_saturation_promo_red_fill
+    - minimalist_empty_hero_layout
+    - chinese_traditional_ornament_overload
+    - elegant_editorial_small_caps_style
+    - storytelling_premium_zen_tone
+  object_translation_map:
+    new_dish: real photographed single hero dish (bowl / plate / steamer) in believable vessel with natural lighting; preserve product identity if user-provided
+    new_signboard_title: oversized hand-painted brush calligraphy with weathered / drybrush / signboard ink character, occupying 40-60% of frame, derived from user-provided title
+    new_background: textured paper surface in warm tone (cream / beige / peach / orange / yellow / kraft) with optional faint watermark pattern matched to concept (ingredient line art / regional landmark silhouette / wave illustration / heritage ornament silhouette)
+    new_brand_emblem: small circular or rectangular brand mark in a corner — generic monochrome or red, never copy specific named brand from this prompt
+    new_supporting_badges: oval or round small badges (origin / signature / season-limited / price / generic concept word) — at least 2-3 around the title
+    new_regional_or_japanese_motif: regional landmark line drawing, ingredient silhouette, wave pattern, watermark typography, or oriental motif appropriate to the concept
+  must_keep:
+    - 手写毛笔标题 40-60% 画面
+    - 单 hero 真实菜品 25-40% 画面
+    - textured 纸面背景 + watermark pattern
+    - 多支撑元素层级（≥4 类装饰）
+    - 暖色基调 + 深字色
+    - 街边招牌街市感
+  must_not_happen:
+    - 印刷 Ming / 现代圆体 / 卡通字标题
+    - 插画 / 3D 菜品
+    - 纯白电商底
+    - 标题做小 / supportive
+    - 单菜品 > 50% 画面
+    - 高饱和促销红铺满
+    - 空荡 hero 无支撑元素
+    - elegant editorial small caps 调
+
+# NOTE: variant subfields are dumped verbatim into SELECTED VARIANT in the
+# assembled prompt. Any concrete Chinese text, brand name, dish name, or
+# poster headline embedded here will be copied by the model into the generated
+# image as if it were an instruction. Use format descriptions, NOT concrete
+# examples. Concrete reference-image mappings live in _meta and the analysis MD.
+variants:
+  classic_chinese_signboard:
+    when_to_use: classic Chinese restaurant signature dish posters, traditional regional cuisine campaigns, heritage / family-recipe storytelling, Chinese chain restaurant menus, hand-made craft narrative
+    palette:
+      - warm cream or beige paper base
+      - dark brown or black for primary brush type
+      - red accent for badge / seal / secondary type
+      - optional green or blue panel for ribbon / bottom band
+    background_treatment: warm cream / beige / peach textured paper with optional faint watermark pattern (ingredient silhouette / heritage architectural line / faint Chinese ornament typography / ink-wash brush watermark); never plain solid
+    typography_emphasis: massive heavy black or dark-brown hand-painted brush calligraphy as dominant title, with characteristic drybrush / signboard ink character; small caps English subtitle horizontal at bottom; vertical Chinese small text for product copy or origin claim
+    decoration_emphasis: oval or round small concept badges (generic small character oval seal / round signature label), brand emblem with shop name lockup in a corner, optional ribbon banner with cuisine concept, optional red seal or stamp, vertical Chinese sub-copy column, decorative bottom strip with romanization
+    information_density: medium-rich
+
+  japanese_izakaya_brush:
+    when_to_use: Japanese izakaya / ramen / donburi / udon brand posters, Japanese-Chinese fusion item launches, regional-limited Japanese-style items, restaurant signboard with mixed Chinese-Japanese kanji
+    palette:
+      - warm cream or beige paper base
+      - black or dark-brown for primary brush type
+      - blue panel or orange panel for title color block
+      - red for badge / wave illustration accent
+    background_treatment: textured paper with optional Japanese motif overlay (wave illustration in red brush / kanji watermark typography / faint seafood silhouette / dotted half-tone pattern); often a solid color block (blue / orange) hosts the title
+    typography_emphasis: massive heavy hand-painted brush calligraphy mixing Chinese kanji with Japanese hiragana / katakana; characteristic dense signboard ink; secondary small caps English seafood / regional callout
+    decoration_emphasis: red oval price badge, regional-limited vertical stamp, brand izakaya emblem in a corner, wave or seafood illustration as background overlay, vertical Japanese small-text copy column, optional time-window or promo strip
+    information_density: medium-rich
+
+  festive_campaign_brush_kv:
+    when_to_use: festival-themed campaigns (winter solstice / spring festival / regional food festival), urban-culture or city-flavor campaigns, brand collaboration KV with strong typographic statement, fast-food chain regional editions
+    palette:
+      - vibrant base (yellow / orange / peach) with paper texture
+      - oversized red or dark brush type
+      - secondary mixed English serif and Chinese serif for festive mix
+      - optional pink / green accent for festival motif
+    background_treatment: textured paper with strong festive elements — irregular bright color block, scattered photo cutouts of regional ingredients, regional landmark line drawings, festive ornament line art, or seasonal motif pattern
+    typography_emphasis: oversized handpainted brush calligraphy as the hero, often mixed with large festive serif English; rotated / tilted secondary typography; bracketed editorial copy fragments
+    decoration_emphasis: multiple oval festival badges, hashtag callout labels for regional flavors, regional landmark line art, scattered photo cutouts of ingredients in baskets, mascot illustration or brand emblem with year, time-window strip
+    information_density: rich
+
+anti_ai_rules:
+  - title MUST be hand-painted brush calligraphy with weathered / drybrush / signboard ink character; NEVER use clean printed Ming, modern rounded sans, cartoon childish letterforms, or thin elegant Western serif as the dominant title
+  - title MUST occupy 40-60% of frame width as the visual protagonist; NEVER reduce title scale below 30% or push to supportive section header role
+  - dish MUST be real photographed food in believable vessel with natural lighting; NO AI-illustrated food; NO 3D rendered dish; NO clay-like food; NO glossy plastic finish
+  - dish occupies 25-40% of frame — supports the title, never exceeds it; NEVER let dish exceed 50% of frame
+  - background MUST be textured paper (cream / beige / peach / orange / yellow / kraft) with optional faint watermark pattern; NEVER plain bleached white; NEVER random noise; NEVER dirty AI texture; NEVER dark feast-scene background
+  - color family MUST be warm base + dark type + optional accent panel; NEVER high-saturation promo red filling the entire background; NEVER neon / fluorescent
+  - decoration density MUST be medium-rich — at least 4 supporting element types (badges / brand emblem / price tag / vertical small copy / seal / watermark pattern); NEVER empty hero layout
+  - mixed-language typography is encouraged (simplified + traditional + Japanese kanji + small English) — but NEVER garbled or pseudo-Chinese / pseudo-Japanese characters
+  - no random AI doodle stickers floating without an info role
+  - no Chinese traditional ornament excess (印章 / 卷草 / 祥云 / 花纹 dense pattern) — a single small red seal or stamp is acceptable
+  - storytelling / signboard copy tone — NEVER use elegant editorial small caps style; NEVER use sale-shout buy-now splashes covering the design
+  - keep brush calligraphy LEGIBLE — drybrush ink character is fine but characters must be readable Chinese (or Japanese kanji), not abstract scribble
+  - no fake premium gold sparkle, no rainbow gradient, no neon backlight; warm paper-print feel only
+
+style_dna: |
+  STYLE: signboard_typography_food_poster — typography-led food poster combining oversized hand-painted brush calligraphy Chinese title as the visual protagonist (40-60% of frame width with weathered drybrush signboard ink character) with a single hero real photographed dish (bowl / plate / steamer occupying 25-40% of frame) underneath or overlapping the title, all on a textured warm paper background (cream / beige / peach / orange / yellow / kraft) with optional faint watermark pattern (ingredient silhouette / regional landmark line / wave illustration / heritage translucent watermark typography), surrounded by multiple supporting elements (oval badges / brand emblem / price tags / vertical Chinese small copy / seals / hashtag callouts) in a street-signboard tone.
+
+  STYLE ESSENCE: typography-led signboard food poster with hand-painted brush calligraphy as protagonist. NOT a multi-dish menu array, NOT a clean editorial supportive-title layout, NOT a product-led layout with small caption, NOT a 3D rendered dish or clay food, NOT a cute cartoon mascot-led poster, NOT a sparse Japanese minimalist single-frame, NOT a heritage Chinese ornament-heavy poster, NOT a storytelling premium tea-brand zen aesthetic.
+
+  CORE VISUAL LOGIC: massive hand-painted brush calligraphy Chinese title occupies 40-60% of frame width as THE visual protagonist (the title is the hero, NOT the dish); a single real photographed hero dish (occupying 25-40% of frame) sits under or interleaves with the title; the background is a textured warm paper surface optionally carrying a faint watermark pattern coherent with the concept (ingredient line art / regional landmark silhouette / wave illustration / heritage translucent watermark typography); a rich set of supporting elements surrounds the title and dish (oval badges, brand emblem, price tag, vertical Chinese small-text copy column, seals, hashtag callouts, decorative bottom strip); the color system stays warm-base (cream / peach / orange / yellow) with dark type (black / dark brown / wine red) and optional accent panel (blue / orange / red ribbon); mixed-language typography (simplified + traditional + Japanese kanji + small English) signals regional / international / authentic flavor; the overall tone is street-signboard heritage-restaurant, not editorial-refined.
+
+  ROLE-BASED ELEMENT GRAMMAR (must include at least 6 categories, choreographed not random; all concrete rendered text MUST be derived from the user-provided title and subtitle or be generic placeholder concept words, NEVER copied from this prompt):
+  - dominant hand-painted brush calligraphy title: occupies 40-60% of frame width, characterful drybrush / signboard ink, derived from user-provided title text
+  - single hero real photographed dish: occupies 25-40% of frame, real natural-lit food photography
+  - textured warm paper background: cream / beige / peach / orange / yellow / kraft paper grain
+  - faint watermark pattern overlay (optional but recommended): ingredient line art / regional landmark silhouette / wave illustration / heritage translucent watermark typography / brush ornament silhouette — ONE mode only, kept subtle
+  - oval or round concept badges (1-3): small generic concept word (signature / limited / authentic / origin / season — derive from user subtitle, do not copy specific badge wording from this prompt)
+  - brand emblem (1): small circular or rectangular shop / brand mark in a corner, monochrome or red, generic mark — never copy a specific named brand from this prompt
+  - price tag or callout (optional): currency-prefixed price or time-window callout in small framed text, derived from user copy
+  - vertical Chinese small-text column (optional): tasting notes / origin claim / product description in clean serif, derived from user copy
+  - red seal or stamp (optional, one only): single small heritage seal accent
+  - bottom decorative strip (optional): romanization of title / cuisine concept band / small-caps English ribbon
+  - regional or Japanese motif accent (optional, for the relevant variants): wave illustration / regional landmark line / kanji watermark pattern / cherry blossom / chopsticks accent
+  - hashtag callout labels (festive variant only): # 概念词 short labels for flavor categories
+
+  ELEMENTS: dominant hand-painted brush calligraphy title, single hero real photographed dish, textured warm paper background, faint watermark pattern, oval concept badges, brand emblem, price tag, vertical Chinese small-text column, optional red seal, bottom decorative strip, optional regional motif accents, optional hashtag labels.
+
+  TYPOGRAPHY: dominant oversized hand-painted brush calligraphy Chinese title — must have weathered / drybrush / signboard ink character, NEVER clean printed Ming, NEVER modern rounded sans, NEVER cartoon childish letterforms, NEVER thin elegant Western serif. Title scale 40-60% of frame width. Mixed-language support: simplified + traditional + Japanese kanji + small English encouraged for regional / izakaya variants. Small Chinese sub-copy in clean serif or seal-script for vertical columns. Small English in caps small-caps or bottom band. NO bubble fonts, NO childish letterforms.
+
+  COLOR: warm-base family with dark type and optional accent panel — pick one variant:
+  - classic Chinese signboard: warm cream / beige / peach paper with dark brown or black brush type and red accent
+  - Japanese izakaya brush: warm cream / beige with black brush + blue or orange title panel + red accents
+  - festive campaign brush KV: vibrant yellow / orange / peach with oversized red or dark brush + mixed serif English accents
+  Always warm base. Dark or red type. NO neon, NO fluorescent, NO promo-red filling the entire background.
+
+  TEXTURE: background MUST be textured warm paper (cream / beige / peach / orange / yellow / kraft grain); optional faint watermark pattern overlay (ingredient line art / regional landmark / wave illustration / heritage translucent watermark typography) kept subtle so it does not compete with title or dish. NEVER plain bleached white, NEVER random noise, NEVER dirty AI texture, NEVER dark feast-scene background, NEVER glossy plastic surface. Dish photography must look real with natural lighting and believable food texture (soup, meat, vegetable, steam, sauce).
+
+  INFORMATION DENSITY: MEDIUM-RICH — title + dish + textured background + watermark pattern + 4-6 supporting elements form a populated street-signboard composition. NEVER empty hero layout. NEVER over-stuffed sale-graphic clutter.
+
+  ANTI-AI RULES: real food photography only (no 3D / clay / illustrated dish); hand-painted brush calligraphy only (NEVER printed Ming / modern sans / cartoon); textured warm paper background only (NEVER plain white / NEVER random noise); warm-base + dark-type palette only (NEVER full-bleed promo red); medium-rich supporting elements only (NEVER empty); mixed-language readable (NEVER garbled pseudo-Chinese); no random AI doodles; no ornament excess; storytelling / signboard copy tone only; no fake premium gold sparkle.
+
+default_composition: |
+  COMPOSITION: vertical 3:4 poster, title-led signboard layout —
+  - top section: oversized hand-painted brush calligraphy Chinese title (40-60% of frame width), placed as the visual protagonist either centered, top-aligned, or as a vertical pillar on one side
+  - central section: single hero real photographed dish (bowl / plate / steamer, 25-40% of frame width) underneath the title or interleaving with it
+  - sidebars: vertical Chinese small-text column for product description or origin claim
+  - decorative supporting elements: 2-3 oval concept badges, brand emblem in a corner, optional price tag, optional single red seal stamp, optional bottom decorative strip with romanization
+  - background: textured warm paper (cream / beige / peach / orange / yellow / kraft) with optional faint watermark pattern (ingredient silhouette / regional landmark line / wave illustration / heritage translucent watermark typography) — kept subtle
+
+  OUTPUT RATIO: 3:4.
+
+final_image_prompt: |
+  (auto-composed at use time = style_dna + default_composition)
+  For 4:1 banner output, use the banner_4_1_production template + production_profile below.
+
+design_quality_checklist:
+  - 标题是否手写毛笔字（有顿挫 / 飞白 / 风化感）？（印刷 Ming / 圆体 / 卡通字 = ❌）
+  - 标题是否占画面 40-60%, 是视觉绝对主导？（标题做小 / supportive = ❌）
+  - 菜品是否真实摄影（汤色 / 肉质 / 蒸汽细节可见）？（插画 / 3D / 卡通 = ❌）
+  - 菜品占画面是否 25-40%（不超过标题主导）？（菜品 > 50% = ❌）
+  - 背景是否 textured 暖色纸面？（纯白 / 净色 / 脏底 / 深色 = ❌）
+  - 是否有 watermark pattern overlay（食材 / 地域 / 水波 / heritage 字）？
+  - 是否有 4-6 个支撑元素（徽章 + 品牌 + 价签 + vertical 小字 + 印章 + bottom strip）？（≤ 3 = 空荡 = ❌）
+  - 调色是否暖基底 + 深字色？（高饱和促销红铺满 = ❌）
+  - 是否有混排语言（简中 + 繁中 / 日文 / 英文）？
+  - 是否避免中式 ornament 堆砌（单红印章 OK, 卷草 / 祥云 / 花纹 = ❌）？
+  - 字符是否清晰可读, 无伪中文 / 伪日文 / 乱码？
+  - 整体调性是否街边手写招牌（不是 editorial 精致, 不是 storytelling premium zen）？
+
+production_profile:
+  production_template: production_templates/banner_4_1_production.yaml
+  supported_outputs:
+    - banner_4_1
+  default_output: banner_4_1
+  title_style: |
+    DOMINANT oversized hand-painted brush calligraphy Chinese title — must occupy 40-60% of frame width as the visual protagonist.
+    Must have weathered / drybrush / signboard ink character, with characteristic uneven strokes and traditional hand-sign feel.
+    ABSOLUTELY NEVER use clean printed Ming, modern rounded sans, cartoon childish letterforms, thin elegant Western serif, or bubble fonts as the dominant Chinese-equivalent title.
+    Mixed-language typography is encouraged for regional variants (simplified + traditional + Japanese kanji + small English).
+  subtitle_style: |
+    Small caps English horizontal band beneath the title (or as bottom strip with cuisine concept romanization); OR a vertical Chinese small-text column for product description / origin claim; OR a small generic festival / concept phrase derived from the user-provided subtitle.
+  background_style: |
+    Textured warm paper background — pick the variant base:
+    - classic Chinese signboard: warm cream / beige / peach paper grain with optional faint ingredient silhouette or heritage translucent watermark typography
+    - Japanese izakaya brush: cream / beige paper with optional Japanese motif overlay (wave illustration / kanji watermark / seafood silhouette / dotted half-tone) often combined with a solid color block (blue / orange) hosting the title
+    - festive campaign brush KV: vibrant yellow / orange / peach paper with optional festive elements (irregular bright color block / scattered photo cutouts / regional landmark line drawings / seasonal motif pattern)
+    NEVER plain bleached white, NEVER random noise, NEVER dirty AI texture, NEVER dark feast-scene background, NEVER promo-red full-bleed.
+  composition_preference: |
+    Title-led signboard layout — oversized hand-painted brush calligraphy Chinese title is THE visual protagonist (40-60% of frame width), placed centered, top-aligned, or as a vertical pillar on one side.
+    Single hero real photographed dish (25-40% of frame width) sits underneath the title or interleaves with it — supports the title, never exceeds it.
+    Supporting elements (oval badges, brand emblem, price tag, vertical Chinese small-text column, seals, bottom strip) surround the title and dish.
+    NEVER multi-dish menu array. NEVER product-led layout with small caption title. NEVER empty hero with no supporting elements.
+  decoration_requirements: |
+    Medium-rich signboard decoration — every element earns its place in the signboard hierarchy.
+    All concrete rendered text MUST be derived from user-provided title, subtitle, and copy; NEVER copy specific Chinese phrases, brand names, dish names, or example words from this prompt.
+    Pick 5-7 categories per banner from this slot grammar (MANDATORY items marked):
+    - dominant hand-painted brush calligraphy title — MANDATORY
+    - single hero real photographed dish — MANDATORY
+    - textured warm paper background — MANDATORY
+    - optional faint watermark pattern overlay (ingredient line / regional landmark / wave / heritage translucent watermark typography) — strongly recommended
+    - 1-3 small oval or round concept badges (generic concept word from user subtitle, never invented brand text)
+    - small brand emblem in a corner — generic monochrome or red, never copy a specific named brand from this prompt
+    - optional price tag or time-window callout (small framed text, derived from user copy)
+    - optional vertical Chinese small-text column for product description
+    - optional single small red seal or stamp (one only)
+    - optional bottom decorative strip with romanization or cuisine concept band
+    - optional regional / Japanese motif accent for the relevant variants (wave illustration / kanji watermark / regional landmark / cherry blossom)
+    - optional hashtag callout labels for festive variant
+    NEVER use Chinese traditional ornament excess (卷草 / 祥云 / 花纹 dense pattern); single small red seal is the only heritage element allowed.
+    NEVER use random AI doodle stickers floating without an info role.
+    NEVER use promo sale stickers, discount mega-callouts, or buy-now splashes covering the design.
+    NEVER copy any specific Chinese phrase, brand name, dish name, or example word from this prompt into the image.
+  information_density: medium-rich
+  anti_ai_emphasis:
+    - "MUST: oversized hand-painted brush calligraphy Chinese title at 40-60% of frame width as the visual protagonist"
+    - "MUST: title with weathered / drybrush / signboard ink character"
+    - "MUST: single hero real photographed dish at 25-40% of frame (supports the title, never exceeds it)"
+    - "MUST: textured warm paper background (cream / beige / peach / orange / yellow / kraft)"
+    - "MUST: 4-6 supporting elements around title and dish (badges / brand / price / vertical small copy / seal / bottom strip / watermark pattern)"
+    - "MUST: warm-base palette with dark type and optional accent panel"
+    - "MUST: street-signboard tone, not editorial-refined"
+    - "NEVER: clean printed Ming / modern rounded sans / cartoon / bubble fonts for the title"
+    - "NEVER: title scale below 30% of frame width or in supportive section-header role"
+    - "NEVER: 3D rendered dish / clay food / illustrated food / glossy plastic finish"
+    - "NEVER: dish exceeding 50% of frame width or product-led layout with small caption title"
+    - "NEVER: plain bleached white background, random noise, dirty AI texture, dark feast-scene background"
+    - "NEVER: high-saturation promo red filling the entire background"
+    - "NEVER: empty hero layout without supporting elements"
+    - "NEVER: Chinese traditional ornament dense pattern (卷草 / 祥云 / 花纹)"
+    - "NEVER: random AI doodle stickers floating without an info role"
+    - "NEVER: promo sale stickers / discount mega-callouts / buy-now splashes covering the design"
+    - "NEVER: garbled or pseudo-Chinese / pseudo-Japanese characters"
+    - "NEVER: fake premium gold sparkle / rainbow gradient / neon backlight"
+    - "NEVER: copy specific Chinese phrases, brand names, dish names, or example words from this prompt into the image"

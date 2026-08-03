@@ -1,0 +1,385 @@
+_meta:
+  source: hand_extracted_from_9_reference_images
+  reference_path: ~/Desktop/头图参考图/有趣文字/
+  reference_files:
+    - 3f25edcf5993cda4df1578dde3995ca5.jpg  # 传承创新 / FREE RANGE CHICKEN — noren帘子容器 → paper_banner_container
+    - 478a9210368e0575f335c68ddb8f7b44.jpg  # 加價就有喜 — 红色 ribbon + 多 tag → paper_banner_container
+    - 5ede5c60fe4ea26643fc6ce9840093e2.jpg  # 芝芝满陇金桂 HEYTEA — 米黄圆角块 → modern_color_block_container
+    - 71c673d59223825b09dd6b1d473b6eff.jpg  # 第六市場 — 黄色撕纸带 + 橙色长条 → paper_banner_container
+    - c16dfe3f2033ca06ed3fbcf7098852c7.jpg  # 粽子大對決 TABASCO — 复古金框 + 红 ribbon → traditional_ornament_container
+    - c3277dbb570b9fc60ea6546b3839d4ba.jpg  # 趙記傳承 UNCLE CHIU — 4 个如意框 per-char → traditional_ornament_container
+    - ef2305e6b3cfcde56247b754263da33d.jpg  # 豆豆波波茶 — 黄色 banner + 圆环 — paper_banner_container
+    - ffe15c76e35b26028cab96fd2369d323.jpg  # 赭·庭深几许 — 5 个圆形 per-char + 罗马音 → traditional_ornament_container
+    - 截屏2026-06-22 00.18.40.png             # 一周食谱 MENU OF THE WEEK — 红色 tag → modern_color_block_container
+  status: ready
+  extracted_by: claude_code
+  notes: |
+    REPLACES the prior playful_type_shape_festival_poster.yaml — the old name
+    pointed to "字母变形音乐节海报", but actual references are FOOD posters
+    with text wrapped in decorative containers. Old file deleted.
+
+    Core distinction from sibling styles:
+    - vs signboard_typography_food_poster: signboard uses BARE BRUSH calligraphy
+      as protagonist (no container); this style wraps EVERY text element in
+      a decorative container (banner / ribbon / tag / oval / per-char circle)
+    - vs clean_fresh_menu_grid_poster: clean menu is multi-dish grid with
+      supportive title; this is single-hero with title-IN-container DOMINANT
+    - vs chinese_fresh_lifestyle: chinese_fresh has bare text, this has
+      text-in-container as the visual signature
+
+    Uses banner_4_1_production.yaml (single-hero typography-led).
+
+style_name: playful_text_container_food_poster
+style_cn: 有趣文字
+style_cn_full: 有趣文字 · 装饰容器型字体食物海报风（每个文字都装在装饰容器里）
+style_type: 餐饮单品海报 / 节庆活动 KV / 品牌联名 / 季节限定 / 传统手作叙事 / 文化主题餐饮
+
+usage_scenes:
+  - 餐饮品牌新品海报（带传承/文化叙事的）
+  - 节庆活动 KV（节日 / 端午 / 中秋 / 春节 / 文化节）
+  - 品牌联名（如 HEYTEA × 文化 IP, TABASCO × 端午）
+  - 季节限定 / 限定回归菜品
+  - 传统手作 / 老字号餐饮宣传
+  - 文化主题餐饮（庭院茶 / 复古中餐 / 节气美食）
+  - 小红书餐饮封面带强字体设计
+  - 门店头图 / 海报系列封面
+
+mood_keywords:
+  - 文字容器化
+  - 多容器并存
+  - 装饰文字
+  - 复古手作
+  - 传统/文化感
+  - 暖色基调
+  - 真实菜品支撑
+  - 混排语言
+  - 节庆/限定
+  - 编辑感装饰
+
+one_liner: 用多种装饰容器（纸帘 / ribbon / 撕纸带 / 如意框 / 圆环 / 复古金框 / 色块 tag）把每个标题 / 副文 / 标签包起来 + 真实菜品摄影支撑 + 暖色基调, 构建一种"文字 = 视觉主角 + 容器 = 装饰本身"的有趣文字食物海报。
+
+output_ratio_options:
+  banner: '4:1'
+  poster: '3:4'
+  square: '1:1'
+
+style_essence:
+  visual_type:
+    - typography-in-decorative-container food poster
+    - multi-container layout (banner / ribbon / tag / oval / per-char circle / vintage frame)
+    - real food photography supporting
+    - warm-base palette with vintage / heritage / playful character
+    - text-in-container is the visual signature (NOT bare brush calligraphy, NOT bare modern type)
+  not:
+    - bare brush calligraphy as protagonist (that is signboard_typography style)
+    - multi-dish menu array with supportive title (that is clean_fresh_menu style)
+    - storytelling-zen tea-brand aesthetic (that is fresh_green_natural style)
+    - clean editorial layout with text floating freely
+    - 3D rendered food / clay / illustrated dish
+    - high-saturation promo KV with red banners
+    - generic AI rounded rectangle containers without decorative character
+
+core_visual_logic:
+  - 每个文字元素（标题 / 副文 / 标签 / 价签）都被装进装饰容器, 几乎不出现裸字漂浮
+  - 容器是多样化的（一张图常 2-5 个不同形状的容器并存）
+  - 容器本身有装饰性（纸质 / 复古金线 / 如意造型 / ribbon 翻折感 / 撕纸边缘 / 印章纹理）, NOT 通用 AI 圆角矩形
+  - 单 hero 真实菜品摄影作为视觉支撑（25-40% 画面）, 不是主角
+  - 标题 + 容器组合是 protagonist, 占画面 30-50%
+  - 暖色基调（米色 / 桃色 / 红色 / 暖橙 / 暖黄 / 暖棕）+ 偶尔绿色作 panel 对比
+  - 混排语言常见: 中文 + 罗马拼音注解 / 英文小注
+
+design_quality_logic:
+  design_sense_from:
+    - 文字容器化建立"字 + 容器"双重视觉层
+    - 容器多样化（不同形状 + 不同纹理）创造画面节奏
+    - 容器本身的装饰性（纸感 / 复古 / 手作）建立文化感
+    - 真实菜品摄影质感作为温度支撑
+    - 暖色基调统一画面, 克制饱和度
+    - 混排语言（中 + 罗马音 / 英）增加编辑感
+  key_design_decisions:
+    - 绝不让文字裸排 — 每个文字必装容器
+    - 用 2-5 个不同形状容器, 不用单一容器
+    - 容器要有装饰特征, 不用通用几何
+    - 让文字 + 容器组合占画面主导, 菜品做支撑
+    - 暖色基调统一, 不用高饱和促销红
+    - 混排语言显现文化深度
+  hierarchy_control:
+    - 第一层: 主标题 + 主装饰容器（占画面 30-50%）
+    - 第二层: 真实菜品摄影（25-40%）
+    - 第三层: 副文 + 副容器 / per-char 容器 / 装饰标签
+    - 第四层: 罗马音注解 / 小英文 / 品牌 emblem / 印章
+  layout_intention:
+    primary: top_container_title_with_dish_below（主容器在上, 菜品在下方）
+    variant_1: side_container_with_dish_flanking（容器在一侧, 菜品在另一侧）
+    variant_2: per_character_container_grid（每字独立容器, 横排或排列）
+    variant_3: vintage_frame_full_border（古典框线包整个 layout）
+    rule: 文字容器永远是视觉主角群, 菜品是支撑
+  restraint:
+    - 不用裸字浮在背景
+    - 不用单一类型的容器（要多样化）
+    - 不用通用 AI 圆角矩形（要有装饰特征）
+    - 不用 3D / 卡通 / 插画菜品
+    - 不用高饱和促销红铺满
+    - 不用 elegant editorial sans-serif（这是手作 playful 调）
+    - 不用现代极简 layout（必须有装饰容器系统）
+  theme_form_relationship:
+    - 「传承 / 老字号 / 文化」→ 复古金框 / 如意容器 / 印章 + 暗红/暖棕底
+    - 「节庆 / 限定」→ ribbon / banner / yellow tag 容器 + 暖红/暖黄底
+    - 「现代品牌 / 联名」→ 圆角色块 + 现代 tag 容器 + 桃色/米色底
+    - 「江湖 / 街市」→ 撕纸带 / 手写撕边 + 真实场景底
+    - 「禅意 / 庭院」→ 圆环 per-char + 罗马音 + 米色复古花砖底
+    - 「中式手作」→ noren 帘子 / 卷轴 + 暖棕 + 真实砂锅
+  avoid_losing_design_sense:
+    - 不要让文字裸排（毁容器化签名）
+    - 不要把容器形状统一（毁多容器节奏）
+    - 不要用 AI 通用圆角矩形（毁装饰感）
+    - 不要让菜品过大喧宾夺主（保持菜品支撑性）
+    - 不要砍掉混排语言（毁文化深度）
+    - 不要换高饱和促销色（变促销 KV）
+    - 不要用现代极简 layout（毁手作 playful 调）
+  most_valuable_reusable_decision:
+    - 「文字必装容器 + 多容器并存 + 容器本身装饰化 + 真实菜品支撑」四要素
+    - 每个文字元素都有"小房子"的容器化原则
+    - 容器形状多样化（banner / ribbon / oval / per-char circle / vintage frame）创造节奏
+    - 暖色基调 + 混排语言 + 复古手作调
+
+theme_transfer_rule:
+  principle: >
+    主题迁移时必须保留: 文字容器化原则（每个文字必装容器）、容器多样化（2-5 个不同形状）、
+    容器本身的装饰特征（纸质 / 复古 / 手作, NOT 通用圆角矩形）、真实菜品摄影支撑、
+    暖色基调、混排语言能力。新主题元素必须保持容器化文字系统, 不能用裸排; 容器风格按
+    新主题选择（传承用复古框 / 节庆用 ribbon / 现代用圆角色块）; 菜品保持真实摄影。
+  transferable_design_relationships:
+    - every_text_element_in_decorative_container
+    - multi_container_diversity_in_one_banner
+    - container_has_decorative_character_not_generic
+    - single_hero_real_dish_as_supporting
+    - warm_base_color_palette
+    - mixed_language_capability
+    - playful_or_heritage_handcrafted_tone
+  replaceable_surface_elements:
+    - 具体菜品类型（炖品 / 茶饮 / 粥品 / 粽子 / 甜品 / 炸物 / 单品）
+    - 容器风格家族（复古金框 / 如意框 / paper banner / ribbon / 撕纸带 / 圆环 / 色块 tag）
+    - 暖色底色（米色 / 桃色 / 暖红 / 暖橙 / 暖棕 / 暖黄）
+    - 装饰主题（祥云 / 古典框 / 节庆 motif / 禅意 / 街市烟火 / 庭院）
+    - 标题文字（按用户主题）
+    - 混排语言（中 + 英 / 中 + 罗马音 / 中 + 日 kanji）
+  avoid_when_transferring:
+    - bare_text_without_container
+    - single_container_type_only
+    - generic_ai_rounded_rectangle
+    - dish_dominating_the_frame
+    - clean_editorial_elegant_serif_only
+    - high_saturation_promo_red_fill
+    - modern_minimalist_layout
+    - 3d_or_illustration_dish
+  object_translation_map:
+    new_dish: real photographed dish (bowl / cup / steamer / plate) in believable vessel with natural lighting; supporting role, 25-40% of frame
+    new_main_title: oversized Chinese title placed inside a decorative container appropriate to the theme (heritage = vintage gold frame / 节庆 = ribbon banner / modern = rounded color block / per-char = oval circle group)
+    new_secondary_text: each secondary text (副文 / 价签 / 标签 / 注解) ALSO wrapped in its own smaller decorative container, different shape from the main title container
+    new_container_palette: pick 2-5 container shapes from {ribbon, banner, paper-tag, oval-frame, per-char-circle, vintage-gold-frame, torn-paper-strip, rounded-color-block, noren-curtain, shield, cloud-shape}
+    new_brand: small brand emblem with optional vintage seal stamp, never dominant
+  must_keep:
+    - 每个文字必装容器
+    - 2-5 个不同形状容器并存
+    - 容器有装饰特征（纸 / 复古 / 手作 / 印章）
+    - 单 hero 真实菜品支撑
+    - 暖色基调
+    - 混排语言
+    - 文字 + 容器组合做画面主角
+  must_not_happen:
+    - 裸字浮在背景
+    - 全部容器同一形状
+    - 通用 AI 圆角矩形
+    - 菜品占画面 > 50%
+    - 纯白电商底
+    - 高饱和促销红铺满
+    - 现代极简 layout
+
+# NOTE: variant subfields are dumped verbatim into SELECTED VARIANT in the
+# assembled prompt. Any concrete Chinese text, brand name, dish name, or
+# poster headline embedded here will be copied by the model into the image
+# as if it were an instruction. Use format descriptions, NOT concrete
+# examples. Concrete reference-image mappings live in _meta and analysis MD.
+variants:
+  paper_banner_container:
+    when_to_use: heritage / handcrafted / regional storytelling, traditional cooking narrative, classic Chinese restaurant new launch, paper-craft aesthetic campaigns
+    palette:
+      - warm cream or beige base
+      - warm yellow or warm orange for primary container
+      - dark brown or deep red for type
+      - red seal or stamp accent
+    background_treatment: warm textured paper (cream / beige / kraft) with optional very subtle watermark pattern (faint food silhouette / steam / cloud motif); real food photography may serve as the bottom-half background
+    typography_emphasis: massive heavy black or deep-red Chinese title placed inside a noren-curtain / ribbon-banner / torn-paper-strip container; smaller English caps secondary line as a small horizontal sub-band; vertical Chinese descriptor text inside a thin paper-strip container
+    container_emphasis: noren curtain (rectangular hanging fabric / paper banner) for the main title; ribbon banner with folded ends for promotional copy; torn-paper strips with rough edges for secondary text; yellow paper tag with stitched border for highlight text
+    decoration_emphasis: optional small brand emblem at the top, optional small red seal stamp at a corner, optional small dotted divider or stitched-paper edge
+    information_density: medium-rich
+
+  traditional_ornament_container:
+    when_to_use: heritage brand / vintage / cultural / festival campaigns, classical Chinese cuisine, premium gift sets, regional dessert / dim sum brands
+    palette:
+      - warm beige or cream base
+      - deep red or wine red for vintage frame and accent
+      - gold for frame lines and ornament
+      - dark brown or black for type
+    background_treatment: warm vintage paper or cream with optional faint floral / geometric ornament pattern; real food photography in the central area with traditional table setting (mahjong tiles / dice / cloth)
+    typography_emphasis: heavy Chinese title characters placed each in their own decorative container (oval / 如意-shape / round-frame) — for short titles, one container per character; secondary romanization line in small caps under or above; subtle gold-line decorative frame around the whole composition
+    container_emphasis: per-character oval / 如意 / round-frame containers for the main title; vintage gold-line frame around the entire banner edge; smaller decorative cartouches for secondary copy; optional ribbon banner with folded ends for sub-title
+    decoration_emphasis: gold corner ornaments, optional small ornamental dividers, optional small red seal or stamp, optional traditional motif (cloud / geometric / floral) as subtle background
+    information_density: medium-rich
+
+  modern_color_block_container:
+    when_to_use: modern tea brand / dessert brand / contemporary single-product launches, brand collaboration KV with soft modern aesthetic, lifestyle campaigns
+    palette:
+      - soft warm pastel base (peach / cream / soft yellow)
+      - rounded block color (mustard yellow / soft red / sage green) for main container
+      - dark brown or deep navy for type
+      - one accent color matched to product
+    background_treatment: soft warm pastel solid with optional very subtle hand-drawn cloud or botanical line accents; real product photography supported by natural props (wood block / stone / sprig / leaf)
+    typography_emphasis: bold Ming or rounded heavy Chinese title placed inside a rounded color block / soft rectangle tag container; small caps English brand line below; optional secondary tag or descriptor copy in a smaller rounded block
+    container_emphasis: rounded rectangle color block for the main title; small rounded color tag for promotional callouts; soft outline frame for secondary copy; optional speech-bubble shape for playful highlight
+    decoration_emphasis: hand-drawn cloud or floral line accents at corners, optional small brand emblem, optional photographic natural prop (stone / sprig / wood block) near the product
+    information_density: medium
+
+anti_ai_rules:
+  - text MUST be wrapped in a decorative container — bare floating text is FORBIDDEN for this style
+  - use 2-5 different container shapes per banner (do NOT use only one container type for all text)
+  - containers MUST have decorative character (paper texture / vintage gold line / handcrafted edge / ornamental cartouche / per-char rounded frame); NEVER use generic AI rounded rectangles with no character
+  - dish MUST be real photography in a believable vessel; NO 3D rendered dish; NO illustrated food; NO clay food
+  - dish occupies 25-40% of frame — supporting role; NEVER let dish exceed 50% of frame
+  - title scale 30-50% of frame width (DOMINANT but within container)
+  - background MUST be warm textured paper / pastel / vintage surface; NEVER plain bleached white; NEVER high-saturation promo red filling the whole frame; NEVER random AI noise
+  - typography MUST be heavy Ming / brush / decorated serif / rounded display matched to variant; NEVER thin generic sans-serif Chinese
+  - mixed-language readable (Chinese + English / Pinyin / romanization); NEVER garbled or pseudo-Chinese / pseudo-English characters
+  - no random AI doodle stickers floating without an info role; every decoration must serve a role
+  - no Chinese traditional ornament excess (印章 / 卷草 / 祥云 / 花纹 dense pattern) beyond the variant's allowed level — a single small red seal is acceptable
+  - playful / heritage / handcrafted tone only — NEVER elegant editorial sans-serif clean minimalism
+  - container edges look hand-drawn / printed / stitched / paper-torn, not perfect digital geometry
+
+style_dna: |
+  STYLE: playful_text_container_food_poster — typography-in-decorative-container food poster combining oversized Chinese text wrapped in 2-5 different decorative containers (noren curtain / ribbon banner / torn-paper strip / oval frame / per-character rounded circle / vintage gold frame / rounded color block / paper tag) with a single hero real photographed dish as supporting element, all on a warm textured paper or pastel background in a playful-heritage-handcrafted tone.
+
+  STYLE ESSENCE: typography-in-decorative-container food poster. NOT bare brush calligraphy as protagonist (that is signboard_typography style), NOT multi-dish menu array with supportive title (that is clean_fresh_menu style), NOT storytelling-zen tea-brand aesthetic (that is fresh_green_natural style), NOT clean editorial layout with text floating freely, NOT 3D rendered food, NOT high-saturation promo KV, NOT generic AI rounded rectangle containers without decorative character.
+
+  CORE VISUAL LOGIC: every text element (main title / secondary copy / sub-labels / price callouts) is wrapped in its own decorative container — bare floating text is FORBIDDEN; the banner uses 2-5 different container shapes simultaneously to create visual rhythm (one container per text element, container shape varies by text role); containers themselves carry decorative character — paper-textured, vintage gold-line, per-character oval, ribbon-folded, torn-paper-edge, ornamental cartouche — never generic AI rounded rectangles; a single real photographed hero dish (25-40% of frame) provides supporting visual weight underneath or beside the title-container system; the title+container combination is the DOMINANT visual subject (30-50% of frame width); the color system stays warm-base (cream / beige / peach / orange / warm red / kraft) with dark type and optional accent panel; mixed-language typography (Chinese + Pinyin romanization + English small caps) signals editorial / cultural depth; the overall tone is playful-heritage-handcrafted, not editorial-elegant-minimalist.
+
+  CONTAINER VOCABULARY (must use 2-5 different shapes per banner; all concrete container content must be derived from the user-provided title and subtitle, NEVER copied from this prompt):
+  - noren_curtain: rectangular hanging-fabric / paper-banner shape with optional bamboo rod on top, for heritage handcrafted titles
+  - ribbon_banner: ribbon with folded ends, for promotional copy and festive titles
+  - torn_paper_strip: rectangular paper strip with rough hand-torn edges, for street-market or casual titles
+  - paper_tag: small rectangular tag with stitched / dotted border, for highlight callouts and small labels
+  - per_character_oval: each title character placed inside its own oval / circle / 如意-shape container, for heritage Chinese titles (works best for 2-6 character titles)
+  - vintage_gold_frame: gold-line decorative frame around the whole banner edge or around a sub-section
+  - ornamental_cartouche: shield-shape or scroll-shape ornamental frame for sub-titles
+  - rounded_color_block: rounded rectangle solid color block for modern brand titles
+  - soft_outline_frame: thin rounded outline frame for secondary copy
+  - speech_bubble: rounded speech-bubble shape for playful highlight
+
+  ELEMENTS: oversized Chinese title in decorative container (main protagonist), 1-3 secondary text containers (smaller / different shape), single hero real photographed dish, optional small brand emblem, optional small red seal stamp, optional decorative corner ornaments, optional faint background watermark pattern matched to variant, optional small natural prop (sprig / stone / wood / cloud line accent).
+
+  TYPOGRAPHY: heavy Chinese title type matched to variant — heavy black Ming for heritage handcrafted variant, heavy decorated Chinese for traditional ornament variant, bold rounded display Chinese for modern color-block variant. Title MUST sit INSIDE its decorative container, not floating beside it. Secondary text in smaller serif or romanization caps inside smaller containers. Mixed-language pairs (Chinese + Pinyin / English / romanization) are characteristic. ABSOLUTELY NO thin generic sans-serif Chinese, NO cartoon bubble fonts, NO abstract scribble that is not readable Chinese.
+
+  COLOR: warm-base family with dark type — pick one variant:
+  - paper banner container: warm cream / beige / kraft base with deep red or dark brown brush + warm yellow / orange container fill + red seal accent
+  - traditional ornament container: warm cream / vintage paper base with deep red / wine red container + gold line ornament + dark brown type
+  - modern color block container: soft warm pastel (peach / cream / soft yellow) base with mustard / soft red / sage green container + dark brown or deep navy type
+  Always warm base. NO neon, NO high-saturation promo red filling the whole background.
+
+  TEXTURE: background MUST be warm textured paper or pastel solid with optional faint watermark pattern; container surfaces MUST look hand-crafted (paper-textured / gold-line / printed / stitched / torn-edge), NOT digitally perfect geometry; dish photography must look real with natural lighting. NO glossy plastic, NO 3D render finish, NO AI fantasy glow.
+
+  INFORMATION DENSITY: MEDIUM-RICH — title-in-container + 1-3 secondary text containers + dish + 2-3 small ornament elements + background pattern form a populated composition with playful character. NEVER bare hero with single container. NEVER over-stuffed sale clutter.
+
+  ANTI-AI RULES: every text in decorative container (NEVER bare floating text); 2-5 different container shapes (NEVER single uniform container); containers have hand-crafted decorative character (NEVER generic AI rounded rectangles); real food photography (NEVER 3D / illustrated / glossy plastic); warm-base palette only (NEVER full-bleed promo red); medium-rich population (NEVER empty / NEVER over-stuffed); mixed-language readable (NEVER pseudo-Chinese); no random AI doodles; no ornament excess.
+
+default_composition: |
+  COMPOSITION: vertical 3:4 poster, title-container-led layout —
+  - top section: main title wrapped in a decorative container (noren curtain / ribbon banner / per-char oval group / vintage frame) — DOMINANT element occupying 30-50% of frame width
+  - central section: single hero real photographed dish (bowl / plate / cup / steamer) supporting the title from below or to the side, 25-40% of frame
+  - secondary text containers: 1-3 smaller different-shape containers wrap subtitle / price callout / vertical sub-copy / origin claim
+  - decorative corners: optional small brand emblem, single red seal stamp, gold corner ornament, small natural prop
+  - background: warm textured paper / vintage surface / soft pastel with optional faint watermark pattern matched to variant
+
+  OUTPUT RATIO: 3:4.
+
+final_image_prompt: |
+  (auto-composed at use time = style_dna + default_composition)
+  For 4:1 banner output, use the banner_4_1_production template + production_profile below.
+
+design_quality_checklist:
+  - 是否每个文字元素都装在装饰容器里？（裸字漂浮 = ❌）
+  - 是否有 2-5 个不同形状容器并存？（单一容器类型 = ❌）
+  - 容器是否有装饰特征（纸质 / 复古 / 手作 / 印章 / per-char）？（通用 AI 圆角矩形 = ❌）
+  - 主标题 + 主容器是否占画面 30-50%, 视觉主导？
+  - 菜品是否真实摄影, 占画面 25-40%（支撑非主导）？（3D / 插画 / 卡通 = ❌）
+  - 背景是否暖色纹理纸面？（纯白 / 净色 / 深色 / 高饱和促销红 = ❌）
+  - 字体是否重 Ming / 粗黑 / 装饰 serif（按 variant）？（廉价 sans / 卡通 = ❌）
+  - 是否有混排语言（中 + 英 / 拼音 / 罗马音）？
+  - 容器边缘是否手作感（纸感 / 撕边 / 金线 / 印章 / 缝线）？
+  - 是否避免随机 AI 涂鸦 / 假高级金 / 神奇光晕？
+  - 字符是否清晰可读, 无伪中文 / 乱码？
+  - 整体调性是否 playful-heritage-handcrafted（不是 editorial-elegant-minimalist）？
+
+production_profile:
+  production_template: production_templates/banner_4_1_production.yaml
+  supported_outputs:
+    - banner_4_1
+  default_output: banner_4_1
+  title_style: |
+    DOMINANT oversized Chinese title wrapped INSIDE a decorative container — must occupy 30-50% of frame width as the visual protagonist.
+    Typography matched to variant: heavy black Ming for paper banner variant; heavy decorated Chinese for traditional ornament variant; bold rounded display for modern color-block variant.
+    Title MUST sit INSIDE the container, not floating beside it.
+    NEVER use thin generic sans-serif Chinese; NEVER bubble cartoon fonts; NEVER abstract unreadable scribble.
+  subtitle_style: |
+    Smaller English caps or Pinyin romanization line wrapped in its own different-shape container (smaller scale); OR a short Chinese descriptor in a small framed tag; OR a vertical sub-copy column inside a thin paper-strip container.
+    All secondary text must also be in a container — never floating.
+  background_style: |
+    Warm textured paper / pastel surface — pick the variant:
+    - paper banner: warm cream / beige / kraft paper grain with optional faint food silhouette watermark
+    - traditional ornament: warm cream / vintage paper with optional faint floral / geometric ornament pattern, often with gold-line frame around the whole edge
+    - modern color block: soft warm pastel (peach / cream / soft yellow) with optional faint hand-drawn cloud or botanical line accents
+    NEVER plain bleached white, NEVER random AI noise, NEVER high-saturation promo red filling the background, NEVER dark feast scene.
+  composition_preference: |
+    Title-container-led layout — main title wrapped in a DOMINANT decorative container (30-50% of frame width) occupying the top, top-left, or top-center.
+    Single hero real photographed dish (25-40% of frame width) supports from below, beside, or interleaved with the title-container.
+    1-3 smaller secondary text containers (different shapes) wrap subtitle / price / origin / sub-copy, placed around the title-container and dish.
+    NEVER bare text floating in the layout. NEVER dish dominating the frame. NEVER single-container layout.
+  decoration_requirements: |
+    Multi-container typography system + warm textured background — every element earns its place.
+    All concrete rendered text MUST be derived from user-provided title, subtitle, and copy; NEVER copy specific Chinese phrases, brand names, dish names, or example words from this prompt.
+    Pick 5-7 categories per banner from this slot grammar (MANDATORY items marked):
+    - main title wrapped in DOMINANT decorative container (noren / ribbon / per-char oval / vintage frame / rounded block matched to variant) — MANDATORY
+    - single hero real photographed dish — MANDATORY
+    - warm textured paper / pastel background — MANDATORY
+    - 1-3 secondary text containers in different shapes (smaller scale) wrapping subtitle / price / sub-copy — MANDATORY (at least 1)
+    - optional small brand emblem in a corner — generic, never copy a specific named brand from this prompt
+    - optional single small red seal or stamp (one only)
+    - optional decorative corner ornaments (gold corner / floral motif / dotted divider)
+    - optional faint background watermark pattern matched to variant
+    - optional small natural prop near the dish (sprig / stone / wood block / cloud line accent)
+    NEVER use Chinese traditional ornament excess (卷草 / 祥云 / 花纹 dense pattern); single small red seal is the only heritage element allowed beyond the container ornament itself.
+    NEVER use generic AI rounded rectangles without decorative character — every container must look hand-crafted, paper-textured, gold-lined, stitched, or torn-edged.
+    NEVER use random AI doodle stickers floating without an info role.
+    NEVER copy any specific Chinese phrase, brand name, dish name, or example word from this prompt into the image.
+  information_density: medium-rich
+  anti_ai_emphasis:
+    - "MUST: every text element wrapped in a decorative container"
+    - "MUST: 2-5 different container shapes per banner (multi-container diversity)"
+    - "MUST: containers have hand-crafted decorative character (paper-textured / vintage gold-line / per-char oval / torn-edge / ribbon-folded)"
+    - "MUST: single hero real photographed dish at 25-40% of frame (supporting role)"
+    - "MUST: warm textured paper / pastel background (cream / beige / peach / orange / kraft)"
+    - "MUST: heavy Ming / decorated Chinese / bold rounded display typography matched to variant"
+    - "MUST: mixed-language readable typography (Chinese + Pinyin / English / romanization)"
+    - "MUST: playful-heritage-handcrafted tone, not editorial-elegant-minimalist"
+    - "NEVER: bare floating text without a container"
+    - "NEVER: single uniform container type for all text"
+    - "NEVER: generic AI rounded rectangles without decorative character"
+    - "NEVER: thin generic sans-serif Chinese / cartoon bubble fonts / unreadable abstract scribble"
+    - "NEVER: 3D rendered dish / clay food / illustrated dish / glossy plastic finish"
+    - "NEVER: dish exceeding 50% of frame width or dominating the layout"
+    - "NEVER: plain bleached white background / random AI noise / dirty texture"
+    - "NEVER: high-saturation promo red filling the entire background"
+    - "NEVER: dense Chinese traditional ornament (卷草 / 祥云 / 花纹) beyond variant allowance"
+    - "NEVER: random AI doodle stickers floating without an info role"
+    - "NEVER: garbled or pseudo-Chinese / pseudo-English characters"
+    - "NEVER: fake premium gold sparkle / rainbow gradient / neon backlight"
+    - "NEVER: copy specific Chinese phrases, brand names, dish names, or example words from this prompt into the image"

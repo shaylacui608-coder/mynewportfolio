@@ -1,0 +1,89 @@
+style_name: douyin_clay_3d_life_sale_kv
+style_cn: 黏土活动
+style_cn_full: 黏土 3D 本地生活活动 KV
+matching_status: excluded_from_food_category_matching
+exclude_from_category_matching: true
+exclude_reason: 不适合作为当前餐饮品类海报风格推荐项
+style_type: 平台活动 KV / 本地生活营销视觉 / 黏土质感 3D
+
+style_essence:
+  visual_type:
+    - clay-like 3D rendering
+    - platform campaign KV
+    - cute commercial prop scene
+  not:
+    - flat poster
+    - realistic photography
+    - luxury product editorial
+
+core_visual_logic:
+  - 用中心化黏土主视觉承载活动主题
+  - 周围小道具构成本地生活场景联想
+  - 柔和材质降低促销感，让活动更亲近
+
+design_quality_logic:
+  design_sense_from:
+    - 统一黏土材质
+    - 中心主体和环绕道具的层级清楚
+    - 色彩明快但不过度刺眼
+  key_design_decisions:
+    - 把生活服务转译成可爱的 3D 小物
+    - 用大主视觉控制画面
+    - 保持光照柔和统一
+  hierarchy_control:
+    - 活动主题物件第一层
+    - 生活服务小物第二层
+    - 活动文字和辅助信息第三层
+  layout_intention:
+    - 中心聚合，周围散点补充品类
+  restraint:
+    - 小物数量有限
+    - 不使用真实照片
+    - 不加入高反射金属或玻璃
+  theme_form_relationship:
+    - 本地生活被转译为餐饮、休闲、到店、券包等黏土符号
+  avoid_losing_design_sense:
+    - 不要把道具做成随机玩具堆
+    - 不要使用复杂真实场景
+    - 不要让材质混乱
+
+theme_transfer_rule:
+  principle: >
+    保留黏土 3D、中心主视觉、柔和光照和有限环绕道具。新主题必须变成统一材质的小型生活符号。
+  transferable_design_relationships:
+    - central_hero_object
+    - orbiting_service_props
+    - soft_clay_material
+    - friendly_campaign_mood
+  replaceable_surface_elements:
+    - service_prop_types
+    - hero_object_shape
+    - supporting_color_palette
+  avoid_when_transferring:
+    - realistic_store_scene
+    - too_many_props
+    - mixed_materials
+    - unreadable_fake_text
+
+anti_ai_rules:
+  - Use one coherent clay material system.
+  - Avoid excessive glossy highlights.
+  - Avoid random unrelated props.
+  - Avoid unintended brand marks or logo text.
+
+production_profile:
+  production_template: production_templates/banner_4_1_production.yaml
+  supported_outputs:
+    - banner_4_1
+  default_output: banner_4_1
+  title_style: friendly bold campaign title, rounded but not generic, integrated with clay 3D hero object
+  subtitle_style: small platform campaign callout or coupon badge in matching soft clay style
+  background_style: soft colorful commercial 3D environment with unified clay material and gentle lighting
+  composition_preference: centered hero clay object with orbiting service props adapted to wide banner
+  decoration_requirements: limited orbiting life-service props, coupon symbols, soft shadows, unified material
+  information_density: medium, friendly and clear
+  anti_ai_emphasis:
+    - one coherent clay material system
+    - no random unrelated props
+    - no mixed materials
+    - no excessive glossy highlights

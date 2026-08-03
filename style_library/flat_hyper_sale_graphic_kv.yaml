@@ -1,0 +1,88 @@
+style_name: flat_hyper_sale_graphic_kv
+style_cn: 促销图形
+style_cn_full: 高饱和平面大促图形 KV
+matching_status: excluded_from_food_category_matching
+exclude_from_category_matching: true
+exclude_reason: 不适合作为当前餐饮品类海报风格推荐项
+style_type: 平台大促视觉 / 高冲击运营 KV / 平面图形营销
+
+style_essence:
+  visual_type:
+    - flat graphic design
+    - high-saturation campaign KV
+    - bold typography-led marketing visual
+  not:
+    - 3D rendering
+    - realistic photography
+    - quiet editorial layout
+
+core_visual_logic:
+  - 用强色块和大字形成瞬时注意力
+  - 图形符号服务促销节奏，而不是构成真实空间
+  - 视觉冲击来自色彩对撞和文字层级
+
+design_quality_logic:
+  design_sense_from:
+    - 大面积纯色控制
+    - 主标题极强
+    - 促销符号被图形化
+  key_design_decisions:
+    - 不做真实场景
+    - 不做复杂透视
+    - 用少数高能元素形成节奏
+  hierarchy_control:
+    - 大促标题第一层
+    - 核心利益点第二层
+    - 图形装饰第三层
+  layout_intention:
+    - 高密度但有明确视觉中心
+  restraint:
+    - 不让所有角落都同样热闹
+    - 不混用太多字体
+    - 不加入照片质感
+  theme_form_relationship:
+    - 主题通过促销符号、色块和标题形态表达
+  avoid_losing_design_sense:
+    - 避免做成杂乱电商拼贴
+    - 避免伪 3D 过多
+    - 避免信息层级崩塌
+
+theme_transfer_rule:
+  principle: >
+    保留高饱和色块、大标题、强促销层级和图形化符号。新主题元素要变成平面营销符号，
+    不能转成真实商品堆叠或 3D 场景。
+  transferable_design_relationships:
+    - bold_type_hierarchy
+    - color_block_impact
+    - graphic_promotion_symbols
+    - controlled_density
+  replaceable_surface_elements:
+    - sale_icons
+    - abstract_stickers
+    - accent_shapes
+  avoid_when_transferring:
+    - realistic_product_collage
+    - weak_title_scale
+    - too_many_equal_badges
+
+anti_ai_rules:
+  - Avoid random sale stickers without hierarchy.
+  - Avoid fake 3D depth unless specifically requested.
+  - Keep text blocks readable and dominant.
+
+production_profile:
+  production_template: production_templates/banner_4_1_production.yaml
+  supported_outputs:
+    - banner_4_1
+  default_output: banner_4_1
+  title_style: bold oversized promotional typography with strong scale contrast
+  subtitle_style: concise benefit callout, badge, or sale note with clear hierarchy
+  background_style: high-saturation flat color blocks with graphic contrast; no realistic scene
+  composition_preference: high-impact centered or diagonal graphic hierarchy adapted to 4:1
+  decoration_requirements: graphic sale symbols, abstract stickers, accent shapes, controlled density
+  information_density: high but clearly tiered
+  anti_ai_emphasis:
+    - no realistic product collage
+    - no weak title scale
+    - no too-many-equal badges
+    - no fake 3D depth unless requested

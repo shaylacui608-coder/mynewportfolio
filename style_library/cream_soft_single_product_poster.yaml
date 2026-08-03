@@ -1,0 +1,251 @@
+style_name: cream_soft_single_product_poster
+style_cn: 奶油单品
+style_cn_full: 奶油柔和单品海报风
+style_type: soft cream single-product poster / gentle new product KV / dessert and drink commercial visual
+
+source_folder: /Users/bytedance/Desktop/头图参考图/奶油单品
+representative_files:
+  - 0c2e4f21004d8c19d958140a2aebd85b.jpg
+  - 234781566ebaea4e2003e504a6182ce1.jpg
+  - 4da520ec6de54a57e16a6d7cbe5baee7.jpg
+  - 5ede5c60fe4ea26643fc6ce9840093e2.jpg
+  - 62f7ba50b1d49574cbffa9b8d20cadcf.jpg
+  - 71c673d59223825b09dd6b1d473b6eff.jpg
+  - 9dbe56aa58e35aecbb19119c4db2c082.jpg
+  - ef2305e6b3cfcde56247b754263da33d.jpg
+
+style_essence:
+  visual_type:
+    - soft single-product commercial poster
+    - cream-toned dessert or drink KV
+    - gentle new product announcement
+    - light still-life food poster
+  not:
+    - multi-dish menu grid
+    - strong signboard typography poster
+    - dark feast KV
+    - high-saturation sale graphic
+    - western bakery editorial menu
+
+core_visual_logic:
+  - 用奶油色、米白、浅黄、柔橙或浅粉背景托住一个主产品，让产品显得温柔、干净、可亲近。
+  - 画面通常只有一个主单品或少量组合，道具围绕主产品解释口味、质地或新品感。
+  - 标题不需要压场，而是以柔和手写、圆润标题或轻量衬线表达温暖情绪。
+  - 设计感来自轻柔色彩、单品聚焦、少量道具和干净商业留白。
+
+design_quality_logic:
+  design_sense_from:
+    - 奶油色背景和柔和光线带来亲和、甜感和干净度
+    - 主产品被明确居中或放在稳定构图点，不被多元素稀释
+    - 少量原料、杯具、植物或纸张道具解释口味和质感
+    - 文字层级轻，不用强促销语气破坏温柔气质
+  key_design_decisions:
+    - 只突出一个主产品或一个清晰组合
+    - 用低饱和暖色建立新品/甜品氛围
+    - 控制道具数量，保留大片轻背景
+    - 小标签和卖点只作为辅助，不成为大促贴纸
+  hierarchy_control:
+    - 主产品是第一视觉层
+    - 柔和标题是第一信息层
+    - 原料、杯具、小食或包装是第二视觉层
+    - 口味、价格、小卖点是第三信息层
+  layout_intention:
+    - 竖版多用中心单品、上方标题、下方小信息
+    - 横幅应让单品与标题形成左右或中心平衡，背景保持干净
+    - 道具只围绕主产品形成温柔陈列
+  restraint:
+    - 不使用强红黄促销色
+    - 不堆多个产品成菜单
+    - 不加入复杂真实场景
+    - 不让文字变成密集说明书
+  theme_form_relationship:
+    - 甜品、饮品、奶制品、轻食新品通过奶油色、柔光、原料小物和温柔标题表达
+    - 口味通过水果、坚果、茶叶、谷物、奶泡或小食材进入画面
+    - 新品感通过小徽章、日期、短句和干净留白表达
+  avoid_losing_design_sense:
+    - 避免把单品海报做成多菜品菜单
+    - 避免高饱和大促和过多价格标签
+    - 避免背景太空但没有产品锚点
+    - 避免随机漂浮食材造成 AI 拼贴感
+  most_valuable_reusable_decision:
+    - 用柔和奶油背景和单一产品焦点建立温暖新品感，让少量道具服务口味和质地说明。
+
+composition_system:
+  layout_skeleton:
+    - single hero product
+    - soft cream background
+    - small supporting prop cluster
+    - gentle title and short callout
+  focal_point:
+    - one cup, dessert, snack, package, or hero item
+  rhythm:
+    - quiet central focus with small orbiting props and light text
+  whitespace:
+    - generous warm negative space, especially around title and product
+
+element_system:
+  core_elements:
+    - hero product photo
+    - flavor ingredient props
+    - small dish, cup, spoon, napkin, paper, or plant
+    - soft shadow
+  supporting_elements:
+    - small badge
+    - rounded label
+    - delicate line or icon
+    - light texture
+  element_abstraction:
+    - props should remain small, tactile, and connected to flavor or product material
+  element_density:
+    - low to medium-low; one hero and a few supports
+
+typography_system:
+  typography_role:
+    - title sets warmth and product mood
+    - short copy explains flavor, newness, or comfort
+  font_style:
+    - soft handwritten Chinese
+    - rounded display Chinese
+    - light serif or clean sans for small copy
+  scale_relationship:
+    - medium title, clear hero product, small supporting copy
+  type_image_relationship:
+    - typography should embrace or balance the product, not dominate like signboard style
+
+color_system:
+  primary_colors:
+    - cream white
+    - warm beige
+    - soft yellow
+    - peach orange
+  secondary_colors:
+    - milk brown
+    - pale pink
+    - light gray
+    - soft tea green
+  accent_colors:
+    - fruit orange
+    - small seal red
+    - nut brown
+  color_logic:
+    - low-saturation warm palette with product-derived flavor accents
+
+texture_and_material:
+  material:
+    - creamy paper background
+    - ceramic cup or plate
+    - soft food photography
+    - fabric or paper prop
+  texture:
+    - smooth cream surface, subtle grain, soft shadow, light foam or crumb texture
+  lighting:
+    - warm diffused commercial light, no harsh drama
+  avoid_material:
+    - glossy plastic 3D
+    - neon gradients
+    - metallic luxury
+    - dark smoky background
+
+information_density:
+  density: low_to_medium
+  whitespace_strategy:
+    - keep warm blank space around the hero product
+    - place text in one or two controlled zones only
+  decoration_density:
+    - low; every prop should explain product flavor, texture, or mood
+
+mood:
+  keywords:
+    - gentle
+    - creamy
+    - soft
+    - sweet
+    - warm
+    - clean
+    - approachable
+  commercial_feeling:
+    - friendly new-product poster, dessert or drink launch, soft premium snack KV
+  audience_feeling:
+    - comforting, light, inviting, not noisy
+
+theme_transfer_rule:
+  principle: >
+    Transfer the soft single-product relationship first: one clear hero product,
+    cream-toned background, gentle title, a few flavor props, and warm negative
+    space. New themes should change product, flavor props, and accent color,
+    but keep the quiet single-product focus.
+  transferable_design_relationships:
+    - single_product_as_hero
+    - cream_background_as_warmth
+    - few_flavor_props_as_story
+    - gentle_title_as_mood
+    - warm_negative_space
+  replaceable_surface_elements:
+    - product type
+    - flavor ingredient
+    - prop material
+    - accent color
+    - badge shape
+  avoid_when_transferring:
+    - multi_dish_menu_grid
+    - high_saturation_sale_graphics
+    - dense_price_tags
+    - random_floating_ingredients
+    - dark_restaurant_scene
+
+variants:
+  dessert_soft_launch:
+    variant_cn: 甜品柔推
+    use_when: 蛋糕、甜点、小食、烘焙单品
+    visual_notes:
+      - crumb, cream, fruit, nut, plate or paper props
+      - warm cream and peach palette
+  drink_single_product:
+    variant_cn: 饮品单品
+    use_when: 奶茶、酸奶、茶饮、咖啡单品
+    visual_notes:
+      - cup/bottle hero, ingredient cues, soft shadow
+      - title can be vertical or gently wrapped around product
+  comfort_snack:
+    variant_cn: 温柔小食
+    use_when: 坚果、谷物、轻零食、早餐小食
+    visual_notes:
+      - beige/yellow palette, tactile small props, low density
+
+anti_ai_rules:
+  - Do not turn the layout into a multi-item menu grid.
+  - Do not add strong sale stickers or excessive prices.
+  - Keep only one clear hero product or one compact product set.
+  - Do not invent logos, brand marks, or dense fake packaging text.
+  - Avoid random floating ingredients and plastic-looking food.
+  - Blend provided product or dish photos naturally without rectangular cutout edges.
+
+production_profile:
+  production_template: production_templates/banner_4_1_production.yaml
+  supported_outputs:
+    - banner_4_1
+  default_output: banner_4_1
+  title_style: soft handwritten Chinese, rounded display type, or light serif title with gentle warmth
+  subtitle_style: short flavor note, small new-product badge, or simple rounded callout
+  background_style: cream, warm beige, soft yellow, peach, or pale pink background with subtle paper grain and soft shadows
+  composition_preference: 4:1 single-product hero layout with title balanced beside or above the product and a few flavor props nearby
+  decoration_requirements: small flavor ingredients, ceramic or paper props, soft shadow, subtle badge, delicate line accents
+  information_density: low_to_medium, warm and uncluttered
+  anti_ai_emphasis:
+    - one hero product only
+    - no dense fake package text
+    - no strong sale stickers
+    - no logo or platform marks
+    - blend provided dish photos naturally without rectangular cutout edges
+
+final_image_prompt: >
+  Create a 4:1 soft cream single-product food or drink banner. Use one clear
+  hero product on a warm cream, beige, soft yellow, peach, or pale pink
+  background with subtle paper grain, diffused light, and soft shadows. Add only
+  a few flavor-related props such as fruit, nuts, milk foam, spoon, ceramic
+  plate, paper, or small plant accents. Typography should be gentle: soft
+  handwritten Chinese, rounded display type, or light serif, with a short flavor
+  note or new-product badge. Keep the composition warm, clean, and uncluttered.
+  Avoid multi-dish menu grids, strong sale stickers, dense fake packaging text,
+  logos, random floating ingredients, plastic-looking food, and visible
+  rectangular edges around provided dish photos.

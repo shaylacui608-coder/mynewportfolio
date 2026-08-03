@@ -1,0 +1,413 @@
+_meta:
+  source: hand_extracted_from_9_reference_images
+  reference_path: ~/Desktop/中式清新_风格参考/
+  reference_files:
+    - 中式清新风_1.jpg              # 鲜龙骨煨/和家和 — 暖棕做旧 + 粗白书法
+    - 中式清新风_2.jpg              # 立秋·山药炖排骨 — 暖卡其 + 篆体水印 + 红如意印章
+    - 中式清新风_3.jpg              # 巷子粉铺 — 鹅黄棕 + 大白书法竖排 + 金边徽章
+    - 中式清新风_5.jpg              # 太兴臻享套餐 — 米色明朝体 + 多菜品分屏
+    - 中式清新风_6.jpg              # 隆重上市/果树面 — 麻布米色 + 大字竖排 + 祥云装饰
+    - 中式清新风_7.jpg              # Crystal Jade Yum Cha — 金色花框装饰
+    - 中式清新风_8.jpg              # 燦爛夏日 — 薄荷绿 + 满铺绿叶
+    - 中式清新风_9.jpg              # 十二月 — 双 banner + 多徽章
+    - d019c4a00402aac69e6a787319d83eba.jpg  # 地道南洋风味/海楠里 — 绿花砖 + 椰子树 IP
+  status: ready
+  extracted_by: claude_code
+  extraction_method: visual_style_extraction skill (6 steps, all 9 images analyzed)
+  notes: |
+    9 张参考图覆盖暖深红 / 暖棕做旧 / 卡其米色 / 鹅黄 / 茶绿 / 绿花砖等多种色调，
+    但共享同一套「中式商业餐饮海报」DNA：巨大中文书法/明朝体标题 + 真实菜品摄影 +
+    装饰生态系统 + 暖色纹理底 + 中-高信息密度。本资产取最大公约数，variants 保留 5 个主要色调分支。
+  supersedes: editorial_minimal_lifestyle.yaml  # 老版本判错为编辑克制派，已重命名归档
+
+style_name: chinese_fresh_lifestyle
+style_cn: 中式清新
+style_cn_full: 中式清新风（中式商业餐饮海报 · 装饰生态派）
+style_type: 中式餐饮海报 / 节气菜品 KV / 门店宣传 / 套餐推广 / 品牌活动视觉
+
+usage_scenes:
+  - 中式餐饮品牌新品上市
+  - 节气 / 季节菜品宣传
+  - 套餐 / 菜单推广
+  - 门店头图 / banner / KV
+  - 老字号 / 匠心叙事
+  - 火锅 / 粥品 / 烧腊 / 茶餐厅 / 中餐正餐 / 中式烘焙
+  - 小红书餐饮封面
+  - 节庆 / 活动 KV
+
+mood_keywords:
+  - 中式商业餐饮海报
+  - 巨大书法 / 明朝体压场
+  - 装饰生态系统
+  - 暖色基调
+  - 纹理 / 做旧底
+  - 信息饱满有序
+  - 烟火气
+  - 传统 / 匠心
+  - 节庆感
+  - 文化感
+
+one_liner: 以巨大中文书法 / 明朝体标题为视觉锚点 + 真实菜品摄影 + 围绕主体的装饰生态系统（角落植物 / 副徽章 / 印章 / 副文 / 底装饰带）+ 暖色纹理底，构建一种装饰饱满、烟火气浓、有秩序的中式商业餐饮海报。
+
+output_ratio_options:
+  banner: '4:1'
+  poster: '3:4'
+  square: '1:1'
+
+style_essence:
+  visual_type:
+    - Chinese commercial F&B promotional poster
+    - oversized Chinese typographic anchor (brush calligraphy or heavy Ming)
+    - real food photography
+    - ornamental ecosystem composition
+  not:
+    - flat graphic poster (背景必须有纹理)
+    - minimalist editorial poster (必须饱满, 不能稀薄)
+    - 3D rendering
+    - food illustration
+    - clay-like 3D
+    - high-saturation promo KV
+    - Western asymmetric left-text-right-image editorial layout
+
+core_visual_logic:
+  - 巨大中文标题（书法或明朝体）作为视觉锚点, 占画面 25-45% 宽度
+  - 真实菜品摄影承担质感与说服力, 可单可多
+  - 装饰生态系统环绕主体（角落植物 + 副徽章 + 副文 + 底装饰带 协同出现）
+  - 暖色调有纹理的底统一画面, 绝不用净色
+  - 信息密度中-高, 饱满有序
+
+design_quality_logic:
+  design_sense_from:
+    - 巨大中文书法 / 明朝体作为视觉锚点
+    - 真实菜品摄影质感
+    - 底色有纹理 / 做旧 / 场景
+    - 装饰生态系统协同（≥4 类协同）
+    - 暖色基调 + 红色印章点缀
+    - 信息密度饱满有序
+  key_design_decisions:
+    - 标题字号「压场」级别, 绝不普通
+    - 字体用书法或明朝体, 绝不用现代无衬线
+    - 底色有纹理, 绝不净色
+    - 装饰要「成生态」, 不是孤立 icon
+    - 真实摄影菜品, 绝不插画 / 3D
+    - 居中对称为主, 编辑三段或散布为辅
+    - 信息密度中-高
+  hierarchy_control:
+    - 第一层：巨大中文标题
+    - 第二层：真实菜品摄影
+    - 第三层：装饰生态（角落植物 + 副徽章 + 副文）
+    - 第四层：底部信息带 / 品牌信息 / 二维码
+  layout_intention:
+    primary: 居中对称（标题正中 + 菜品对称分布 + 角落装饰对应）
+    variant_1: 编辑三段（顶标题 / 中菜品 / 底信息）
+    variant_2: 分屏（上下两块各自完整）
+    variant_3: 散布（中央标题 + 周围菜品散点）
+    rule: 主体永远被装饰「包围」, 不孤立
+  restraint:
+    - 不用扁平纯色背景
+    - 不用 AI 装饰 icon（要传统印章 / 真实植物剪影 / 手工花体）
+    - 不用 3D / 卡通菜品
+    - 不用现代圆体 / 无衬线中文
+    - 不用高饱和荧光促销色
+    - 不用渐变光效 / 塑料质感
+    - 装饰不「堆乱」, 要成生态
+  theme_form_relationship:
+    - 「传统 / 匠心」→ 做旧底纹 + 书法 + 印章 + 砂锅器皿
+    - 「丰盛 / 烟火」→ 多菜品并排 + 暖色 + 装饰生态
+    - 「节气 / 季节」→ 对应角落植物 + 主题色（春樱花 / 夏绿叶 / 秋松枝红叶 / 冬梅竹）
+    - 「地域 / 风味」→ 场景化背景（港式店内 / 巴蜀辣椒 / 宣纸水墨 / 南洋花砖）
+    - 「老字号 / 品牌力」→ 顶部品牌徽章 + 底部品牌带 + 副徽章群
+  avoid_losing_design_sense:
+    - 不要把底变成净色（毁底纹）
+    - 不要砍掉装饰生态（变孤单）
+    - 不要换成现代无衬线（毁中式气质）
+    - 不要让菜品变插画 / 3D
+    - 不要堆乱（装饰要分层有序）
+    - 不要让信息密度太低（变成日系编辑感 = 失去中式特征）
+    - 不要「左文右图」那种 Western 报刊感
+  most_valuable_reusable_decision:
+    - 「巨大书法标题 + 真实菜品 + 装饰生态 + 纹理底」四要素结构
+    - 「角落植物 + 副徽章 + 底装饰带」的环绕装饰模式
+    - 暖色基调 + 红色印章点缀的色彩配方
+    - 居中对称为主、编辑三段为辅的构图选项
+
+theme_transfer_rule:
+  principle: >
+    主题迁移时必须保留：巨大中文书法 / 明朝体标题、真实菜品摄影、有纹理 / 做旧 / 场景的底、
+    装饰生态系统（角落植物 + 副徽章 + 副文 + 底装饰带）、暖色基调、中-高信息密度、
+    居中对称为主的构图。新主题元素必须保持真实摄影质感, 不能改成插画 / 3D / 扁平图形,
+    底色不能变成净色, 装饰生态不能砍光。
+  object_translation_map:
+    new_dish: real photographed dish in ceramic / clay / wood vessel; ideally 2 dishes for symmetric flanking
+    new_season: 'corner motif — pick from seasonal pool (春 — 樱花/桃花/玉兰/迎春/海棠; 夏 — 荷花/莲叶/绣球/蕨叶/绿藤; 秋 — 菊花/红叶/桂花/柿子枝/银杏; 冬 — 梅花/松枝/山茶/竹枝) OR non-plant pool (灯笼/中国结/折扇/团扇/流苏/香炉/茶具/折纸). DO NOT default to plum blossoms regardless of season.'
+    new_region: scene or pattern background — 港式店内 / 巴蜀辣椒 / 宣纸水墨 / 南洋花砖
+    new_brand: top brand badge + bottom brand band + optional mascot IP
+    new_festival: extra red + gold + denser decorative band
+  must_keep:
+    - 巨大中文书法 / 明朝体标题
+    - 真实菜品摄影
+    - 纹理 / 做旧 / 场景底
+    - 装饰生态系统（≥4 类协同）
+    - 暖色基调
+    - 信息密度中-高
+    - 居中对称为主
+  must_not_happen:
+    - 底变净色
+    - 装饰被砍光
+    - 用现代无衬线
+    - 菜品变插画 / 3D
+    - 信息密度过低
+    - 左文右图非对称
+
+variants:
+  warm_dark_red:
+    when_to_use: 火锅 / 中餐正餐 / 烧腊 / 港式 / 节庆 / 老字号
+    palette: 深红 / 酒红 / 暗红 + 米白 + 红色印章
+    background_texture: 做旧暗红墙纸 / 深色木纹 / 暗砖
+    corner_decoration: 红灯笼 / 中国结 / 流苏 / 八角 / 红枣 / 桂圆 / 松枝（火锅节庆元素混搭, 避免梅花单一）
+    typography_note: 偏粗白书法压场, 气势厚重
+    example_reference: 港式打边炉 / 烈火红金 / 暖棕做旧（图1风格再加深）
+  kraft_aged_brown:
+    when_to_use: 节气菜品 / 私房菜 / 粥品 / 匠心叙事
+    palette: 暖棕 / 卡其 / 赭石 + 红色印章
+    background_texture: 做旧牛皮纸 / 篆体水印 / 砖纹
+    corner_decoration: 松枝 / 红叶 / 干花
+    typography_note: 粗黑明朝体或书法均可
+    example_reference: 立秋·山药炖排骨（图2）/ 鲜龙骨煨（图1）
+  warm_beige_creamy:
+    when_to_use: 套餐推广 / 中式正餐 / 中式烘焙 / 高端品牌
+    palette: 米白 / 米黄 / 卡其 + 金色装饰
+    background_texture: 米色淡纹 / 麻布 / 宣纸
+    corner_decoration: 兰花 / 玉兰 / 桂花 / 桃花 / 折扇 / 团扇 / 祥云（典雅清新混搭, 避免梅花单一）
+    typography_note: 偏粗黑明朝体
+    example_reference: 太兴臻享套餐（图5）/ 隆重上市果树面（图6）/ Crystal Jade（图7）
+  mist_tea_green:
+    when_to_use: 夏季菜品 / 清新茶饮 / 健康轻食 / 韩日式中餐
+    palette: 茶绿 / 薄荷绿 + 米白 + 深绿点缀
+    background_texture: 茶绿淡纹 / 满铺绿叶
+    corner_decoration: 满铺绿叶 / 竹枝 / 茶叶
+    typography_note: 偏中文 + 韩文混排, 标题偏明朝体
+    example_reference: 燦爛夏日（图8）/ 十二月下半（图9）
+  ornate_floral_pattern:
+    when_to_use: 异域中餐 / 南洋 / 文化主题 / 品牌 IP 强的店
+    palette: 花砖绿 / 红 / 金
+    background_texture: 满铺花砖 / 几何纹 / 异域图案
+    corner_decoration: 椰子树 / 异域植物 / 品牌 IP
+    typography_note: 中文书法 + 红色英文花体叠加
+    example_reference: 地道南洋风味 / 海楠里（图9 新加）
+
+  lantern_festive_red:
+    when_to_use: 春节 / 周年庆 / 婚宴 / 喜庆活动 / 老字号节日推广 / 红色主题餐饮
+    palette: 大红 / 朱红 / 金 + 米白 + 黑色字
+    background_texture: 红色织锦 / 红色洒金 / 暗红印花
+    corner_decoration: 红灯笼 / 福字 / 对联 / 流苏 / 中国结 / 鞭炮 / 团扇 / 折扇（节庆喜庆元素, 强红+金色调）
+    typography_note: 粗黑书法 + 金边描边 + 红色印章双叠
+    example_reference: 春节餐饮 KV / 周年庆海报 / 婚宴菜单（参考图无直接对应, 新增 variant）
+
+  ink_wash_artistic:
+    when_to_use: 茶道 / 老字号品牌 / 文化品牌 / 高端文人餐饮 / 艺术联名
+    palette: 水墨黑灰 + 米白宣纸 + 一抹朱红印章
+    background_texture: 水墨山水淡墨 / 宣纸纹 / 兰墨笔触
+    corner_decoration: 水墨山水 / 兰墨 / 竹墨 / 书法笔触 / 印章 / 砚台 / 毛笔（文人艺术调, 黑灰色为主）
+    typography_note: 行书 / 草书 / 大字明朝, 偏文人手书感
+    example_reference: 文人茶馆 / 老字号文化海报（参考图无直接对应, 新增 variant）
+
+anti_ai_rules:
+  - no flat plain-color background; background MUST be textured / aged / scene-based
+  - no minimalist negative-space layout; must be a dense ornamental ecosystem
+  - no AI-style food illustration; dishes MUST be real photography
+  - no 3D rendered food; no clay-like 3D
+  - no modern geometric sans-serif Chinese; only brush calligraphy or heavy Ming
+  - no rounded bubble fonts
+  - no thin elegant Western serif as the main Chinese-equivalent headline
+  - no high-saturation neon promo colors
+  - no gradient lighting on the dishes
+  - no plastic-looking material textures
+  - no isolated random AI doodle icons; decoration must form a coherent ecosystem
+  - no garbled or pseudo-Chinese characters
+  - no Western asymmetric left-text-right-image editorial layout
+  - no documentary-style empty space
+  - no symmetric layout that is EMPTY (对称必须配合装饰填充)
+
+production_profile:
+  production_template: production_templates/banner_4_1_production.yaml
+  supported_outputs:
+    - banner_4_1
+    - poster_3_4
+    - square_1_1
+  default_output: banner_4_1
+  title_style: oversized Chinese brush calligraphy or heavy Ming headline, 25-45% of frame width, never rounded or modern sans-serif
+  subtitle_style: vertical poetic side text, framed sub-badge, small-cap English serif, or handwritten flourish
+  background_style: warm textured, aged, scene-based, floral tile, kraft, rice paper, linen, brick, or wallpaper; never flat plain color
+  composition_preference: centered symmetric first, with title and real dishes surrounded by a coherent ornamental ecosystem
+  decoration_requirements: at least four coordinated categories from corner plant motif, sub-badge, secondary text, bottom info band, red seal stamps
+  information_density: medium_high, densely populated but orderly
+  anti_ai_emphasis:
+    - no flat plain-color background
+    - no sparse minimalist layout
+    - no 3D or illustrated food
+    - no modern sans-serif Chinese headline
+    - no random isolated decoration
+
+style_dna: |
+  STYLE: chinese_fresh_lifestyle, Chinese commercial F&B promotional poster combining an oversized Chinese brush-calligraphy or heavy-Ming headline as the visual anchor, with real photographed dishes surrounded by a coherent ornamental ecosystem on a warm textured / aged / scene-based background.
+
+  STYLE ESSENCE: Chinese commercial F&B poster tradition (restaurant promotion, seasonal menu, set-meal launch, brand storefront banner). NOT Western editorial minimalism, NOT Japanese / Nordic clean-restraint, NOT 3D render, NOT illustration, NOT high-saturation promo KV.
+
+  CORE VISUAL LOGIC: an oversized Chinese title (brush calligraphy or heavy Ming) anchors the composition occupying 25-45% of the frame width; one or multiple real photographed dishes carry texture and credibility; a coherent decorative ecosystem (corner plant motif + sub-badges + secondary text + bottom info band) surrounds the main subject; a warm earth-tone or scene-textured background unifies everything; information density is medium-to-high, densely populated but orderly — NEVER sparse, NEVER empty.
+
+  DECORATIVE ECOSYSTEM (must include at least 4 categories, choreographed not random):
+  - corner motif: pick from SEASONAL POOL matching the user's title or concept (春: 樱花/桃花/玉兰/迎春/海棠; 夏: 荷花/莲叶/绣球/蕨叶; 秋: 菊花/红叶/桂花/柿子枝/银杏; 冬: 梅花/松枝/山茶/竹枝) OR from NON-PLANT POOL (灯笼/中国结/折扇/团扇/流苏/香炉/茶具/砚台) — placed at top corners (left AND right, mirrored or complementary). DO NOT default to plum blossoms regardless of season — choose the motif that matches the user's concept;
+  - sub-badges: round gold-rimmed seal OR framed callout box ("seasonal new" / "premium" / "no.1") OR petal-shape badge near the title;
+  - secondary text layer: vertical small-text columns (parallel poetic side lines), small-cap English serif or hand-written flourish, optional Korean / other-language support;
+  - bottom decorative band: continuous small icon row / repeating seal pattern / brand info band / dotted divider with section markers;
+  - traditional Chinese seal stamps: 1-3 small red stamps placed near the title or below.
+
+  ELEMENTS: real food photography (1-N dishes, prefer 2+ for symmetric flanking), ceramic / clay / casserole / steamer / wood vessel, wooden / linen / aged-paper prop surface, red seal stamps, framed callout badges, English serif lockup, vertical poetic side text, decorative bottom band, optional brand mascot IP.
+
+  TYPOGRAPHY: OVERSIZED Chinese brush calligraphy OR heavy Ming (宋体 / 明朝体) headline as the dominant visual anchor — must look commanding, not modest. Small Chinese serif / seal-script for secondary text. English in serif small caps or hand-written flourish. ABSOLUTELY NO rounded sans-serif, NO bubble fonts, NO modern geometric sans, NO thin elegant Western serif as the main Chinese-equivalent headline.
+
+  COLOR: warm-earth family with red-seal accent — pick one variant:
+  - warm dark red / maroon (火锅 / 节庆 / 港式)
+  - kraft / aged brown (节气 / 私房菜)
+  - warm beige / cream (套餐 / 中式正餐)
+  - mist tea-green (清新 / 夏季)
+  - ornate floral pattern (异域 / 南洋)
+  Low-to-medium saturation. Always warm. No neon. No fluorescent.
+
+  TEXTURE: background MUST be textured — aged paper, kraft, xuan rice paper, linen weave, brick wall, photo scene, ink-wash, floral tile pattern, or wallpaper print. NEVER flat plain color. Matte surfaces, natural lighting, no glossy plastic.
+
+  INFORMATION DENSITY: medium-to-high. Orchestrated, not sparse. Dishes, title, decoration, and bottom info form a coherent populated composition.
+
+  ANTI-AI RULES: no flat plain-color background; no Western minimalist negative-space layout; no AI-style food illustration; no 3D food; no modern Chinese sans-serif headline; no neon promo colors; no plastic textures; no isolated random AI icons; no garbled pseudo-Chinese; no Western asymmetric left-text-right-image editorial layout; no empty symmetric layout.
+
+default_composition: |
+  COMPOSITION: vertical 3:4 poster, CENTERED SYMMETRIC composition —
+  - top headline band: oversized Chinese brush calligraphy or heavy Ming title centered (vertical or horizontal), flanked by small vertical secondary text columns OR a framed sub-badge (seasonal new / premium);
+  - central hero band: real photographed dish(es) in ceramic / clay vessel(s), ideally 2 dishes flanking the title (one left, one right) on a textured background — or 1 central dish if only one provided;
+  - corner decoration: motif at top-left AND top-right chosen from the SEASONAL POOL matching the user's concept (春: 樱花/桃花/玉兰; 夏: 荷花/莲叶/绣球; 秋: 菊花/桂花/红叶; 冬: 梅花/松枝/竹枝) OR NON-PLANT POOL (灯笼/中国结/折扇/团扇/流苏/茶具) — do NOT default to plum blossoms;
+  - bottom info band: brand info / price / date / location with a thin or dotted decorative divider, optional small mascot IP and 1-3 red seal stamps.
+
+  OUTPUT RATIO: 3:4.
+
+final_image_prompt: |
+  (auto-composed at use time = style_dna + composition for the chosen output ratio)
+  For specific output formats see:
+    - banner_production block (4:1 widescreen, 3840x960)
+    - default_composition (3:4 vertical poster)
+    - future: square_production (1:1 KV)
+
+design_quality_checklist:
+  - 标题是否使用毛笔书法或粗壮明朝体？（圆体 / 无衬线 = 不及格）
+  - 标题是否压场尺寸（占画面 25-45% 宽度）？（字号偏小 = 不及格）
+  - 菜品是否为真实摄影质感？（插画 / 3D = 不及格）
+  - 底色是否有纹理 / 做旧 / 场景？（净色 = 不及格）
+  - 是否有装饰生态（≥4 类装饰元素协同）？（孤立 icon 或装饰过少 = 不及格）
+  - 角落是否有植物装饰？（左上 + 右上对应）
+  - 是否有副徽章 / 印章 / 副文层？
+  - 底部是否有装饰带 / 品牌信息？
+  - 色调是否暖色基调？（高饱和促销色 = 不及格）
+  - 信息密度是否中-高、饱满有序？（过于稀薄 = 变成日系编辑感 = 不及格）
+  - 构图是否居中对称（或编辑三段）？（左文右图 = 不及格）
+  - 是否避免渐变光效 / AI 装饰 / 描边花字？
+  - 视觉主次：标题 → 菜品 → 装饰 → 信息 是否清晰分层？
+
+# ============================================================
+# 门店头图生产层（schema v2 扩展字段）
+# 启用后, 本风格可被 scripts/assemble_banner_prompt.py 调用
+# 生成 4:1 门店头图（居中对称, 一次出图）
+# ============================================================
+banner_production:
+  enabled: true
+  layout: centered_symmetric
+  layout_description: >
+    Banner composition (4:1 ratio): oversized Chinese brush-calligraphy or heavy
+    Ming title CENTERED on a textured warm-earth background; real photographed
+    dishes flanking the title — one on the LEFT side and one on the RIGHT side
+    when 2 dishes are provided. Corner plant motifs at top-left and top-right.
+    A framed sub-badge OR vertical secondary text accents the title. A
+    decorative bottom info band runs across the lower edge. NEVER use
+    asymmetric left-text-right-image layout. NEVER use flat plain-color
+    background. NEVER use sparse minimalist layout.
+
+  text_slots:
+    title:
+      required: true
+      placement: centered horizontally, upper-center vertical
+      size: oversized dominant headline (25-45% of frame width)
+      style_note: must be brush calligraphy or heavy Ming; NEVER rounded or sans-serif
+    subtitle:
+      required: false
+      placement: directly below title OR as a small framed sub-badge near the title
+      size: small supporting line
+      style_note: small Chinese serif, or framed callout style
+
+  asset_slots:
+    dish_images:
+      required: false
+      min: 0
+      max: 4
+      placement: flanking the centered title symmetrically
+      treatment: >
+        Use the user-provided dish photograph(s) as real hero subject(s).
+        Keep each dish recognizable and untouched in form; integrate into the
+        warm textured background with soft natural light and traditional
+        ceramic / clay / casserole vessel feel. Blend the provided dish photos
+        naturally into the banner background; remove rectangular photo edges and
+        avoid visible cutout borders.
+
+  decorative_ecosystem:
+    required_categories_min: 4
+    categories:
+      - corner_plant_motif      # 角落植物 at top-left AND top-right
+      - sub_badge               # 副徽章 framed callout or round gold-rimmed seal
+      - secondary_text_layer    # 副文 vertical poetic side text or English serif flourish
+      - bottom_info_band        # 底部装饰带 dotted divider + brand info
+      - red_seal_stamps         # 红印章 1-3 stamps
+
+  api_params:
+    model: doubao-seedream-5-0-260128
+    size: 3840x960
+    n: 1
+    # doubao-seedream-5 不支持 guidance_scale; 若回到 seedream-4-5 再加。
+
+  dish_clauses:
+    '0': 'Render two complementary hero dishes flanking the centered title — one on the LEFT and one on the RIGHT, each in a traditional ceramic / clay / casserole vessel'
+    '1': 'Use the provided dish photograph as the central or left-flanking hero subject; generate one complementary companion dish on the opposite side to create symmetric balance (matching vessel and lighting). Blend the provided dish photo naturally into the banner background; remove rectangular photo edges and avoid visible cutout borders.'
+    '2': 'Place the first provided dish on the LEFT side and the second on the RIGHT side, both flanking the centered title with symmetric balance. Blend the provided dish photos naturally into the banner background; remove rectangular photo edges and avoid visible cutout borders.'
+    '3': 'Arrange the 3 provided dishes in a symmetric central composition around the title — typically one large central hero with two smaller flanking dishes. Blend the provided dish photos naturally into the banner background; remove rectangular photo edges and avoid visible cutout borders.'
+    '4': 'Arrange the 4 provided dishes in a balanced central cluster around or below the title, maintaining symmetry and a coherent ornamental layout. Blend the provided dish photos naturally into the banner background; remove rectangular photo edges and avoid visible cutout borders.'
+
+  prompt_assembly_template: |
+    {style_dna}
+
+    BANNER COMPOSITION: 4:1 widescreen banner, CENTERED SYMMETRIC layout.
+    - Title "{title}" placed CENTERED horizontally in the upper-center of the
+      frame as an OVERSIZED Chinese brush-calligraphy or heavy-Ming headline
+      occupying 25-45% of the frame width. NEVER use rounded sans-serif or
+      modern geometric type.
+    - {subtitle_clause}
+    - {dish_clause}, integrated into the warm textured background with soft
+      natural light and traditional ceramic / clay / casserole vessel feel.
+    - DECORATIVE ECOSYSTEM (REQUIRED, at least 4 categories, choreographed
+      not random):
+      • corner motifs at TOP-LEFT and TOP-RIGHT chosen from SEASONAL POOL
+        matching the user's concept (春: 樱花/桃花/玉兰/迎春/海棠; 夏: 荷花/
+        莲叶/绣球/蕨叶; 秋: 菊花/红叶/桂花/柿子枝/银杏; 冬: 梅花/松枝/山茶/
+        竹枝) OR NON-PLANT POOL (灯笼/中国结/折扇/团扇/流苏/香炉/茶具/砚台) —
+        DO NOT default to plum blossoms regardless of season; pick the motif
+        that visually matches the user-provided title and variant;
+      • 1-2 framed sub-badges or callout boxes near the title (e.g., "seasonal
+        new" / "premium" / a round gold-rimmed seal);
+      • optional vertical secondary small-text columns flanking the title
+        (parallel poetic side lines);
+      • 1-3 red traditional Chinese seal stamps near the title or below;
+      • a decorative bottom info band with a thin or dotted divider running
+        across the lower edge.
+    - BACKGROUND: warm textured / aged / scene-based surface — NEVER flat
+      plain color. Pick one: aged warm-red wallpaper / kraft aged brown /
+      warm beige linen / mist tea-green with foliage / ornate floral tile.
+    - Information density medium-to-high; orderly populated composition;
+      NEVER sparse, NEVER empty.
+
+    OUTPUT RATIO: 4:1.

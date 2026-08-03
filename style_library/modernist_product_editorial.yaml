@@ -1,0 +1,87 @@
+style_name: modernist_product_editorial
+style_cn: 现代单品
+style_cn_full: 现代主义产品编辑风
+matching_status: excluded_from_food_category_matching
+exclude_from_category_matching: true
+exclude_reason: 不适合作为当前餐饮品类海报风格推荐项
+style_type: 产品视觉 / 编辑版式 / 高级运营 KV
+
+style_essence:
+  visual_type:
+    - editorial product layout
+    - restrained graphic design
+    - clean commercial photography or render integration
+  not:
+    - cute illustration
+    - chaotic collage
+    - hyper sale poster
+
+core_visual_logic:
+  - 用清晰网格、产品留白和少量文字建立高级感
+  - 产品是画面主体，图形元素只负责支撑秩序
+  - 克制比装饰更重要
+
+design_quality_logic:
+  design_sense_from:
+    - 精准留白
+    - 严格的文字对齐
+    - 主体与信息的比例控制
+  key_design_decisions:
+    - 减少装饰元素
+    - 强调产品轮廓和材质
+    - 使用少量高对比文字
+  hierarchy_control:
+    - 产品主体第一层
+    - 标题第二层
+    - 辅助卖点第三层
+  layout_intention:
+    - 用网格和边距制造稳定商业感
+  restraint:
+    - 不堆砌标签
+    - 不使用复杂背景
+    - 不使用过多促销符号
+  theme_form_relationship:
+    - 主题通过产品姿态、背景色和少量图形暗示进入画面
+  avoid_losing_design_sense:
+    - 避免把画面做成普通电商详情图
+    - 避免过多渐变和装饰
+
+theme_transfer_rule:
+  principle: >
+    保留编辑版式、产品主体比例、留白和文字对齐方式。新主题应通过少量符号和色彩进入，
+    不能破坏产品作为第一视觉层级的关系。
+  transferable_design_relationships:
+    - product_as_hero
+    - strict_grid
+    - restrained_text
+    - controlled_negative_space
+  replaceable_surface_elements:
+    - accent_shape
+    - background_color
+    - small_theme_symbol
+  avoid_when_transferring:
+    - crowded_sale_badges
+    - floating_random_props
+    - excessive_texture
+
+anti_ai_rules:
+  - Avoid overdecorated commercial backgrounds.
+  - Keep text placement disciplined.
+  - Do not let theme props overpower the product.
+
+production_profile:
+  production_template: production_templates/banner_4_1_production.yaml
+  supported_outputs:
+    - banner_4_1
+  default_output: banner_4_1
+  title_style: restrained editorial typography, precise alignment, small-to-medium scale unless brand requires dominance
+  subtitle_style: minimal supporting copy, aligned to grid
+  background_style: clean controlled background, solid or subtle texture, with product-focused negative space
+  composition_preference: strict grid, product-led, quiet asymmetry or centered product hero depending on asset
+  decoration_requirements: very few accent shapes or lines; decoration must support product hierarchy
+  information_density: low_to_medium, refined and spacious
+  anti_ai_emphasis:
+    - no crowded badges
+    - no floating random props
+    - no excessive texture
+    - keep product first

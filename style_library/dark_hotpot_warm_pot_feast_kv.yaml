@@ -1,0 +1,113 @@
+style_name: dark_hotpot_warm_pot_feast_kv
+style_cn: 暗调火锅
+style_cn_full: 深色火锅汤锅宴席 KV
+style_type: 火锅海报 / 汤锅套餐 KV / 暖冬餐饮活动视觉
+
+source_folder: /Users/bytedance/Desktop/头图参考图/06:18参考
+representative_files:
+  - 0035cdd04386355b1398add23404327f.jpg
+  - 06d257759a85a141816cca14e68f7f9e.jpg
+  - 265d7f80f45c426963f8ad7dbfa49131.jpg
+  - 78c6acb4b232838eaa2b0a0202659532.jpg
+  - 9349b7beac46d9d36ec2e6871ff68e4d.jpg
+  - 9c89de474d5aa85ad8ad40bfad7900aa.jpg
+  - d2a881fe0a7c7159e748b97a4b706fd7.jpg
+
+style_essence:
+  visual_type:
+    - dark warm hotpot poster
+    - restaurant feast KV
+    - steam and pot hero photography
+    - bold Chinese title layout
+  not:
+    - light cream menu
+    - western bakery editorial
+    - fresh fruit beverage KV
+    - minimalist product poster
+
+core_visual_logic:
+  - 用暗红、墨绿、深棕或木质背景制造火锅汤锅的温热氛围
+  - 锅具、热汤、蒸汽和多菜品围桌构成第一视觉吸引
+  - 大号中文标题压住画面，表达季节、滋补、热烈和聚餐感
+  - 信息密度较高，但必须围绕主锅和主标题组织
+
+design_quality_logic:
+  design_sense_from:
+    - 深色背景与热汤蒸汽形成温度感
+    - 真实锅具和菜品摄影带来食欲
+    - 大字标题和竖排副文强化餐饮记忆点
+    - 木桌、竹篮、锅盖、布料等道具增强真实宴席感
+  key_design_decisions:
+    - 保留暗场和暖光
+    - 让锅或主菜成为中心视觉
+    - 使用强中文标题而非轻编辑字
+    - 蒸汽和热气可作为氛围层
+  hierarchy_control:
+    - 大标题第一信息层
+    - 主锅或热菜第一视觉层
+    - 配菜、价格、卖点第二信息层
+    - 桌面纹理、烟雾、印章和小标签第三层
+  layout_intention:
+    - 常见中心聚合、上下分区或餐桌俯拍
+    - 横幅中可左右布置两锅，中间放标题
+    - 背景要有厚度，不能空
+  restraint:
+    - 不使用清浅奶油菜单底
+    - 不使用卡通 3D 食物
+    - 不把所有菜品做成同等大
+    - 不让文字遮住食物主体
+  theme_form_relationship:
+    - 暖冬通过深色、蒸汽、锅具和热汤表达
+    - 宴席通过多菜品、木桌和围桌关系表达
+    - 滋补通过药材、汤锅、陶锅和暖光表达
+  avoid_losing_design_sense:
+    - 避免画面过黑导致食物不可读
+    - 避免菜品堆满但没有主锅
+    - 避免蒸汽过度遮挡文字
+    - 避免变成普通中式菜单风
+
+theme_transfer_rule:
+  principle: >
+    迁移时保留深色暖光、真实锅具、蒸汽热气、大中文标题和聚餐式菜品层级。
+    新主题应围绕热锅或宴席场景展开，不要变成浅底菜单或电商拼盘。
+  transferable_design_relationships:
+    - hot_pot_as_hero
+    - dark_warm_background
+    - steam_as_atmosphere
+    - bold_chinese_title
+    - feast_table_cluster
+  replaceable_surface_elements:
+    - pot type
+    - soup color
+    - side dishes
+    - seasonal motif
+    - table material
+  avoid_when_transferring:
+    - light_minimal_menu
+    - equal_size_dish_grid
+    - cartoon_food
+    - unreadable_steam_overlay
+
+anti_ai_rules:
+  - Keep food appetizing and not muddy.
+  - Do not make all dishes equally important.
+  - Avoid fake unreadable Chinese labels.
+  - Blend provided dish photos naturally and avoid rectangular cutout borders.
+  - Do not add logo or platform marks.
+
+production_profile:
+  production_template: production_templates/banner_4_1_production.yaml
+  supported_outputs:
+    - banner_4_1
+  default_output: banner_4_1
+  title_style: bold Chinese brush or heavy display title, warm, strong, restaurant-like
+  subtitle_style: vertical seasonal copy, small price or callout badge, restrained seal
+  background_style: dark red, deep green, warm brown, wood table, smoky restaurant atmosphere, textured cloth
+  composition_preference: centered feast table or two hot pots flanking a strong title in wide banner
+  decoration_requirements: steam, warm light, wood texture, small seals, vertical copy, seasonal ingredient accents
+  information_density: medium_high, warm and busy but title-led
+  anti_ai_emphasis:
+    - no muddy dark food
+    - no equal-size dish clutter
+    - no fake unreadable labels
+    - no rectangular photo edges

@@ -1,0 +1,104 @@
+style_name: rustic_farm_fresh_produce_kv
+style_cn: 田园鲜蔬
+style_cn_full: 自然农场鲜蔬产地 KV
+style_type: 产地食材海报 / 农场鲜蔬宣传 / 自然食材品牌视觉
+
+source_folder: /Users/bytedance/Desktop/头图参考图/06:18参考
+representative_files:
+  - 0ca0480b794fa3664fcd371bd1ef3a51.jpg
+  - 147f3356592d10df2304a9efc46074ea.jpg
+  - 4052b8e710c5011998f72f5ba56ed9b9.jpg
+  - bd8c00ac0528645485d0d1475bd48008.jpg
+
+style_essence:
+  visual_type:
+    - farm-to-table ingredient KV
+    - rustic produce photography
+    - natural origin storytelling
+    - earthy commercial poster
+  not:
+    - clean menu grid
+    - dark hotpot poster
+    - beverage product still life
+    - flat illustration
+
+core_visual_logic:
+  - 用真实蔬果、产地环境、篮筐、土壤或农场背景讲食材来源
+  - 文字强调自然、本真、新鲜、从田到餐桌
+  - 画面可有强烈地域元素、民族服饰或牧场景观，但主体必须是食材可信度
+  - 设计感来自真实场景与品牌文字的融合，而不是纯棚拍
+
+design_quality_logic:
+  design_sense_from:
+    - 食材摄影真实、有体积和产地感
+    - 背景包含自然环境或地域纹理
+    - 大字标题和食材主体建立直接关系
+    - 颜色来自土地、植物和自然光
+  key_design_decisions:
+    - 使用真实蔬果和产地道具
+    - 保留自然光与环境质感
+    - 文字要像产地故事，不像普通促销
+    - 避免过度精修成电商白底
+  hierarchy_control:
+    - 食材主体第一视觉层
+    - 产地或自然主题标题第一信息层
+    - 地域、农场或品质说明第二信息层
+    - 环境纹理和人物局部第三层
+  layout_intention:
+    - 可用近景食材压满画面，也可用田野/牧场作为宽幅背景
+    - 横幅生产时让食材和标题形成左右或中心平衡
+  restraint:
+    - 不使用卡通农场图标
+    - 不把食材做成漂浮拼贴
+    - 不使用荧光促销色
+  theme_form_relationship:
+    - 新鲜通过露水、自然光、绿色、竹篮、田野表达
+    - 地域通过服饰、纹样、背景环境或产地文字表达
+    - 品质通过真实摄影和克制排版表达
+  avoid_losing_design_sense:
+    - 避免变成普通蔬菜电商图
+    - 避免过度堆叠农产品
+    - 避免地域元素抢走食材主体
+
+theme_transfer_rule:
+  principle: >
+    迁移时保留真实食材主体、自然产地环境、土壤/篮筐/田野等来源线索和朴素可信的排版。
+    新食材应被放进产地故事中，而不是变成棚拍商品图。
+  transferable_design_relationships:
+    - produce_as_origin_anchor
+    - natural_environment_as_background
+    - earthy_palette
+    - origin_story_typography
+  replaceable_surface_elements:
+    - produce type
+    - region motif
+    - basket or farming prop
+    - field background
+  avoid_when_transferring:
+    - floating_vegetables
+    - cartoon_farm_icons
+    - ecommerce_white_background
+    - neon_sale_color
+
+anti_ai_rules:
+  - Keep produce realistic and physically grounded.
+  - Do not over-saturate greens until they look artificial.
+  - Do not add random farm icons.
+  - Do not add logo or platform marks.
+
+production_profile:
+  production_template: production_templates/banner_4_1_production.yaml
+  supported_outputs:
+    - banner_4_1
+  default_output: banner_4_1
+  title_style: bold natural Chinese title or clean origin-story typography
+  subtitle_style: small origin note, farm-to-table claim, or quality descriptor
+  background_style: field, grass, rustic paper, woven basket, soil, mountain, or pasture texture
+  composition_preference: real produce hero balanced with natural origin background and readable title
+  decoration_requirements: basket, leaves, subtle regional texture, natural light, minimal annotation
+  information_density: medium, story-driven
+  anti_ai_emphasis:
+    - no floating produce
+    - no artificial neon greens
+    - no random farm icons
+    - keep origin story credible

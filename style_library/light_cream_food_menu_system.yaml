@@ -1,0 +1,104 @@
+style_name: light_cream_food_menu_system
+style_cn: 奶油菜单
+style_cn_full: 浅奶油食品菜单系统风
+style_type: 轻餐菜单 / 甜品菜单 / 早餐套餐 / 清爽食品价目海报
+
+source_folder: /Users/bytedance/Desktop/头图参考图/06:18参考
+representative_files:
+  - 0ff829e136b256f480956e7a54c45c0f.jpg
+  - 931bc318156cf71e3d3eee5f5ff2d2e9.jpg
+  - bf3c78799d071bdf063e69b2ab7a5660.jpg
+  - c0767716dc8ac9c8a5743d0cd6f91785.jpg
+  - e423c53dbf6f04c585200e1276aa35c9.jpg
+
+style_essence:
+  visual_type:
+    - light cream food menu poster
+    - multi-item menu layout
+    - clean food photography system
+    - delicate annotation design
+  not:
+    - dark atmosphere restaurant KV
+    - heavy Chinese heritage poster
+    - product-only editorial
+    - high-saturation promotion poster
+
+core_visual_logic:
+  - 用浅奶油背景承接多个食品单品，让菜单信息清晰可读
+  - 多个餐品以散点或网格方式排列，每个单品配细线标签、价格或说明
+  - 标题通常轻松但清楚，和食品照片形成轻快菜单感
+  - 设计感来自有秩序的多品展示，而不是强情绪背景
+
+design_quality_logic:
+  design_sense_from:
+    - 食品单品被整理成菜单系统
+    - 浅底和细线标签让信息清晰
+    - 多个产品有主次和分区，不是平铺堆满
+    - 小图标、价格牌和曲线注释增加轻快感
+  key_design_decisions:
+    - 保持浅色背景
+    - 用真实食品摄影而不是插画
+    - 每个食品单元有标签关系
+    - 用线条或小徽章组织信息
+  hierarchy_control:
+    - 标题第一层
+    - 主推食品或最大餐品第二层
+    - 其他单品第三层
+    - 价格和说明第四层
+  layout_intention:
+    - 多品类菜单可用纵向分区、斜向散点或柔性网格
+    - 横幅生产时保持左右均衡和中心标题
+  restraint:
+    - 不使用复杂真实餐厅背景
+    - 不做过多中式装饰
+    - 不把价格和标签做成大促贴纸
+  theme_form_relationship:
+    - 早餐、甜品、轻食等主题通过食品单元和标签系统表达
+    - 清爽感通过浅底、细线、柔和阴影和低密度装饰表达
+  avoid_losing_design_sense:
+    - 避免食品等大等距平铺
+    - 避免标签杂乱不可读
+    - 避免背景太花导致菜单信息丢失
+
+theme_transfer_rule:
+  principle: >
+    迁移时保留浅奶油背景、多食品单元、细线标签、价格说明和清晰菜单层级。
+    新主题食品应被组织成菜单系统，而不是做成单张情绪海报。
+  transferable_design_relationships:
+    - multi_item_menu_grid
+    - thin_annotation_lines
+    - light_cream_background
+    - readable_price_and_label_system
+  replaceable_surface_elements:
+    - food category
+    - price tag shape
+    - title wording
+    - accent color
+  avoid_when_transferring:
+    - dark_scene_background
+    - dense_decoration
+    - random_labels
+    - unreadable_prices
+
+anti_ai_rules:
+  - Do not invent dense fake menu text.
+  - Keep labels short and legible.
+  - Do not make every dish equal in size.
+  - Do not add logo or platform marks.
+
+production_profile:
+  production_template: production_templates/banner_4_1_production.yaml
+  supported_outputs:
+    - banner_4_1
+  default_output: banner_4_1
+  title_style: clean friendly menu title, light serif or casual handwritten accent
+  subtitle_style: small menu note, price callout, or simple framed tag
+  background_style: cream, off-white, pale green, or light beige with very subtle texture
+  composition_preference: multi-item menu layout adapted to a wide banner, with one main food anchor and smaller supporting items
+  decoration_requirements: thin annotation lines, small price tags, soft shadows, simple divider marks
+  information_density: medium, menu-readable
+  anti_ai_emphasis:
+    - no fake dense menu copy
+    - no dark restaurant scene
+    - no overdecorated background
+    - keep food labels controlled

@@ -1,0 +1,406 @@
+_meta:
+  source: hand_extracted_from_16_reference_images
+  reference_path: ~/Desktop/头图参考图/鲜绿自然/
+  reference_files:
+    - 03032884e6f3319927addd2ed6680945.jpg  # 茶救星球 · 石榴的情蔬 · 粉色撕纸 → zen_textured_surface
+    - 26262323cc46256404aaa20c9baef7d0.jpg  # HUNJUICE 轻果蔬 Life · 草地+多瓶 → immersive_nature_scene
+    - 2b9bc280fe36b8c530359579bc7b769d.jpg  # 喜柿多多 · 暖橙+柿子枝剪影 → warm_artisan_craft
+    - 3a949d506616822566313c115120aa6e.jpg  # 香雲 · 米色纸+砂锅 → zen_textured_surface
+    - 4052b8e710c5011998f72f5ba56ed9b9.jpg  # 鲜芋仙 MeetFresh · 双手+碗+芋根 → immersive_nature_scene
+    - 4e80323593434bb0d414b99f9abf6d36.jpg  # 时令盛夏桃李 · 工匠+杵 → warm_artisan_craft
+    - 5ddfa48b3034a9d411d5adb528f6a9d7.jpg  # 奈雪 春日寻绿洲 · 抹茶禅沙 → zen_garden_premium
+    - 5f0816a57d219d6e7827f6d36deb2641.jpg  # 喜茶 REAL & LITE · 薄荷绿空心字 → zen_textured_surface
+    - 7227a49830aeb0a0c894ce3e379d7e5c.jpg  # 混果汁 奇迹西芹 · 米黄牛皮纸 → zen_textured_surface
+    - 80c4b7e9e7221863cf956d1a96fd73f3.jpg  # 盛夏桃李正当季 · 水墨竹影 → warm_artisan_craft
+    - 853db8286750be996222a11ba69a2120.jpg  # HUNJUICE 好味黄皮 · 桃色褶皱布 → zen_textured_surface
+    - 90fa4790d70daa329dafda834565b101.jpg  # 牛乳茶芝芝柑普 · 水墨山禅沙 → zen_garden_premium
+    - aae8ba9e487c6bb16ee516d68aea0767.jpg  # CHAGEE 夏梦玫珑 · 蕨类森林 → immersive_nature_scene
+    - d4ef7262211987e8694dcf60501ee6af.jpg  # 古茗 黑巧摩卡 · 米白+木舞台 → warm_artisan_craft
+    - fe88accf0fc6791268d22eae54912399.jpg  # HEYTEA 小奶茉 · 苔藓木桩雪松 → immersive_nature_scene
+    - ff445f59e2c41685a26086766e3bcc6e.jpg  # HUNJUICE 花魁杨梅 · 户外杨梅树虚化 → immersive_nature_scene
+    # NOTE: 36d6ca2afdb8a038ef3023e7334862e6.gif (animation) + 26262323...(1).jpg (duplicate) skipped.
+  status: ready
+  extracted_by: claude_code
+  notes: |
+    Replaces the prior 10.2KB extraction. Filename kept for continuity.
+
+    Differentiates from sibling styles:
+    - vs clean_fresh_menu_grid_poster: single hero product (not 3-6 dish array);
+      title is DOMINANT (30-50% frame width), not supportive
+    - vs modern_bakery_editorial_poster: storytelling-zen-premium tone instead
+      of campaign-promotional; brush calligraphy / heavy Ming instead of modern
+      rounded sans; nature/zen background instead of curved color blocks
+    - vs chinese_fresh_lifestyle: stronger NATURE element (real plants,
+      immersive forest/grass scenes, zen sand garden); single hero instead of
+      dish array; cooler / greener / more "tea brand"
+
+    Uses banner_4_1_production.yaml (single-hero style), NOT
+    multi_dish_menu_production.yaml.
+
+style_name: fresh_green_natural_lifestyle
+style_cn: 鲜绿自然
+style_cn_full: 鲜绿自然 · 茶饮品牌天然源起 KV 风
+style_type: 茶饮品牌 KV / 单品上新 / 季节限定 / 自然源起叙事 / 健康轻概念 / 联名跨界
+
+usage_scenes:
+  - 茶饮品牌新品 KV
+  - 季节限定上市（春日 / 盛夏 / 秋柿 / 冬补）
+  - 健康概念营销（低脂 / 0 香精 / Super Food）
+  - 单品溯源叙事（农场到杯 / 时令鲜采）
+  - 高端单品 / 礼盒 / 跨界联名
+  - 小红书茶饮封面
+  - 门店头图 / 品牌官方海报
+
+mood_keywords:
+  - 鲜绿
+  - 自然
+  - 单 hero
+  - 大字毛笔
+  - 真实摄影
+  - 沉浸场景
+  - 禅意
+  - 茶饮品牌感
+  - 时令
+  - 源起叙事
+  - 暖土 / 深绿
+  - 慢生活
+
+one_liner: 用单 hero 真实茶饮产品 + 真实自然支持元素（植物 / 木 / 石 / 沙 / 水果 / 蔬菜）+ 大字毛笔或重 Ming 中文标题（30-50% 画面宽）+ 沉浸自然场景或有意图纹理底，构建一种带有「自然源起」叙事感的茶饮品牌 KV 风。
+
+output_ratio_options:
+  banner: '4:1'
+  poster: '3:4'
+  square: '1:1'
+
+style_essence:
+  visual_type:
+    - single-hero beverage product KV with natural supporting elements
+    - real photography of product + real natural props
+    - oversized brush calligraphy or heavy Ming Chinese title (dominant)
+    - immersive nature scene OR intentional textured surface as background
+    - premium tea-brand storytelling aesthetic
+  not:
+    - multi-dish menu array of 3+ equal-weight dishes
+    - clean editorial layout with supportive small title
+    - flat graphic poster
+    - 3D rendered beverage or clay food
+    - high-saturation promo KV with red / yellow banners
+    - cute cartoon mascot-led poster
+    - heritage Chinese ornament-heavy poster (印章 / 卷草 / 祥云 / 花纹 dense)
+    - sparse Japanese minimalist single-frame
+
+core_visual_logic:
+  - 单 hero 茶饮产品（1, 偶尔 1-2）作为视觉锚点, 居中或偏一侧
+  - 真实自然支持元素环绕产品 — 真实植物 / 木块 / 石头 / 沙 / 水果 / 蔬菜 / 苔藓
+  - 大字毛笔或重 Ming 中文标题占画面 30-50%, DOMINANT 而非 supportive
+  - 背景两选一: 沉浸自然场景（草地 / 蕨类 / 苔藓 / 户外）OR 有意图纹理面（纸 / 布 / 沙 / 水墨）
+  - 调色家族: 暖土（米奶 / 卡其 / 暖橙 / 暖棕）OR 深绿（森林绿 / 抹茶 / 沙绿 / 薄荷）
+  - 信息中等: 标题 + 副标语 + 1-2 vertical 中文小注 + small English serif + 1-2 小徽章
+  - storytelling 文案语气（origin / season / craft / 自然源, 不是促销叫卖）
+
+design_quality_logic:
+  design_sense_from:
+    - 真实茶饮产品摄影（杯壁水珠 / 蒸汽 / 透明度 / 真实手作感）
+    - 真实自然支持元素的"在场感"（不是装饰图标, 是真物）
+    - 大字毛笔 / 重 Ming 标题作为东方气韵锚点
+    - 背景的"有意图"（沉浸场景或精心纹理）建立 premium-tea-brand 调
+    - 暖土或深绿基调统一画面, 克制饱和度
+    - vertical 中文副文 + 小 English serif 建立 storytelling 编辑感
+    - 信息中等, 让产品和自然元素呼吸
+  key_design_decisions:
+    - 用真实摄影 + 真实自然支持元素, 绝不用插画 / 3D / 卡通
+    - 用毛笔或 Ming 重字, 绝不用现代圆体 / 卡通字
+    - 标题 DOMINANT（30-50% 画面）, 让产品在视觉重量上和标题相当或略低
+    - 背景必须"有故事"（场景或纹理）, 绝不净色或脏底
+    - 调色限定暖土或深绿, 绝不高饱和促销色
+    - storytelling 文案语气, 不用促销叫卖式
+    - 信息密度中等, 不堆砌
+  hierarchy_control:
+    - 第一层: 大字毛笔 / Ming 标题（30-50% 画面宽）
+    - 第二层: 单 hero 真实产品摄影
+    - 第三层: 真实自然支持元素（植物 / 木 / 石 / 沙 / 水果）
+    - 第四层: vertical 中文副文 / small English serif / 小徽章
+  layout_intention:
+    primary: hero_with_natural_stage（产品居中 / 偏侧, 自然元素环绕作"舞台"）
+    variant_1: immersive_environment（产品融入自然场景, 背景是真实环境）
+    variant_2: textured_still_life（产品作为静物 on 有意图纹理面, studio 感）
+    variant_3: artisan_scene_narrative（场景里有手 / 工匠 / 工具, 讲制作故事）
+    variant_4: zen_garden_minimal（产品 on 禅意沙园 / 水墨, 极简 premium）
+    rule: 单 hero 永远是视觉锚, 自然元素是"配角群"
+  restraint:
+    - 不用扁平净色背景
+    - 不用 3D / 卡通 / 插画产品
+    - 不用现代圆体 / 卡通字 / 廉价 sans 中文
+    - 不用高饱和促销红 / 荧光色
+    - 不用中式 ornament 堆砌（单枚红印章 OK, 卷草 / 祥云 / 花纹堆砌不要）
+    - 不用 random AI 涂鸦贴纸
+    - 不用促销叫卖式文案语气
+  theme_form_relationship:
+    - 「自然源起 / 农场到杯」→ 沉浸自然场景 + 真实植物或田野 + 「从田到甜」style 文案
+    - 「时令季节」→ 季节对应植物（春-嫩枝 / 夏-蕨绿 / 秋-柿叶 / 冬-松梅）+ 季节色
+    - 「健康轻概念」→ 浅绿 / 薄荷绿 + 空心字或细字 + kcal 徽章 + 营养数据 callout
+    - 「禅意 premium」→ 水墨山 / 禅沙波纹 / 单色调 + 大字 Ming + 极少装饰
+    - 「联名 / 跨界」→ 主题场景 + 联名 brand emblem + 主题摄影元素
+    - 「单品溯源」→ 工匠 / 手 / 工具场景 + 原材料展示 + 工艺 storytelling 文案
+  avoid_losing_design_sense:
+    - 不要把单 hero 换成多菜品（变成菜单, 不是 KV）
+    - 不要把背景换成纯白电商底（毁 storytelling 感）
+    - 不要让标题字号变小（标题必须 DOMINANT）
+    - 不要把字体换成现代圆体（毁东方气韵 / premium-tea 感）
+    - 不要用插画或 3D 代替真实摄影（毁自然在场感）
+    - 不要堆 ornament（毁 storytelling 留白）
+    - 不要换促销红 / 高饱和色（变成促销 KV, 不是品牌 KV）
+    - 不要用促销叫卖文案（毁慢生活叙事感）
+  most_valuable_reusable_decision:
+    - 「单 hero 产品 + 真实自然支持元素 + 大字毛笔/Ming 标题 + 沉浸场景或有意图纹理底」四要素结构
+    - 标题 DOMINANT 而非 supportive 的角色（区分于 clean_menu）
+    - 暖土或深绿调色家族 + storytelling 文案语气
+    - 真实自然元素的"在场感"而非装饰图标的"符号感"
+
+theme_transfer_rule:
+  principle: >
+    主题迁移时必须保留: 单 hero 真实产品摄影、真实自然支持元素、大字毛笔或 Ming 中文标题
+    （30-50% 画面）、沉浸自然场景或有意图纹理底、暖土或深绿调色家族、storytelling 文案
+    语气、信息密度中等。新主题元素必须保持真实摄影质感, 不能改成插画 / 3D, 背景不能变
+    纯白电商底或脏底, 字体不能退化为现代圆体, 调色不能换成高饱和促销红。
+  transferable_design_relationships:
+    - single_hero_product_with_natural_supporting_cast
+    - real_photography_of_product_and_natural_props
+    - oversized_brush_or_heavy_ming_dominant_title
+    - immersive_nature_or_intentional_textured_background
+    - warm_earth_or_deep_green_color_family
+    - storytelling_copy_tone
+    - medium_density_with_breathing_space
+  replaceable_surface_elements:
+    - 具体茶饮品类（果茶 / 奶茶 / 咖啡 / 鲜榨果汁 / 养生饮品）
+    - 自然支持元素种类（按季节 / 概念匹配 — 嫩枝 / 蕨叶 / 柿叶 / 松梅 / 芋根 / 鲜果）
+    - 背景类型（草地 / 森林 / 苔藓 / 纸面 / 布面 / 沙园 / 水墨）
+    - 调色子分支（暖橙 / 暖棕 / 抹茶绿 / 薄荷绿 / 森林绿）
+    - 标题字体（毛笔 / 重 Ming / 空心字 用于轻概念）
+    - storytelling 短语（自然 / 时令 / 鲜采 / 真水果 / 寻绿洲 等概念词）
+  avoid_when_transferring:
+    - multi_dish_menu_array_layout
+    - supportive_small_title
+    - modern_rounded_sans_typography
+    - high_saturation_promo_red
+    - plain_white_e_commerce_background
+    - illustration_or_3d_product
+    - cartoon_mascot_dominant
+    - chinese_traditional_ornament_overload
+    - sale_sticker_promo_callout_style
+  object_translation_map:
+    new_beverage: real photographed beverage product (cup / bottle / jar) in matching brand vessel with natural lighting
+    new_supporting_nature: real natural props (plants / leaves / wood / stone / fruit / vegetables / sand / water) appropriate to the concept and season — never plastic or illustrated
+    new_background: immersive nature scene (grass / fern / moss / outdoor field) OR intentional textured surface (kraft paper / linen / pleated fabric / zen sand / ink-wash) matched to the variant
+    new_brand: small brand emblem in corner or top — generic monochrome or gold-rimmed mark, never dominant
+    new_concept_callout: small framed badge (kcal / origin / 限定 / Super Food / generic concept word) coherent with concept
+    new_season_color: warm-earth subfamily (cream / kraft / amber / brown / orange) for autumn-winter, deep-green subfamily (sage / matcha / forest / mint) for spring-summer
+  must_keep:
+    - 单 hero 真实产品
+    - 真实自然支持元素
+    - 大字毛笔 / Ming 标题 30-50% 画面
+    - 沉浸场景 OR 有意图纹理底
+    - 暖土 / 深绿调色
+    - storytelling 文案语气
+    - 信息密度中等
+  must_not_happen:
+    - 多菜品并列布局
+    - 标题字号小或 supportive
+    - 现代圆体 / 卡通字 / 廉价 sans 中文
+    - 插画 / 3D 代替真实摄影
+    - 纯白电商底 / 脏底
+    - 高饱和促销红
+    - 中式 ornament 堆砌
+    - 促销叫卖文案
+
+# NOTE: variant subfields are dumped verbatim into SELECTED VARIANT in the
+# assembled prompt. Any concrete Chinese text, brand name, product name, or
+# poster headline embedded here will be copied by the model into the generated
+# image as if it were an instruction. Use format descriptions, NOT concrete
+# examples. Concrete reference-image mappings live in _meta and the analysis MD.
+variants:
+  immersive_nature_scene:
+    when_to_use: nature origin storytelling KV, outdoor / forest / grass field scenes, immersive product integration, seasonal natural setting campaigns
+    palette:
+      - deep forest green or fresh grass green
+      - secondary natural greens (sage / moss / fern)
+      - earth brown or stone grey for natural objects
+      - white or off-white type for contrast against green
+    background_treatment: real immersive nature scene (lush fern forest / grass field / moss-covered logs / outdoor blurred bokeh) where the product is photographically embedded into the environment, with believable depth, lighting, and atmosphere
+    typography_emphasis: oversized brush calligraphy or heavy Ming Chinese title in white or warm cream color, often vertical column or large block; small English serif subtitle vertically along one edge
+    decoration_emphasis: real natural elements (butterflies, raindrops, pine sprigs, leaves) coherent with the scene; small brand emblem in a corner; optional vertical product tasting notes column
+    information_density: medium-low
+
+  zen_textured_surface:
+    when_to_use: studio still-life KV, textured paper or fabric or kraft surface backdrops, controlled product photography, healthy or seasonal light concepts
+    palette:
+      - cream / off-white / kraft beige
+      - soft pastels (mint, peach, blush, sage) for healthy concepts
+      - dark brown or wine red type
+      - one accent color matched to product concept
+    background_treatment: intentional textured surface (paper torn edge / kraft brown / pleated fabric / linen weave / soft pastel solid with grain) as the studio backdrop, product photographed as a still life with natural lighting
+    typography_emphasis: oversized brush calligraphy or heavy Ming Chinese; can be hollow / outline style for ultra-light healthy concepts; small English serif subtitle horizontal or vertical
+    decoration_emphasis: hand-drawn marker accents (small dot / line / brushstroke), one decorative concept badge (kcal / Super Food / generic concept), supporting product detail props (fruit slice, leaf, twine), small brand emblem
+    information_density: medium
+
+  warm_artisan_craft:
+    when_to_use: warm earth tone craftsman or scene-narrative KV, premium single-product storytelling with hand or tool elements, autumn or winter seasonal feel
+    palette:
+      - warm orange / amber / burnt orange
+      - warm brown / chocolate / kraft
+      - cream or beige secondary
+      - golden brush calligraphy or dark brown type
+    background_treatment: warm solid amber / brown / beige background with optional silhouette element (branch silhouette / bamboo ink-wash / wood grain) or a craftsman scene fragment (apron / hand / tool / wooden stage)
+    typography_emphasis: massive brush calligraphy in gold or warm yellow or dark brown on warm background; can be vertical block; small English serif italic descriptor; vertical Chinese small text column for product copy
+    decoration_emphasis: real autumn elements (fallen leaves / persimmons / peaches / dried mandarin), wooden props (stage / block / mortar / basket), small concept badge, small brand emblem
+    information_density: medium
+
+  zen_garden_premium:
+    when_to_use: ultra-premium zen KV, ink-wash mountain or zen sand garden or monochrome aesthetic, single hero on minimal premium stage
+    palette:
+      - deep matcha green OR ink-wash monochrome black / grey / white
+      - secondary white for sand / cloud / negative space
+      - red seal accent for warmth point
+    background_treatment: zen-garden inspired background — ink-wash mountain silhouette / raked sand circles / matcha-green gradient with pine sprig / monochrome misty atmosphere; product placed on the zen stage as the single still hero
+    typography_emphasis: oversized vertical Chinese in heavy Ming or refined brush; small English serif vertically; minimum supporting copy
+    decoration_emphasis: zen-garden props (raked sand circles / ice mountain shapes / pine sprig / small dish), single red seal stamp, small concept badge (generic premium-feel concept), small brand mark
+    information_density: low-to-medium
+
+anti_ai_rules:
+  - product MUST be real photography of a beverage cup / bottle / jar in a believable vessel; no AI-illustrated drink; no 3D rendered cup; no glossy plastic finish
+  - supporting elements MUST be real natural objects (plants / wood / stone / fruit / vegetable / sand / water); no illustrated leaves; no 3D fruit; no plastic-looking props
+  - typography MUST be brush calligraphy or heavy Ming Chinese for the dominant title; NEVER thin generic sans-serif Chinese; NEVER rounded bubble fonts; NEVER cartoon childish letterforms
+  - title scale MUST be DOMINANT (30-50% of frame width); never reduce it to a supportive section header
+  - background MUST be either an immersive nature scene OR an intentional textured surface (paper / fabric / sand / ink-wash); NEVER plain bleached white; NEVER random noise; NEVER dirty AI texture
+  - color family MUST be warm-earth (cream / kraft / amber / brown / orange) OR deep-nature-green (sage / matcha / forest / mint); NEVER high-saturation promo red / pink / hot magenta
+  - information density medium — supportive copy + 1-2 badges + small brand mark; NEVER stuff with promo stickers or large discount callouts
+  - no Chinese traditional ornament excess (印章 / 卷草 / 祥云 / 花纹 dense pattern) — a single small red seal is acceptable
+  - no garbled or pseudo-Chinese characters
+  - no random AI doodle stickers floating without an info role
+  - storytelling copy tone only (origin / season / craft / natural-source vocabulary) — NEVER promotional sale-shout copy
+  - keep beverage product clearly recognizable — no AI fantasy bubble glow on the cup; no surreal product distortion
+  - real natural lighting only — no neon backlights; no rainbow gradients; no fake premium gold sparkle
+
+style_dna: |
+  STYLE: fresh_green_natural_lifestyle — premium tea-brand-aesthetic single-hero beverage KV combining one real photographed beverage product (cup / bottle / jar) with real natural supporting props (plants / leaves / wood / stone / fruits / vegetables / sand / water) under a dominant brush-calligraphy or heavy-Ming Chinese title, set against either an immersive nature scene (forest / grass / moss / outdoor) or an intentional textured surface (paper / fabric / sand / ink-wash) in a warm-earth or deep-nature-green palette with storytelling copy tone.
+
+  STYLE ESSENCE: single-hero beverage product KV with natural supporting cast and tea-brand storytelling aesthetic. NOT a multi-dish menu array, NOT a clean editorial supportive-title layout, NOT a flat graphic poster, NOT a 3D rendered beverage, NOT a high-saturation promo KV, NOT a cartoon mascot-led poster, NOT a heritage Chinese ornament-heavy poster, NOT a sparse Japanese minimalist single-frame.
+
+  CORE VISUAL LOGIC: one (occasionally 1-2) real photographed beverage products act as the visual anchor; real natural supporting props (plants / wood / stone / fruit / sand) surround the product as the natural cast, giving believable in-presence weight; a DOMINANT oversized brush-calligraphy or heavy-Ming Chinese title (30-50% of frame width) anchors the eastern character; a background of either an immersive nature scene OR an intentional textured surface unifies the whole; the color family stays in warm-earth (cream / kraft / amber / brown / orange) or deep-nature-green (sage / matcha / forest / mint); storytelling copy (origin / season / craft / natural-source) carries the editorial voice; information density is medium — supportive copy + 1-2 badges + small brand mark, never stuffed.
+
+  ROLE-BASED ELEMENT GRAMMAR (must include at least 5 categories, choreographed not random; all concrete rendered text MUST be derived from the user-provided title and subtitle, NEVER copied from this prompt):
+  - hero beverage product (1, occasionally 1-2): real photographed cup / bottle / jar in believable vessel with natural lighting and slight water droplets / steam / transparency cues
+  - natural supporting cast: real plants (leaves / sprigs / branches), wood blocks or wooden stage, stones or zen sand, real fruits / vegetables, butterflies or raindrops appropriate to the scene
+  - dominant title: oversized brush-calligraphy or heavy-Ming Chinese occupying 30-50% of frame width, placed as the eastern anchor (vertical column or large block)
+  - subtitle / sidebar copy: small English serif (vertical or horizontal) plus optional vertical Chinese small-text column for product tasting notes, generic origin or storytelling vocabulary derived from user copy
+  - concept or quality badge (1-2): small circular or oval badge (generic concept word from user title) — never copy specific badge wording from this prompt
+  - brand mark (1): small monochrome or gold-rimmed brand emblem in a corner or top, never dominant
+  - optional red seal stamp: a single small red traditional seal for warmth and Chinese cultural touch (do not stack multiple seals)
+  - optional small price or callout: minor framed text for price / season window / time-limit copy, kept small and editorial
+
+  ELEMENTS: real beverage product photography, real natural supporting cast, dominant brush-calligraphy or heavy-Ming Chinese title, small English serif sidebar, vertical Chinese small-text column for tasting notes, small concept badge, small brand emblem, optional small red seal stamp, optional small price callout.
+
+  TYPOGRAPHY: oversized brush-calligraphy OR heavy Ming Chinese (宋体 / 明朝体) as the dominant title — must look commanding, 30-50% of frame width. For ultra-light healthy variants, oversized hollow / outline Chinese is acceptable. Small English serif (Garamond / Trajan-like / italic) for subtitle or sidebar. Vertical Chinese small-text column for tasting notes in clean serif or seal-script. ABSOLUTELY NO rounded bubble fonts, NO modern geometric sans, NO cartoon childish letterforms, NO thin elegant Western serif as the dominant Chinese-equivalent title.
+
+  COLOR: pick one variant family —
+  - immersive nature scene: deep forest green or fresh grass green with white or cream type
+  - zen textured surface: cream / kraft / soft pastel (mint / peach / blush) with dark brown or wine red type
+  - warm artisan craft: warm orange / amber / brown / kraft with golden brush or dark brown type
+  - zen garden premium: deep matcha green OR ink-wash monochrome black / grey / white with red seal accent
+  Low-to-medium saturation. Warm-earth or deep-nature-green family only. NO neon, NO high-saturation promo red.
+
+  TEXTURE: background MUST carry one of: immersive nature scene (real photographed environment with believable atmosphere), textured surface (kraft paper / linen / pleated fabric / torn paper edge), zen surface (raked sand / ink-wash mountain / monochrome mist), or warm artisan backdrop (silhouette branch / bamboo ink-wash / wood grain). Product surfaces must look like real photographed beverage with natural lighting and believable transparency / liquid level / condensation. NO glossy plastic, NO 3D render finish, NO AI fantasy bubble glow.
+
+  INFORMATION DENSITY: MEDIUM. Title + product + natural cast + 1-2 small badges + small brand mark + optional supporting copy form a coherent composition with breathing space. NEVER stuffed with promo stickers. NEVER sparse-empty.
+
+  ANTI-AI RULES: real beverage photography only; real natural supporting props only; brush calligraphy or heavy Ming dominant title only (NEVER modern sans / cartoon / rounded); immersive nature OR intentional textured background only (NEVER plain white / NEVER random noise); warm-earth or deep-nature-green palette only (NEVER promo red); storytelling copy tone only (NEVER sale-shout); no excess Chinese ornament (single small seal OK); no garbled pseudo-Chinese; no AI doodles; no fake premium gold sparkle.
+
+default_composition: |
+  COMPOSITION: vertical 3:4 poster, hero with natural stage —
+  - top or side title band: oversized brush-calligraphy or heavy-Ming Chinese title (30-50% of frame width), placed vertically along a side OR as a large block at the top, with small English serif subtitle nearby
+  - central hero band: one real photographed beverage product (cup / bottle / jar) as the visual anchor, with real natural supporting cast (plants / wood / stone / fruit / sand) arranged around or behind to form a natural stage
+  - sidebar: optional vertical Chinese small-text column for tasting notes
+  - small accents: 1-2 small concept or quality badges, small brand emblem in a corner, optional single small red seal stamp
+  - background: variant-driven (immersive nature scene / textured surface / warm artisan backdrop / zen garden)
+
+  OUTPUT RATIO: 3:4.
+
+final_image_prompt: |
+  (auto-composed at use time = style_dna + default_composition)
+  For 4:1 banner output, use the banner_4_1_production template + production_profile below.
+
+design_quality_checklist:
+  - 是否单 hero 真实茶饮产品（1, 偶尔 1-2）？（多产品并列 = ❌, 变成 menu）
+  - 是否有真实自然支持元素（植物 / 木 / 石 / 沙 / 水果 / 蔬菜）环绕产品？（缺自然元素 = ❌）
+  - 标题是否大字毛笔 / 重 Ming 中文, 占画面 30-50%？（小字 supportive = ❌, 圆体 / 廉价 sans = ❌）
+  - 背景是否沉浸自然场景 OR 有意图纹理面？（纯白 / 净色 / 脏底 = ❌）
+  - 调色是否暖土 OR 深绿家族？（高饱和促销红 / 荧光 = ❌）
+  - 文案语气是否 storytelling（origin / season / craft / 自然源）？（促销叫卖 = ❌）
+  - 产品摄影是否真实, 有水珠 / 蒸汽 / 透明度等细节？（3D / 插画 / 塑料感 = ❌）
+  - 自然支持元素是否真实摄影？（插画 / 3D 元素 = ❌）
+  - 信息密度是否中等, 有呼吸感？（堆 promo 贴纸 = ❌）
+  - 是否最多 1 枚红印章, 没有卷草 / 祥云 / 花纹堆砌？
+  - 字符是否清晰, 无伪中文 / 乱码？
+  - 是否避免 AI 装饰图标 / 假高级金 / 神奇泡泡光？
+
+production_profile:
+  production_template: production_templates/banner_4_1_production.yaml
+  supported_outputs:
+    - banner_4_1
+  default_output: banner_4_1
+  title_style: |
+    DOMINANT oversized brush-calligraphy OR heavy Ming (宋体 / 明朝体) Chinese title — must occupy 30-50% of frame width as the eastern anchor. May be vertical column or large horizontal block. For ultra-light healthy variants (zen_textured_surface healthy subvariant), oversized hollow / outline Chinese is acceptable.
+    ABSOLUTELY NEVER use rounded bubble fonts, modern geometric sans, cartoon childish letterforms, or thin elegant Western serif as the dominant Chinese-equivalent title.
+  subtitle_style: |
+    Small English serif (Garamond / Trajan-like / italic) horizontally or vertically along an edge; OR a vertical Chinese small-text column in clean serif or seal-script for product tasting notes; OR a generic short storytelling phrase derived from the user-provided subtitle.
+  background_style: |
+    Variant-driven — pick the variant background mode:
+    - immersive nature scene: real photographed environment (lush fern forest / grass field / moss-covered logs / outdoor blurred bokeh) with believable depth and natural lighting; product photographically embedded into the scene
+    - zen textured surface: intentional textured studio backdrop (kraft paper / linen / pleated fabric / torn paper edge / soft pastel solid with grain); product as still life with natural lighting
+    - warm artisan craft: warm amber / brown / beige background with optional silhouette element (branch / bamboo ink-wash / wood grain) or craftsman scene fragment (apron / hand / tool / wooden stage)
+    - zen garden premium: ink-wash mountain silhouette / raked sand circles / matcha-green gradient with pine sprig / monochrome misty atmosphere
+    NEVER plain bleached white, NEVER random noise, NEVER dirty AI texture, NEVER high-saturation promo background.
+  composition_preference: |
+    Hero with natural stage — one (occasionally 1-2) real photographed beverage product as visual anchor (occupying 20-35% of frame), with real natural supporting cast (plants / wood / stone / fruit / sand) arranged around or behind to form a natural stage.
+    Title placed as DOMINANT anchor (30-50% of frame width), vertically along a side OR as a large horizontal block at top, balancing the product.
+    Sidebar may carry vertical Chinese small-text column for tasting notes.
+    NEVER multi-dish menu array. NEVER product confined to a small thumbnail. NEVER title shrunk to supportive section header.
+  decoration_requirements: |
+    Storytelling editorial decoration — every element earns its place.
+    All concrete rendered text MUST be derived from user-provided title, subtitle, and tasting copy; NEVER copy specific Chinese phrases, brand names, product names, or example words from this prompt.
+    Pick 5-7 categories per banner from this slot grammar (MANDATORY items marked):
+    - real beverage product photography — MANDATORY
+    - real natural supporting cast (plants / wood / stone / fruit / sand) — MANDATORY
+    - dominant brush-calligraphy or heavy-Ming Chinese title — MANDATORY
+    - small English serif sidebar OR vertical Chinese tasting-notes column — at least one
+    - 1-2 small concept or quality badges (generic concept word derived from user subtitle, never invented brand text)
+    - small brand emblem in a corner — generic monochrome or gold-rimmed, never copy a specific named brand from this prompt
+    - optional single small red seal stamp (warmth accent, one only)
+    - optional small price callout or seasonal window framed text
+    - optional season-appropriate natural prop accent (pine sprig / fern frond / berry / dried mandarin / flower)
+    NEVER use Chinese traditional ornament excess (卷草 / 祥云 / 花纹 dense pattern); single small red seal is the only heritage element allowed.
+    NEVER use random AI doodle stickers floating without an info role.
+    NEVER use promo sale stickers, discount callouts, or buy-now splashes — this is brand KV, not sale graphic.
+    NEVER copy any specific Chinese phrase, brand name, product name, or example word from this prompt into the image.
+  information_density: medium
+  anti_ai_emphasis:
+    - "MUST: single hero real photographed beverage product"
+    - "MUST: real natural supporting cast (plants / wood / stone / fruit / sand)"
+    - "MUST: DOMINANT brush-calligraphy or heavy-Ming Chinese title at 30-50% frame width"
+    - "MUST: immersive nature scene OR intentional textured surface background"
+    - "MUST: warm-earth or deep-nature-green palette"
+    - "MUST: storytelling copy tone (origin / season / craft / natural-source vocabulary)"
+    - "MUST: medium info density with breathing space"
+    - "NEVER: multi-dish menu array of 3+ equal-weight dishes"
+    - "NEVER: supportive small title"
+    - "NEVER: modern rounded sans / cartoon / bubble fonts for Chinese title"
+    - "NEVER: 3D rendered beverage / clay food / glossy plastic finish"
+    - "NEVER: AI-illustrated leaves or fruit — all natural props must be real"
+    - "NEVER: plain bleached white background"
+    - "NEVER: high-saturation promo red / pink / hot magenta"
+    - "NEVER: random AI doodle stickers"
+    - "NEVER: Chinese traditional ornament dense pattern (卷草 / 祥云 / 花纹)"
+    - "NEVER: promo sale stickers, discount callouts, buy-now splashes"
+    - "NEVER: garbled or pseudo-Chinese characters"
+    - "NEVER: fake premium gold sparkle / rainbow gradient / neon backlight"
+    - "NEVER: copy specific Chinese phrases, brand names, or example words from this prompt into the image"

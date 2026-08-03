@@ -1,0 +1,405 @@
+_meta:
+  source: hand_extracted_from_13_reference_images
+  reference_path: ~/Desktop/头图参考图/清爽菜单/
+  reference_files:
+    - 0ff829e136b256f480956e7a54c45c0f.jpg  # 元气早餐套餐 Vitality Breakfast → light_cream_chinese_menu
+    - 19060145eeb0123fa009a5f7b8a43345.jpg  # 台湾博览会 グルメパン → immersive_themed
+    - 5e9a4871de9dafa0a580f47a481ab19f.jpg  # 太兴 整点印章兑点美味 → bright_promo_brand_menu
+    - 7c364ff620c1a8ae68bf083da4650e6d.jpg  # SANDWICH 招牌三明治系列 → clean_western_editorial
+    - 931bc318156cf71e3d3eee5f5ff2d2e9.jpg  # 中式糖水 NEO CHINESE STYLE → light_cream_chinese_menu
+    - 96f2256fb4f15d898582d93c44ea195c.jpg  # 太兴 当鲜正当时 Summer Specials → bright_promo_brand_menu
+    - 9c93d25c14166037f8fa18a292c65114.jpg  # 吐司系列 TOAST SERIES → immersive_themed
+    - be5618d5f38a04fd41535d720239b92c.jpg  # Artisan Loaves → clean_western_editorial
+    - bf3c78799d071bdf063e69b2ab7a5660.jpg  # Curry Time Cfarm → light_cream_chinese_menu
+    - c0767716dc8ac9c8a5743d0cd6f91785.jpg  # 鱼汤粥底 Men Wah Congee → light_cream_chinese_menu
+    - d964964832b02264dc5bc3e35f423971.jpg  # 大汗系列 mixian sense → light_cream_chinese_menu
+    - e423c53dbf6f04c585200e1276aa35c9.jpg  # Lighthouse Studio 燦爛夏日 → light_cream_chinese_menu
+    - f270bb08a73a7125f935f2c9f68a42f3.jpg  # CHO NOI THE FLOATING MARKET → immersive_themed
+  status: ready
+  extracted_by: claude_code
+  notes: |
+    Replaces the prior 9.5KB extraction. Filename kept (clean_fresh_menu_grid_poster.yaml)
+    for continuity with existing style_library inventory. "Grid" in the name is loose —
+    this style covers grid / scatter / pillar-anchored / themed-scattered compositions;
+    the unifying logic is multi-dish menu layout + per-dish label-with-connector system
+    + light intentional background.
+
+    Differentiates from sibling styles:
+    - vs modern_bakery_editorial_poster: dishes dominant (3-6, not single hero), title
+      supportive instead of dominant anchor, menu-like restraint instead of dense ornament
+    - vs chinese_fresh_lifestyle: light/clean bg instead of textured warm-earth, modern
+      editorial typography instead of dominant calligraphy anchor, multi-dish array instead
+      of central product hero
+    - vs warm_traditional_soup_catering_kv: lighter palette, more whitespace, per-dish
+      multilingual labels instead of single brand-hero
+
+style_name: clean_fresh_menu_grid_poster
+style_cn: 清爽菜单
+style_cn_full: 清爽多菜品菜单海报风（多菜品 + 浅色底 + 标签注释系统）
+style_type: 多菜品菜单海报 / 套餐推广 / 节令新品菜单 / 系列展示 / 品类目录 / 门店菜单 KV
+
+usage_scenes:
+  - 多菜品套餐推广（早餐套餐 / 午市套餐 / 下午茶套餐）
+  - 节令新品菜单（夏日特选 / 秋冬新品）
+  - 招牌系列展示（招牌三明治 / 招牌粥品 / 招牌甜品）
+  - 系列产品目录（吐司系列 / 面包系列 / 糖水系列）
+  - 餐厅 / 烘焙 / 茶饮 / 粥品门店菜单
+  - 异域 / 主题餐饮（越南 / 台湾 / 韩式融合 / 中式糖水）
+  - 小红书餐饮系列封面
+  - 门店头图 / 餐牌 / 大众点评门头多菜品展示
+
+mood_keywords:
+  - 清爽
+  - 多菜品菜单
+  - 标签注释系统
+  - 中英多语种混排
+  - 浅色基调
+  - 编辑感
+  - 菜单秩序
+  - 等量级展示
+  - 注释箭头
+  - 菜品并列
+  - 餐厅菜单
+  - 系列推荐
+
+one_liner: 用 3-6 张真实菜品并列展示 + 每道菜配中英文标签和价格 + 箭头/连线注释系统 + 浅色（米白 / 米奶 / 浅绿 / 暖灰 / 主题质感）有意图的背景, 构建一种菜单秩序感强、菜品等量级展示的清爽多菜品菜单海报。
+
+output_ratio_options:
+  banner: '4:1'
+  poster: '3:4'
+  square: '1:1'
+
+style_essence:
+  visual_type:
+    - multi-dish menu-style poster (3-6 real photographed dishes)
+    - per-dish label system (Chinese name + translation + optional price + connector)
+    - light intentional background (cream / off-white / pastel / themed surface)
+    - editorial dish-led layout with restrained ornament
+    - supportive section title rather than dominant headline
+  not:
+    - single-hero product poster
+    - title-dominant typographic poster
+    - dense decorative ornament ecosystem
+    - dark hot-pot or feast scene
+    - heritage Chinese ornament poster
+    - flat high-saturation sale KV
+    - random e-commerce product shot on plain white
+    - sparse Japanese minimalist single-frame layout
+
+core_visual_logic:
+  - 3-6 张真实菜品摄影并列, 菜品本身是视觉主角群（不是单 hero, 无菜品 > 35% 画面）
+  - 每道菜配标签系统: 中文菜名 + 常配英文/日韩越多语种译名 + 常配价格
+  - 标题是支撑性的"系列名 / 品类名 / 套餐名"角色, 占画面 15-25%, 不喧宾夺主
+  - 背景永远是浅色 + 有意图（米白 / 米奶 / 浅绿 / 暖灰 / 主题质感如木板 / 棉麻 / 牛皮纸 / 手绘线稿）
+  - 注释系统是视觉签名: 箭头线 / 虚线 / 连接点 / 椭圆框 / Top 标签 / 数字 pill 把 label 和菜品绑定
+  - 装饰极克制（≤3 类）, 信息密度中等而非饱满
+  - 中英多语种混排是典型语言（中文菜名 + 英文菜名 + 偶尔日韩越多语种）
+
+design_quality_logic:
+  design_sense_from:
+    - 真实菜品并列摄影的"菜单陈列感"
+    - 每道菜带标签的"信息秩序"
+    - 箭头/连线注释系统创造 label-to-dish 的视觉绑定关系
+    - 浅色 + 有意图背景, 不是促销底也不是脏底
+    - 标题作为"系列名"而非"主标题"的克制选择
+    - 中英多语种混排建立现代餐厅菜单语言
+    - 装饰极克制, 让菜品自己说话
+  key_design_decisions:
+    - 用 3-6 张菜品并列, 不做单 hero
+    - 每道菜必须有 label, 缺标签等于失去菜单本质
+    - 用箭头/连线/椭圆框/数字 pill 作为 label 和菜品的绑定符号
+    - 用浅色背景, 绝不用深色或高饱和促销色
+    - 标题做小做支撑, 让菜品成为视觉主角群
+    - 中英多语种混排, 建立现代餐厅菜单的字体语言
+    - 装饰克制, 不堆 ornament ecosystem
+  hierarchy_control:
+    - 第一层: 3-6 张真实菜品摄影（视觉主角群, 等量级或主次轻分）
+    - 第二层: 每道菜的标签（中文名 + 翻译 + 价格）
+    - 第三层: 标题（系列名 / 品类名, 占画面 15-25%）
+    - 第四层: 装饰 / 品牌信息 / 时段说明 / 注释连线
+  layout_intention:
+    primary: array_with_labels（菜品并列/网格排列, 每张配 label, 箭头连接）
+    variant_1: pillar_anchored（中央竖排标题 pillar + 周围 dish 散布, 标签向外）
+    variant_2: editorial_arrow（菜品散布 + 大字英文标题 + 手绘箭头连接到 label）
+    variant_3: themed_scattered（主题质感背景 + 菜品在篮 / 木板 / 桌面散布）
+    rule: 菜品永远是主角群, 不允许单菜品占画面 > 35%
+  restraint:
+    - 不用深色或高饱和背景
+    - 不用单 hero 占大画面
+    - 不用中式 ornament（印章 / 卷草 / 祥云 / 花纹）
+    - 不用 AI 装饰 doodle
+    - 不用过度装饰 ecosystem（这是菜单, 不是 KV）
+    - 不用渐变光效 / 塑料质感
+    - 不用纯白电商底（要有意图的浅色）
+    - 标题不能大过菜品的视觉主导
+  theme_form_relationship:
+    - 「套餐 / 系列」→ 3-6 张菜品并列 + 中央或顶部系列标题 + 每菜带 label
+    - 「招牌推荐」→ 主菜 + 辅菜环绕 + Top 1/2/3 椭圆标签
+    - 「节令新品」→ 主题浅色背景（夏-浅绿 / 秋-米黄 / 春-粉米）+ 季节短语标题
+    - 「品牌菜单」→ 品牌色块 + 编号 pill + 曲线连接 + 多菜品
+    - 「异域 / 主题」→ 主题质感背景（木板 / 棉麻 / 椰叶 / 篮）+ 菜品散布
+    - 「系列目录」→ 网格排列 + 每菜独立 label + 顶部 Series 标题
+    - 「健康 / 轻食」→ 浅色基调 + 手写字 + 小图标 + 多菜品
+  avoid_losing_design_sense:
+    - 不要把多菜品改成单 hero（毁菜单本质）
+    - 不要砍掉 label 系统（毁信息秩序）
+    - 不要砍掉箭头/连线（毁注释签名）
+    - 不要让标题大过菜品视觉（变成单品海报）
+    - 不要换深色或饱和促销底（变成 KV 或促销图）
+    - 不要堆装饰生态（变成烘焙编辑或中式商业）
+    - 不要用中式印章/卷草装饰（毁现代餐厅菜单感）
+  most_valuable_reusable_decision:
+    - 「3-6 张菜品并列 + 每菜带 label + 箭头连接 + 浅色有意图底」四要素结构
+    - 标题做"系列名"而非"主标题"的克制角色
+    - 中英多语种菜名混排作为现代餐厅菜单语言
+    - 装饰极克制原则（≤3 类）, 让菜品自己说话
+
+theme_transfer_rule:
+  principle: >
+    主题迁移时必须保留: 多菜品并列布局（3-6 张）、每菜配中英文标签 + 价格的菜单信息系统、
+    箭头/连线/椭圆框的注释绑定系统、浅色有意图背景（米白 / 米奶 / 浅绿 / 暖灰 / 主题质感）、
+    标题做支撑而非主导的克制角色。新主题元素必须保持菜品并列结构, 不能改成单 hero,
+    背景不能换深色或高饱和促销色, 装饰不能堆成 ecosystem。
+  transferable_design_relationships:
+    - multi_dish_array_as_visual_subject_group
+    - per_dish_label_system_with_chinese_and_translation
+    - arrow_or_line_annotation_binding
+    - light_intentional_background
+    - supportive_section_title_rather_than_hero_headline
+    - mixed_language_modern_menu_typography
+    - restrained_ornament_under_three_categories
+  replaceable_surface_elements:
+    - 具体菜品类型（早餐 / 三明治 / 粥 / 糖水 / 面包 / 沙拉 / 异域菜）
+    - 背景浅色色调（米白 / 米奶 / 浅绿 / 暖灰 / 主题质感如木板 / 棉麻 / 牛皮纸 / 手绘线稿）
+    - 标签语种（中英 / 中日 / 中韩 / 中越 / 纯西文 + 中文小注）
+    - 注释符号（箭头 / 虚线 / 椭圆框 / Top 标签 / 数字 pill）
+    - 标题字体（手写 script / 西文 serif / 西文 sans / 粗黑中文 / 毛笔字）
+    - 价格货币（¥ / YEN / IDR / VND）
+  avoid_when_transferring:
+    - single_hero_product_layout
+    - dominant_oversized_title
+    - dense_ornament_ecosystem
+    - dark_high_saturation_background
+    - heritage_chinese_ornament
+    - calligraphy_as_dominant_anchor
+    - random_decorative_stickers
+    - hot_pot_or_feast_scene
+    - flat_promo_sale_kv
+  object_translation_map:
+    new_dish_set: 3-6 real photographed dishes in matched vessels (ceramic / clay / basket / wooden tray / linen surface), arranged in grid / scatter / pillar-anchored composition
+    new_theme: light intentional background appropriate to the concept (pastel for breakfast / cream for editorial / themed wood plank for regional / soft green for healthy)
+    new_label_set: each dish gets one Chinese name + one English (or other appropriate language) name + optional price, connected by arrow / dotted line / oval frame / number pill
+    new_brand: small brand mark in a corner or as a footer band, never dominant
+    new_section_theme: section title at top or pillar-center as supportive headline (15-25% frame width), styled to match the menu character
+  must_keep:
+    - 3-6 张菜品并列（不允许单 hero）
+    - 每菜带中英文标签和价格
+    - 箭头/连线/椭圆框注释系统
+    - 浅色有意图背景
+    - 标题做支撑而非主导
+    - 装饰 ≤ 3 类, 不堆 ecosystem
+  must_not_happen:
+    - 单菜品占画面 > 35%
+    - 砍掉 label 或注释连线
+    - 用深色或高饱和促销底
+    - 标题字号 > 菜品视觉
+    - 加中式 ornament（印章 / 卷草 / 祥云）
+    - 堆 ornament ecosystem
+    - 用纯白电商底（要有意图的浅色）
+
+# NOTE: variant subfields are dumped verbatim into SELECTED VARIANT in the
+# assembled prompt. Any concrete Chinese text, brand name, dish name, or poster
+# headline embedded here will be copied by the model into the generated image
+# as if it were an instruction. Use format descriptions, NOT concrete examples.
+# Concrete reference-image mappings live in _meta and the analysis MD.
+variants:
+  clean_western_editorial:
+    when_to_use: Western series displays, signature item recommendations, bakery series catalogs, editorial restaurant menus, international brand menus
+    palette:
+      - cream
+      - off-white
+      - warm grey
+      - dark brown or black type
+      - small green or warm accent band as separator
+    background_treatment: clean cream or off-white solid with optional subtle paper grain or very faint botanical pattern; never busy
+    typography_emphasis: oversized Western serif or heavy display sans-serif section title in English plus smaller Chinese subtitle; per-dish labels in clean serif or italic; hand-drawn arrows connecting labels to dishes
+    decoration_emphasis: minimal — hand-drawn arrow connectors, small oval recommendation badge, thin bottom band with 2-3 generic quality adjective words derived from the user title
+    information_density: medium-low
+
+  light_cream_chinese_menu:
+    when_to_use: Chinese-style series displays, set-meal promotions, seasonal new menus, sweet dessert menus, congee menus, fusion regional menus
+    palette:
+      - cream
+      - warm beige
+      - soft sage or pastel green
+      - dark brown or wine red type
+      - red seal or small decorative accent
+    background_treatment: light cream or beige solid with optional very subtle pattern (faint botanical, faint ingredient line art, or soft paper grain); pastel green or peach acceptable for seasonal subvariants
+    typography_emphasis: brush calligraphy or heavy Ming Chinese section title kept medium-large (not dominant), plus matching English support line in serif or italic; per-dish labels combine Chinese name plus English / Japanese / Korean translation, with optional currency-prefixed price
+    decoration_emphasis: oval Top labels per dish, thin dotted or curved line connectors between labels and dishes, optional small seal or hand-drawn decorative emblem in a corner
+    information_density: medium
+
+  bright_promo_brand_menu:
+    when_to_use: brand-led promotional campaigns, set-meal point-exchange events, limited-time seasonal menus, chain-restaurant campaigns
+    palette:
+      - warm yellow or yellow-green gradient
+      - cream
+      - dark brown or deep green type
+      - brand color accent
+    background_treatment: warm bright (yellow or yellow-green) solid or soft gradient with optional curved or wavy color shapes connecting dish positions
+    typography_emphasis: oversized heavy rounded or brush Chinese title (more dominant than other variants but still proportional to the dish array), plus English supporting line; per-dish labels combine Chinese name plus English translation plus currency-prefixed price
+    decoration_emphasis: numbered pills (01 / 02 / 03 style) per dish, curved or wavy connecting brush line linking pills to dishes, small brand mark in a corner
+    information_density: medium-high
+
+  immersive_themed:
+    when_to_use: regional / cultural theme menus, premium series catalogs, season-limited theme menus, immersive concept menus with strong atmosphere
+    palette:
+      - themed (dark wood brown / blue wood plank / olive green with regional pattern / kraft brown)
+      - high-contrast type matched to background (cream on dark wood / bright display on blue plank / brush black on green)
+      - small gold or red decorative accent
+    background_treatment: themed surface (dark wood texture / blue wood plank / olive green with regional pattern / kraft fabric); ONE pattern mode only (texture OR motif, never mixed)
+    typography_emphasis: themed display font appropriate to the region or concept (display script for tropical, decorated serif for premium dark, brush Chinese for regional Asian); per-dish labels match theme typography
+    decoration_emphasis: themed props as background context (woven baskets, banana leaves, wooden trays, regional textiles), Top 1/2/3 oval labels for premium catalog subvariant, regional motif at top or side as cultural marker
+    information_density: medium-high
+
+anti_ai_rules:
+  - dishes MUST be real photography, 3-6 dishes per banner; no single-hero composition; no AI-style food illustration; no 3D or clay food
+  - dish labels are mandatory; each dish MUST have an accompanying Chinese name (usually plus English or other language translation, optionally price); never render a dish without a label
+  - typography MUST be modern editorial (serif / sans-serif / brush Ming / display script); NEVER use thin generic sans-serif Chinese without character
+  - background MUST be light and intentional (cream / off-white / pastel / themed surface); NEVER plain bleached white; NEVER high-saturation promo red; NEVER dark feast-scene background
+  - title is supportive, NOT dominant — never let the title exceed 25% of frame width; dishes are the visual subject group
+  - annotation connectors (arrows / dotted lines / oval frames / number pills) MUST bind labels to dishes; never let labels float freely
+  - ornament restraint — never include more than 3 ornament categories; this is a menu, NOT a campaign KV
+  - no Chinese traditional ornament (印章 / 卷草 / 祥云 / 花纹) unless the light_cream_chinese_menu variant explicitly adds a single small seal
+  - no garbled or pseudo-Chinese characters
+  - no random AI doodle stickers floating without an info role
+  - no dense decorative ecosystem; per-dish label plus connector plus minimum framing is enough
+  - mixed-language label is the menu signal — even pure-Chinese menus benefit from a thin translation line beneath each dish name
+  - prices when present must use a believable currency format; never invent unreadable price-like glyphs
+
+style_dna: |
+  STYLE: clean_fresh_menu_grid_poster — multi-dish menu-style poster combining 3-6 real photographed dishes arranged in array / scatter / pillar / themed-scattered composition, each dish bound to its own Chinese-plus-translation label by an arrow / dotted line / oval frame / number pill, all on a light intentional background (cream / off-white / pastel / themed surface). The section title is supportive (15-25% of frame width), never dominant; dishes are the visual subject group.
+
+  STYLE ESSENCE: modern multi-dish menu poster with editorial restraint. NOT a single-hero product poster, NOT a title-dominant typographic poster, NOT a dense ornament-ecosystem campaign KV, NOT a heritage Chinese ornament poster, NOT a flat high-saturation sale graphic, NOT a sparse minimalist single-frame layout, NOT a dark feast scene.
+
+  CORE VISUAL LOGIC: 3-6 real photographed dishes occupy the visual subject group (no single dish > 35% of frame); each dish carries its own label system — Chinese name plus optional English / Japanese / Korean translation plus optional currency-prefixed price — bound to the dish by an arrow, dotted line, oval frame, or number pill; a supportive section title (15-25% of frame width) anchors the composition without dominating; a light intentional background (cream / off-white / pastel / themed surface) unifies the whole and stays under the dishes in visual weight; ornament is strictly restrained to under 3 categories; information density is medium, orderly menu-like.
+
+  LABEL ANNOTATION GRAMMAR (mandatory — this is the menu signal; every concrete dish name MUST be derived from the user-provided dish names or generic descriptive copy, NEVER from this prompt):
+  - per-dish Chinese name as the primary label
+  - per-dish English / Japanese / Korean translation as a secondary line beneath the Chinese name
+  - optional currency-prefixed price (currency format matched to regional variant)
+  - connector between label and dish: arrow / dotted line / curved brush line / oval frame around the label / Top 1/2/3 badge
+  - optional small recommendation seal or ranking pill near the dish
+  - all label content stays brief — name plus translation plus price; never long marketing copy
+
+  COMPOSITION OPTIONS (pick one per banner based on use case):
+  - array: dishes in grid or near-grid arrangement with labels beside each
+  - scatter: dishes scattered organically across the frame with arrows reaching out to labels at the periphery
+  - pillar-anchored: central vertical title pillar with dishes flanking, labels reaching outward
+  - themed-scattered: dishes resting on themed surfaces (woven baskets / banana leaves / wooden trays) arranged with regional rhythm
+
+  ELEMENTS: 3-6 real photographed dishes in matching vessels (ceramic / clay / wooden tray / woven basket / linen surface), per-dish label cluster (Chinese name + translation + optional price), arrow / dotted line / oval frame / number pill connectors, supportive section title, optional small brand mark in a corner, optional thin decorative bottom band with 2-3 quality adjective words.
+
+  TYPOGRAPHY: section title in oversized but proportional Western serif or heavy display sans or brush Chinese or hand-written script (matched to the variant), occupying 15-25% of frame width — NEVER dominant headline scale. Per-dish labels in clean serif or italic for Chinese names and matching translation language. Mixed-language label pairs are characteristic. ABSOLUTELY NO thin generic sans-serif Chinese without character. NO childish bubble fonts. NO ornate calligraphy that overwhelms the labels.
+
+  COLOR: light intentional family — pick one variant:
+  - clean Western editorial: cream / off-white / warm grey with dark brown or black type
+  - light cream Chinese menu: cream / warm beige / soft sage or pastel green with dark brown or wine red type, optional red seal accent
+  - bright promo brand menu: warm yellow / yellow-green gradient with dark brown or deep green type, brand color accent
+  - immersive themed: themed surface (dark wood brown / blue wood plank / olive green with regional pattern / kraft brown) with high-contrast type appropriate to the theme
+
+  TEXTURE: background MUST be light and intentional — clean solid, very subtle paper grain, soft botanical pattern (one mode only), themed wood / fabric / regional surface. NEVER random noise, NEVER plain bleached white, NEVER dark feast scene, NEVER high-saturation promo background. Dish surfaces must look like real photographed food with natural lighting and believable shadows. NO glossy plastic. NO 3D render finish.
+
+  INFORMATION DENSITY: medium — orderly menu density with restraint. Title plus dishes plus per-dish labels plus minimum ornament form the entire composition. NEVER dense ornament ecosystem; this is a menu, not a campaign KV.
+
+  ANTI-AI RULES: real photography only (3-6 dishes); no single-hero composition; modern editorial typography only; light intentional background only (NEVER plain white / NEVER dark scene); supportive title only (NEVER dominant headline); annotation connectors mandatory; ornament restraint under 3 categories; no Chinese traditional ornament; no random AI doodles; no garbled pseudo-Chinese; mixed-language labels expected.
+
+default_composition: |
+  COMPOSITION: vertical 3:4 poster, multi-dish menu layout —
+  - top section: supportive section title (15-25% of frame width) using the variant's typography style — section name in primary language plus optional translation line
+  - body section: 3-6 real photographed dishes arranged in array / scatter / pillar / themed-scattered composition depending on variant; each dish accompanied by its own label cluster (Chinese name + translation + optional price), bound to the dish by an arrow / dotted line / oval frame / number pill
+  - bottom: optional small brand mark, optional thin band of 2-3 quality adjective words, optional time-slot or promo strip
+  - background: light intentional surface following the variant
+  - ornament restraint: maximum 3 categories total
+
+  OUTPUT RATIO: 3:4.
+
+final_image_prompt: |
+  (auto-composed at use time = style_dna + default_composition)
+  For 4:1 banner output, use the banner_4_1_production template + production_profile below.
+
+design_quality_checklist:
+  - 是否有 3-6 张真实菜品并列？（单 hero 占画面 > 35% = 不及格）
+  - 每道菜是否都有标签（中文名 + 英文/其他语言译名 + 可选价格）？（裸菜品无 label = 不及格）
+  - 是否有箭头 / 虚线 / 椭圆框 / 数字 pill 把 label 绑定到菜品？（label 自由漂浮 = 不及格）
+  - 标题是否做"支撑性系列名"角色（占画面 15-25%）？（标题大过菜品视觉 = 不及格）
+  - 背景是否浅色 + 有意图（米白 / 米奶 / 浅绿 / 暖灰 / 主题质感）？（纯白电商底 / 深色 / 高饱和 = 不及格）
+  - 装饰是否严格 ≤ 3 类？（堆 ecosystem = 不及格, 变成烘焙编辑或中式商业）
+  - 是否避免中式 ornament（印章 / 卷草 / 祥云 / 花纹）？（除非 light_cream_chinese_menu 加一枚小印章）
+  - 字体是否现代编辑（serif / 粗黑 / 手写 / brush）？（廉价 sans / 圆体 = 不及格）
+  - 中英文混排是否到位？（裸中文无翻译 = 缺信号）
+  - 菜品摄影是否真实？（插画 / 3D / 卡通 = 不及格）
+  - 信息密度是否中等、菜单秩序感强？（过密变烘焙 / 过稀变日系编辑 = 不及格）
+  - 价格货币（如有）是否可读、格式可信？（乱码价格 = 不及格）
+
+production_profile:
+  production_template: production_templates/multi_dish_menu_production.yaml
+  supported_outputs:
+    - banner_4_1
+  default_output: banner_4_1
+  title_style: |
+    Supportive section title — oversized but proportional (15-25% of frame width), NEVER dominant.
+    Typography matched to variant: Western serif or heavy display sans for clean editorial; brush calligraphy or heavy Ming Chinese for light cream Chinese menu; heavy rounded or brush Chinese for bright promo brand; themed display font appropriate to the region for immersive themed.
+    NEVER use thin generic sans-serif Chinese without character.
+    NEVER let title scale exceed the visual weight of the dish array.
+  subtitle_style: |
+    Small supporting line under the Chinese title in serif or italic; OR a short tagline of 2-3 quality adjective words like a bottom band.
+  background_style: |
+    Light intentional background — pick the variant:
+    - clean cream or off-white solid with optional subtle paper grain
+    - light cream or beige with optional very faint botanical pattern (ONE mode only)
+    - warm yellow or yellow-green solid or soft gradient with optional curved wavy color shape
+    - themed surface (dark wood brown / blue wood plank / olive green regional pattern / kraft brown) for immersive themed variant
+    NEVER plain bleached white, NEVER random noise, NEVER dark feast scene, NEVER high-saturation promo red.
+  composition_preference: |
+    Multi-dish menu layout — 3-6 real photographed dishes form the visual subject group, no single dish > 35% of frame.
+    Arrange in array (grid), scatter (organic), pillar-anchored (central title with dishes flanking), or themed-scattered (dishes on themed surfaces) based on variant.
+    Supportive section title at top or pillar-center, sized 15-25% of frame width.
+    Each dish accompanied by its own label cluster (Chinese name + translation + optional price) bound by arrow / dotted line / oval frame / number pill.
+  decoration_requirements: |
+    Restrained menu decoration — maximum 3 ornament categories total.
+    All concrete text inside any decorative slot MUST be derived from the user-provided title, dish names, and prices; NEVER copy specific Chinese phrases, brand names, or example text from this prompt.
+    Pick from this slot grammar:
+    - per-dish label cluster (Chinese name + translation + optional currency-prefixed price) — MANDATORY, one per dish
+    - annotation connector (arrow / dotted line / oval frame / number pill / Top 1/2/3 badge) — MANDATORY, one per dish
+    - supportive section title with optional translation line — MANDATORY
+    - optional thin bottom band with 2-3 quality adjective words
+    - optional small brand mark in a corner
+    - optional recommendation seal or short tagline near one featured dish
+    - optional themed background prop (basket / banana leaf / wooden tray / regional textile) for immersive themed variant
+    NEVER use Chinese traditional ornament (印章 / 卷草 / 祥云 / 花纹) unless the light_cream_chinese_menu variant explicitly adds a single small seal.
+    NEVER use random AI doodle stickers floating without an info role.
+    NEVER copy any specific Chinese phrase, dish name, brand name, or example word from this prompt into the image; all rendered text must come from the user title, subtitle, and dish names.
+  information_density: medium
+  anti_ai_emphasis:
+    - "MUST: 3-6 real photographed dishes as the visual subject group, no single hero"
+    - "MUST: each dish has a label (Chinese name + translation, optional price)"
+    - "MUST: annotation connector (arrow / dotted line / oval frame / number pill) binding label to dish"
+    - "MUST: supportive section title (15-25% of frame width), NEVER dominant"
+    - "MUST: light intentional background (cream / off-white / pastel / themed surface)"
+    - "MUST: modern editorial typography matched to variant"
+    - "MUST: mixed-language label pairs as menu signal"
+    - "MUST: ornament restraint, maximum 3 categories"
+    - "NEVER: single-hero composition with one dish > 35% of frame"
+    - "NEVER: floating labels without arrow / line / frame connector"
+    - "NEVER: title scale exceeding the dish array visual weight"
+    - "NEVER: plain bleached white background"
+    - "NEVER: high-saturation promo red / pink / hot magenta"
+    - "NEVER: dark feast-scene background"
+    - "NEVER: dense ornament ecosystem (this is a menu, not a campaign KV)"
+    - "NEVER: Chinese traditional ornament (印章 / 卷草 / 祥云 / 花纹)"
+    - "NEVER: AI-style food illustration / clay 3D / glossy plastic food"
+    - "NEVER: random AI doodle stickers floating without an info role"
+    - "NEVER: garbled or pseudo-Chinese characters in labels"
+    - "NEVER: invented dish names or prices not provided by the user"
+    - "NEVER: copy specific Chinese phrases, dish names, or example words from this prompt into the image"
