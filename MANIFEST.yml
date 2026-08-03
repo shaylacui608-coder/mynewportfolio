@@ -1,0 +1,11 @@
+type: Workflow
+version: 1.0.0
+main:
+    id: 7669721391282290740
+    name: poster_gen_blend_1
+    desc: 海报生成+合图工作流：品类映射风格→豆包分发器生成生图prompt→生成海报→与用户原图合图
+    icon: plugin_icon/workflow.png
+    version: ""
+    flowMode: 0
+    commitId: ""
+sub: []

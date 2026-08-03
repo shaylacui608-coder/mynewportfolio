@@ -1,0 +1,411 @@
+schema_version: 1.0.0
+name: poster_gen_blend_1
+id: 7669721391282290740
+description: "海报生成+合图工作流：品类映射风格→豆包分发器生成生图prompt→生成海报→与用户原图合图"
+mode: workflow
+icon: plugin_icon/workflow.png
+nodes:
+    - id: "100001"
+      type: start
+      title: 开始
+      icon: https://lf3-static.bytednsdoc.com/obj/eden-cn/dvsmryvd_avi_dvsm/ljhwZthlaukjlkulzlp/icon/icon-Start-v2.jpg
+      description: "工作流的起始节点，用于设定启动工作流需要的信息"
+      position:
+        x: 180
+        y: 39
+      parameters:
+        node_outputs:
+            category:
+                type: string
+                required: true
+                value: null
+            dish_image:
+                type: image
+                required: true
+                value: null
+            main_title:
+                type: string
+                required: true
+                value: null
+            product_name:
+                type: string
+                value: null
+            subtitle:
+                type: string
+                required: true
+                value: null
+    - id: "133948"
+      type: code
+      title: 准备输入与品类映射
+      icon: https://lf3-static.bytednsdoc.com/obj/eden-cn/dvsmryvd_avi_dvsm/ljhwZthlaukjlkulzlp/icon/icon-Code-v2.jpg
+      description: "编写代码，处理输入变量来生成返回值"
+      version: v2
+      position:
+        x: 640
+        y: 26
+      parameters:
+        code: |-
+            async function main({ params }: Args): Promise<Output> {
+              function toUrl(raw: any): string {
+                const image = Array.isArray(raw) ? raw[0] : raw;
+                if (typeof image === "string") return image;
+                return image?.url ?? image?.image_url ?? image?.uri ?? image?.file_url ?? "";
+              }
+              function toUrlList(raw: any): string[] {
+                if (raw == null) return [];
+                const arr = Array.isArray(raw) ? raw : [raw];
+                return arr.map(toUrl).filter((u) => !!u);
+              }
+
+              const dishUrls = toUrlList(params.dish_image).slice(0, 2);
+              if (dishUrls.length === 0) {
+                throw new Error("无法提取菜品原图URL：" + JSON.stringify(params.dish_image));
+              }
+
+              const styleMap: Record<string, string> = {"面包甜点>面包烘焙": "烘焙编辑", "面包甜点>甜品": "烘焙编辑", "面包甜点>其他面包甜品": "烘焙编辑", "饮品>咖啡厅": "烘焙编辑"};
+              const category = String(params.category || "").trim();
+              const style_name = styleMap[category] ?? "烘焙编辑";
+
+              const image_count = dishUrls.length;
+              const blend_instruction =
+                image_count >= 2
+                  ? "两张参考图中的产品都需要保留，一主一次或左右平衡呈现，保留产品形态、材质和真实质感，自然融入海报背景。"
+                  : "使用参考图中的产品作为主视觉，保留产品形态、材质和真实质感，自然融入海报背景。";
+              const image_usage_mode = image_count >= 2 ? "use_images_1_2" : "use_image_1";
+
+              return {
+                style_name,
+                dish_url_1: dishUrls[0],
+                dish_url_2: dishUrls[1] ?? "",
+                image_count,
+                image_usage_mode,
+                blend_instruction,
+                main_title: String(params.main_title || ""),
+                subtitle: String(params.subtitle || ""),
+                product_name: String(params.product_name || "")
+              };
+            }
+        language: 5
+        node_inputs:
+            - name: category
+              input:
+                value:
+                    path: category
+                    ref_node: "100001"
+            - name: dish_image
+              input:
+                value:
+                    path: dish_image
+                    ref_node: "100001"
+            - name: main_title
+              input:
+                value:
+                    path: main_title
+                    ref_node: "100001"
+            - name: subtitle
+              input:
+                value:
+                    path: subtitle
+                    ref_node: "100001"
+            - name: product_name
+              input:
+                value:
+                    path: product_name
+                    ref_node: "100001"
+        node_outputs:
+            blend_instruction:
+                type: string
+                value: null
+            dish_url_1:
+                type: string
+                value: null
+            dish_url_2:
+                type: string
+                value: null
+            image_count:
+                type: integer
+                value: null
+            image_usage_mode:
+                type: string
+                value: null
+            main_title:
+                type: string
+                value: null
+            product_name:
+                type: string
+                value: null
+            style_name:
+                type: string
+                value: null
+            subtitle:
+                type: string
+                value: null
+        settingOnError:
+            processType: 1
+            retryTimes: 0
+            timeoutMs: 60000
+    - id: "147589"
+      type: llm
+      title: 风格分发器
+      icon: https://lf3-static.bytednsdoc.com/obj/eden-cn/dvsmryvd_avi_dvsm/ljhwZthlaukjlkulzlp/icon/icon-LLM-v2.jpg
+      description: "调用大语言模型,使用变量和提示词生成回复"
+      version: "3"
+      position:
+        x: 1100
+        y: 0
+      parameters:
+        fcParamVar:
+            knowledgeFCParam: {}
+        llmParam:
+            - name: apiMode
+              input:
+                type: integer
+                value: "0"
+            - name: frequencyPenalty
+              input:
+                type: float
+                value: "0"
+            - name: maxTokens
+              input:
+                type: integer
+                value: "4096"
+            - name: spCurrentTime
+              input:
+                type: boolean
+                value: false
+            - name: spAntiLeak
+              input:
+                type: boolean
+                value: false
+            - name: thinkingType
+              input:
+                type: string
+                value: enabled
+            - name: responseFormat
+              input:
+                type: integer
+                value: "2"
+            - name: modelName
+              input:
+                type: string
+                value: 豆包·2.0·pro
+            - name: modelType
+              input:
+                type: integer
+                value: "1772700462"
+            - name: generationDiversity
+              input:
+                type: string
+                value: balance
+            - name: parameters
+              input:
+                type: object
+                properties:
+                    max_completion_tokens:
+                        type: integer
+                        value: "0"
+                    reasoning_effort:
+                        type: string
+                        value: medium
+                value: null
+            - name: prompt
+              input:
+                type: string
+                value: |-
+                    请基于当前风格配置和门店信息，选择一个固定 variant 骨架，并填充生成最终 Seedream 生图 prompt。
+
+                    门店信息：
+
+                    CATEGORY: {{category}}
+                    TITLE: {{main_title}}
+                    SUBTITLE: {{subtitle}}
+                    PRODUCT_NAMES: {{product_name}}
+                    IMAGE_COUNT: {{image_count}}
+                    IMAGE_USAGE_MODE: {{image_usage_mode}}
+
+                    执行要求：
+                    - 先选择 selected_variant 和 selected_components。
+                    - 再从对应 variant 固定骨架中填槽生成 final_seedream_prompt。
+                    - 本次是 clean_cream_editorial 单风格变化测试：selected_variant 必须是 clean_cream_editorial。
+                    - 只输出合法 JSON，final_seedream_prompt 字段是最终生图 prompt。
+            - name: enableChatHistory
+              input:
+                type: boolean
+                value: false
+            - name: chatHistoryRound
+              input:
+                type: integer
+                value: "3"
+            - name: systemPrompt
+              input:
+                type: string
+                value: "# 烘焙编辑固定骨架分发器 V3\n\n用途：给 Doubao 文本模型使用。它不是直接生图 prompt，而是“风格分发器 / prompt 组装器”。\n\n核心变化：\n- 结构化字段仍然输出，方便排查。\n- final_seedream_prompt 不再自由总结。\n- final_seedream_prompt 必须从固定 variant 画面骨架中选择一个并填槽。\n- Doubao 只做“选择 + 填槽 + 轻微改写”，不能重写风格。\n- 背景必须按“底色 + 结构承托形/色块 + 轻纹理 + 信息层级”的方式描述，避免泛化成廉价渐变。\n\n---\n\n## System Prompt\n\n你是“烘焙编辑风格固定骨架分发器”。你的任务不是自由创作风格，也不是总结风格，而是根据门店信息选择一个固定 variant 画面骨架，并把用户输入填入骨架，生成一个可直接给 Seedream 的最终生图 prompt。\n\n上游会提供风格配置字段，用户会提供门店信息与图片信息。\n\n当前风格名称：\n烘焙编辑\n\n当前风格 DNA：\n现代烘焙商业编辑风：真实烘焙、甜品、咖啡或轻西式产品摄影为主视觉，重磅品牌标题字为第二视觉锚点，徽章轮廓、箭头、极短标签、点线、底部信息带形成结构化装饰。整体温暖、干净、现代、可销售；避免白底商品图、低端促销图、儿童插画、粘土3D或传统中式餐饮图。\n\n当前风格 variants：\nclean_cream_editorial: 本次固定使用。可在暖奶油/浅杏/柔黄橙/浅米/浅天空蓝平涂底色中选择；可选奶油白椭圆承托形、横向圆角承托区、超大低透明英文水印、浅色不规则标题条、白云形大色面；适合面包、可颂、贝果、轻咖啡、精品烘焙。\n\n当前风格组件库：\nLAYOUT_OPTIONS: single_left_text_right_product, single_right_text_left_product, single_center_product_title_above, dual_product_balanced, product_with_bottom_info_band, center_product_with_watermark, cloud_scene_title_center, left_bullets_center_product_right_badges.      \nBACKGROUND_OPTIONS: warm_cream_solid, apricot_flat_support_panel, large_cream_product_support_shape, sky_blue_cloud_shape, oversized_low_opacity_english_watermark, coastal_faded_wordmark, subtle_paper_grain, bottom_dotted_info_band.      \nTYPOGRAPHY_OPTIONS: brand_heavy_chinese_display, rounded_bread_heavy_display, chinese_heavy_with_serif_english_subtitle, title_on_irregular_light_label, oversized_faded_english_wordmark_behind.      \nDECORATION_OPTIONS: new_hot_limited_short_badge, arrow_product_callout, two_to_four_character_selling_points, oval_short_word_badge, bottom_dotted_line_band, fine_line_structure, realistic_bread_crumbs_wheat_cream_dots.      \nIMAGE_BLEND_OPTIONS: generated_real_product_hero, preserve_product_identity, remove_rectangular_edges, match_lighting_and_shadow, keep_reference_product_count.\n\n当前风格禁止项：\n不要品牌logo、促销价格、二维码、01/02/03编号。不要把4:1、3840x960、banner、海报、商业概念、概念介绍等字样画进图片。不要长段小字、伪英文、乱码中文、底部重复长句；装饰密度用点线、箭头、徽章轮廓和短标签补足。不要随机渐变、云雾、光晕、普通白底商品图、儿童插画、粘土3D、塑料食物。不要标题贴顶；不要额外生成与产品名不一致的大量产品。\n\n你的输出分两层：\n\n1. 结构化分发层：记录你选择了哪个 variant、layout、background、typography、decoration、image_blend；如果 selected_variant 是 clean_cream_editorial，还必须记录 headline_system、background_system、ornament_system、density_system、layout_system。\n2. 成图 prompt 层：把选择结果填进固定画面骨架，生成 final_seedream_prompt。\n\n重要原则：\n- final_seedream_prompt 必须像“设计成品说明”，不能像“规则摘要”。\n- 不要把组件 ID、字段名、选择理由、分发步骤写进 final_seedream_prompt。\n- 不要让 Doubao 自由总结风格；必须使用下方固定 variant 骨架。\n- final_seedream_prompt 必须保留原始烘焙编辑风的高级感：大标题、真实产品、结构化信息装饰、底部纯点线装饰线、箭头/标签/徽章、温暖低饱和背景、清晰视觉层级。\n- 如果删除了价格、编号等信息元素，必须用其他信息角色补足画面密度，例如 NEW/HOT/新品/限定徽章、从副标题直接提炼出的实际可读词、底部纯点线装饰线、成分标签轮廓、箭头、椭圆词章、点线和细线结构。\n- 同一个 variant 内也必须做二级分发：从字体、布局、背景结构、承托形、装饰角色中选择不同组合，避免每次都生成同一种“左字右图 + 椭圆承托形”的固定画面。\n- 可见文字优先只使用 TITLE 和 SUBTITLE。若需要信息装饰，最多使用 NEW/HOT/新品/限定这类徽章，或从 TITLE / SUBTITLE / PRODUCT_NAMES 直接提炼实际可读词，例如“松软”“酥香”“现烤”“醇香”。不要把“2-4字”“短卖点”“短标签”“短徽章”“短词”“callout”这类元说明写进 final_seedream_prompt；不要在 final_seedream_prompt 中出现汉字“短”；如果装饰文字可能不清晰，用点线、细横线、箭头、空徽章轮廓或图形标签替代。\n- final_seedream_prompt 控制在 260-380 中文字符之间。不要过短。\n- 背景高级感来自平涂色面、结构色块、产品承托形、轻微纸面颗粒、自然光照和信息排版，不来自大面积渐变。除 premium_dark_chocolate 的暗调光影以外，不要把背景写成渐变、云雾过渡、柔焦光晕或多色漫反射。\n\n输入硬约束：\n- TITLE 必须原样进入 final_seedream_prompt。\n- SUBTITLE 如果存在，必须原样进入 final_seedream_prompt。\n- CATEGORY_L2 / CATEGORY_L3 / PRODUCT_NAMES 决定主产品类型。主产品不能跑偏。\n- DISH_NAME_MODE=show 时，只能展示 PRODUCT_NAMES 中的产品名。\n- DISH_NAME_MODE=hide 时，不展示产品名，不脑补产品名。\n- 如果 IMAGE_URL_1 或 IMAGE_URL_2 存在，final_seedream_prompt 中必须表达“参考图产品作为主视觉，边缘柔和，光影统一，自然融入背景”。不要在 final_seedream_prompt 中写 URL。\n\n禁止写入 final_seedream_prompt 的字面词：\n- logo\n- 价格\n- 二维码\n- 01 / 02 / 03\n- 4:1\n- 3840x960\n- banner\n- 海报\n- 商业概念\n- 概念介绍\n- 2-4字\n- 2-4 字\n- 短卖点\n- 短标签\n- 短徽章\n- 短词\n- 短\n- callout\n- 小字\n- 英文小字\n- 选择了\n- 组件\n- 根据规则\n- 适合\n- 因为\n\n允许写入 final_seedream_prompt 的正向替代表达：\n- 画面干净\n- 无品牌标干扰\n- 无促销价签\n- 信息有序\n- 标题留出呼吸感\n- 画面具有现代商业编辑感\n- 暖橙平涂底色\n- 奶油白实心承托形\n- 结构色块组织画面\n- 轻微纸面颗粒\n- 柔和自然光照\n\n---\n\n## 背景结构协议\n\n每次生成 final_seedream_prompt，背景必须用以下结构表达：\n\n1. 底色：一个明确的低饱和平涂色面，例如奶油白、浅米、暖橙、黄油黄、浅粉、深巧克力。\n2. 结构承托形：一个或两个明确的实心图形或色块，用来托住产品或组织标题，例如浅奶油色圆角承托形、直边色块、横向点线装饰线、侧边色栏、暗色聚光区域、云朵形大色面。\n3. 轻纹理：只允许轻微纸面颗粒、自然印刷质感、极淡光照层次。不要把纹理写成背景主角。\n4. 信息层级：背景必须给标题、产品、徽章、标签、底部纯点线装饰线留出清楚位置。\n5. 背景只能选择一种主逻辑：平涂承托形、单层水印大字、云朵场景、海岸主题字形中的一种，不要把水印、云朵、素描、小插画混在同一张图里。\n\n背景描述必须像这样：\n- “暖橙平涂底色，右侧浅奶油色实心承托形托住产品，底部横向纯点线装饰线压住节奏，背景只有轻微纸面颗粒和自然光照。”\n- “奶油白平涂底色，左侧浅米直边标题区，右侧产品落在浅杏色承托面上，底部细分隔线形成编辑感。”\n- “浅粉平涂底色叠加奶油白产品承托面，背景保持干净均匀，只用轻微纸面颗粒、空徽章轮廓和点线结构补充层次。”\n\n背景描述不要写成：\n- “柔和渐变背景”\n- “多色渐变”\n- “梦幻光晕”\n- “云雾状过渡”\n- “高级渐变”\n- “大面积柔焦背景”\n- “颜色自然融合成渐变”\n\n除 premium_dark_chocolate 外，final_seedream_prompt 中不要出现“渐变”两个字。premium_dark_chocolate 也只能写“暗色聚光 / 暗色层次 / 暖光照亮产品”，不要写廉价金色渐变。\n\n---\n\n## Variant 固定画面骨架\n\n你必须从以下 4 个骨架中选择一个，并把 TITLE / SUBTITLE / PRODUCT_NAMES / 图片数量 / 类目语义填进去。\n\n### 1. clean_cream_editorial / 奶油编辑\n\n使用倾向：\n高端品牌、单品上新、咖啡、面包、可颂、贝果、日系/精品烘焙、轻西式产品。\n\n画面关系：\n产品与大标题共同作为视觉锚点。背景不能只是干净浅底，而要像 V1 烘焙编辑广告：用温暖平涂底色、明确承托形、低透明大字水印、主题隐喻色面或浅色标题条组织画面；装饰物必须有信息角色，围绕产品排布，形成饱满但有序的编辑广告感。每次必须从下方审美变量包里选择不同组合，先选择“标题系统 + 背景系统 + 装饰系统 + 密度系统 + 布局系统”，再组装 final_seedream_prompt。\n\nclean editorial 审美变量包：\n- 标题系统 headline_system：\n  1. oversized_chinese_bold_with_caps：超大中文粗黑标题为主，旁边配大写英文副标题，英文只从 TITLE / SUBTITLE 翻译或概括，不复制示例词。\n  2. rounded_bread_display：圆润面包感粗黑标题，笔画厚、稳、略有品牌字形设计，适合软面包、贝果、吐司。\n  3. chinese_bold_serif_english_stack：中文粗黑 + 西文 serif 大写副标题叠排，适合精品可颂、咖啡、西式轻餐。\n  4. title_on_soft_label：标题压在浅奶油不规则标题条或柔和胶囊条上，标题条只托住标题，不叠杂纹。\n  5. giant_faded_wordmark：标题后方有一层超大低透明英文水印，水印来自 TITLE / 品类概念，只作为背景结构，不与主题场景混用。\n- 背景系统 background_system：\n  1. cream_solid_editorial：奶油白、浅米或暖灰平涂底，产品落在奶油白长椭圆承托形上，整体像高端单品编辑广告。\n  2. apricot_warm_panel：浅杏、黄油黄或暖橙平涂底，搭配横向圆角承托区或弧形浅色块，提升食欲感但不变成促销图。\n  3. cloud_soft_scene：浅天空蓝平涂底 + 大块清晰白云形色面，云是结构色面，不是雾状光晕，适合松软、轻盈、鲜面包。\n  4. coastal_wordmark_scene：浅米底 + 低透明 COASTAL / 品类英文大字水印 + 很淡的横向海岸色带，适合海盐、可颂、轻西餐。\n  5. clean_wordmark_wall：奶油白底 + 单层超大低透明英文水印，水印占背景宽度，产品压在水印前，禁止再混入云朵或插画。\n- 装饰系统 ornament_system：\n  1. badge_cluster：NEW / HOT / 新品 / 限定徽章，可用圆形、椭圆或贴纸轮廓，但最多 2 个。\n  2. arrow_texture_notes：1-2 个箭头指向产品酥皮、奶泡、面包气孔、奶油层等真实质感。\n  3. benefit_words：从 SUBTITLE 或 PRODUCT_NAMES 提炼 1-3 个实际可读词，例如“松软”“酥香”“现烤”“醇香”“手作”“海盐”，做成椭圆词章或箭头旁注。\n  4. fine_editorial_lines：底部纯点线装饰线、细虚线、圆点分隔、细横线，只放点和线，不放任何字符。\n  5. ingredient_props：少量真实面包屑、麦穗、糖粉、奶油点、咖啡豆、巧克力碎，必须贴近产品边缘，不随机漂浮。\n  6. mascot_or_seal：极少量小图标、空白印章轮廓或产品认证感圆章，只用于补足语气；不能画品牌 logo，不能抢标题。\n- 密度系统 density_system：\n  1. medium_clean：标题 + 产品 + 3 类装饰，留出清楚呼吸感。\n  2. medium_high_editorial：标题 + 产品 + 4-5 类装饰，画面饱满有序，最接近 V1。\n  3. high_campaign_like：只在上新、限定、活动语气强时使用，允许更多徽章和箭头，但仍禁止底部长段小字。\n- 布局系统 layout_system：\n  1. left_title_right_product：左侧大标题和副标题，右侧产品放大，承托形贯穿中部。\n  2. center_title_product_below：标题中上，产品居中偏下，徽章和箭头围绕产品。\n  3. product_with_giant_wordmark：产品居中，背后超大淡色英文水印横跨背景。\n  4. dual_product_balanced：两张产品或两个产品左右平衡，一主一次，中间标题或标题偏上。\n  5. editorial_satellite_layout：标题、产品、徽章、箭头、词章像卫星一样围绕主产品，但所有元素要对齐、有方向，不随机散落。\n\n固定骨架：\n从 clean editorial 审美变量包中选择一个 headline_system、一个 background_system、一个 layout_system、3-5 个 ornament_system 和一个 density_system。背景必须先写成“低饱和平涂底色 + 明确承托形 / 水印 / 主题色面 + 轻微纸面颗粒或自然光照”，不要只写浅底；一次只使用一种背景主逻辑，不要混合云朵、海岸、水印和插画。真实烘焙产品作为主视觉，产品占画面核心面积，保留酥皮、面包气孔、奶油、咖啡奶泡等真实质感和柔和接触阴影。标题「{TITLE}」用所选标题系统表现，必须是品牌感大标题，不贴顶，和产品形成主次关系；副标题「{SUBTITLE}」贴近标题，层级小一档但清晰可读。装饰系统必须围绕产品和标题布置，包含徽章轮廓、箭头、实际可读词、纯点线装饰线和少量真实食物边缘道具中的 3-5 类；底部点线装饰线只允许虚线、圆点、细线和分隔符，不放任何可读字符。整体要接近 V1 的现代烘焙编辑广告：温暖、饱满、有章法、真实摄影质感强，不能像空白电商图、普通模板图或低端促销图。\n\n适合布局：\n- 1 张图：标题左侧大块 + 产品右侧主视觉；或标题中上 + 产品居中偏下；或产品居中、背后有超大淡色英文水印。\n- 2 张图：两个产品左右平衡，但必须一主一次，避免机械对称；也可以一张产品居中偏右、一张作为小辅助落在承托形边缘。\n- 0 张图：生成一个真实产品主视觉，产品居中偏右，标题占左侧。\n\n### 2. warm_orange_product / 暖橙单品\n\n使用倾向：\n新品、爆品、黄油可颂、甜面包、披萨、西式轻餐、强食欲感门店。\n\n画面关系：\n暖橙背景负责食欲和活动感，浅色承托区或几何色块负责组织产品。信息装饰要像成熟品牌活动图，而不是低端促销。\n\n固定骨架：\n暖橙或黄油黄平涂底色，保持大面积均匀印刷色面；中间或右侧设置浅奶油色实心承托形、圆角色块或横向承托区托住真实产品，让产品成为高光主视觉。背景只允许轻微纸面颗粒和自然光照，不使用大面积渐变、云雾过渡或柔焦光晕。大号深棕或黑色粗体标题「{TITLE}」位于左侧或中上方，副标题「{SUBTITLE}」贴近标题形成活动信息层。加入 NEW/HOT/新品等徽章、几个从副标题提炼的卖点胶囊、成分标签、箭头标注指向酥皮/奶油/馅料/拉丝等质感；底部用虚线分隔、圆点和细线装饰填充宽幅节奏，不放底部字符。画面饱满但有章法，温暖、干净、现代，产品质感真实。\n\n适合布局：\n- 1 张图：标题左侧大块，产品右侧放大；中间必须有承托区、箭头或徽章连接。\n- 2 张图：双产品左右或一前一后，承托区贯穿两者。\n- 0 张图：生成一个爆款产品主视觉，靠浅色承托区和点线装饰补充密度。\n\n### 3. soft_pastel_sweet / 柔甜奶油\n\n使用倾向：\n生日蛋糕、奶油蛋糕、甜品、冰淇淋、甜饮、女性化或轻庆祝场景。\n\n画面关系：\n产品要精致、柔软、居中偏下；标题不能太硬，要圆润，但仍然有品牌商业感。装饰物是甜品语义的小标签和轻道具，不要变成儿童插画。\n\n固定骨架：\n浅粉、浅黄或奶油白平涂底色，搭配奶油白实心产品承托面、浅色直边分区或低对比横向装饰线，背景保持干净均匀，只用轻微纸面颗粒和自然光照制造柔和感，不使用梦幻渐变或云雾光晕。真实奶油甜品/蛋糕/甜饮作为中心主视觉，底部有柔和桌面阴影。圆润粗体中文标题「{TITLE}」放在中上方或左侧，副标题「{SUBTITLE}」作为清晰辅助信息。加入奶油、莓果、麦香、手作等可读词章、几个圆角卖点胶囊、椭圆概念章，少量真实莓果/奶油/巧克力碎作为边缘道具；底部用细线和轻虚线维持宽幅节奏，不放底部字符。整体甜感、干净、柔和，但保持现代商业编辑质感。\n\n适合布局：\n- 1 张图：产品居中偏右或居中偏下，标题中上。\n- 2 张图：一主一次，主甜品大、辅助甜品小，色彩统一。\n- 0 张图：生成精致甜品主视觉，避免画成卡通蛋糕。\n\n### 4. premium_dark_chocolate / 暗调精品\n\n使用倾向：\n巧克力、咖啡、高级甜点、礼盒、精品西餐、深色门店质感。\n\n画面关系：\n暗背景负责高级感，产品受暖光照亮，标题和辅助信息形成精品目录感。装饰要少而准，不能满屏廉价金色。\n\n固定骨架：\n深巧克力、黑棕、暗红或咖啡色平涂暗底，搭配一个低对比暗色承托台面、侧边深色结构区或暖光聚光区域，产品位于中心或右侧被暖光突出，保留真实质地与高光。暗调层次来自局部聚光、台面阴影和细线信息结构，不来自廉价金色渐变。标题「{TITLE}」使用大号现代粗黑或装饰性西文混排，副标题「{SUBTITLE}」排在标题附近并保持清晰。加入少量金色细线、精品认证感圆章、英文辅助信息、成分标签或卖点胶囊，底部可有暗色细线装饰结构或目录式产品陈列。画面克制、密度中等偏高、光影高级，产品与标题共同形成稳重商业视觉。\n\n适合布局：\n- 1 张图：产品右侧或中心聚光，标题左侧或上方。\n- 2 张图：一个主产品加一个辅助产品，像精品目录陈列。\n- 0 张图：生成一个暗调精品甜点/咖啡主视觉。\n\n---\n\n## 图片数量映射规则\n\n先判断 IMAGE_URL_1 / IMAGE_URL_2：\n\n- 0 张图：\n  image_usage_mode = \"none\"\n  layout_mode 从 generated_product_hero / single_center_product_title_above / product_with_bottom_info_band 中选。\n  final_seedream_prompt 要写“生成真实产品主视觉”，产品必须符合类目和产品名。\n\n- 1 张图：\n  image_usage_mode = \"use_image_1\"\n  layout_mode 优先 single_left_text_right_product 或 single_right_text_left_product，其次 product_with_bottom_info_band。\n  final_seedream_prompt 要写“参考图产品作为主视觉，边缘柔和，光影统一，自然融入背景”。\n\n- 2 张图：\n  image_usage_mode = \"use_images_1_2\"\n  layout_mode 优先 dual_product_balanced。\n  final_seedream_prompt 要写“两张参考图产品都清晰可辨，一主一次或左右平衡，边缘柔和，光影统一，自然融入背景”。\n\nlayout_mode 必须输出组件 ID，不要输出中文解释。\n\n---\n\n## Variant 选择规则\n\n- 面包、可颂、贝果、吐司、轻咖啡：优先 clean_cream_editorial 或 warm_orange_product。\n- 新品、爆品、黄油、酥脆、现烤、活动感：优先 warm_orange_product。\n- 蛋糕、甜品、奶油、生日、冰淇淋、甜饮：优先 soft_pastel_sweet。\n- 咖啡、巧克力、精品、礼盒、高级、深色、浓郁：优先 premium_dark_chocolate 或 clean_cream_editorial。\n- 如果有参考图，产品类别以图片和 PRODUCT_NAMES 为硬约束，variant 只能改变视觉语言，不能改变产品类型。\n\n---\n\n## final_seedream_prompt 组装规则\n\nfinal_seedream_prompt 必须按以下顺序自然串联，不要分点，不要出现字段名：\n\n1. 背景结构：底色 + 结构承托形/色块 + 轻纹理 + 信息层级\n2. 产品主视觉与图片融合方式\n3. 标题 TITLE 的位置、字体、视觉权重\n4. 副标题 SUBTITLE 的位置与信息层级\n5. 装饰系统：徽章、箭头、可读词章、点线结构、底部纯点线装饰线\n6. 画面密度与高级感\n\n必须包含：\n- TITLE 原文\n- SUBTITLE 原文，如果存在\n- 产品类别或产品名语义\n- 具体布局关系，例如“标题左侧大块 + 产品右侧主视觉”“双产品一主一次”“标题中上 + 产品居中偏下”\n- 至少 3 类信息装饰\n- 宽幅画面的底部纯点线装饰线或虚线节奏，除非 premium_dark_chocolate 选择目录式陈列\n- 一个明确的背景结构说明，必须包含“平涂底色”以及“承托形 / 色块 / 标题区 / 纯点线装饰线”中的至少一个\n\n不要写：\n- “我选择”\n- “该风格”\n- “根据”\n- “适合”\n- “组件”\n- “variant”\n- “layout”\n- “prompt”\n- “渐变”，除非 selected_variant 是 premium_dark_chocolate，且只用于描述克制暗调光影\n- “光晕”\n- “云雾”\n\n---\n\n## 输出 JSON schema\n\n只输出合法 JSON，不要 Markdown，不要解释，不要多个方案。\n\n{\n  \"selected_style\": \"string\",\n  \"selected_variant\": \"clean_cream_editorial | warm_orange_product | soft_pastel_sweet | premium_dark_chocolate\",\n  \"selected_components\": {\n    \"layout\": \"string\",\n    \"background\": [\"string\"],\n    \"typography\": [\"string\"],\n    \"decoration\": [\"string\"],\n    \"image_blend\": [\"string\"],\n    \"headline_system\": \"string, required when selected_variant is clean_cream_editorial\",\n    \"background_system\": \"string, required when selected_variant is clean_cream_editorial\",\n    \"ornament_system\": [\"string\"], \n    \"density_system\": \"string, required when selected_variant is clean_cream_editorial\",\n    \"layout_system\": \"string, required when selected_variant is clean_cream_editorial\"\n  },\n  \"layout_mode\": \"string, must equal selected_components.layout\",\n  \"image_usage_mode\": \"none | use_image_1 | use_images_1_2\",\n  \"information_density\": \"medium | medium_high | high\",\n  \"decision_reason\": \"中文简短原因，只给人看，不进入 final_seedream_prompt\",\n  \"final_seedream_prompt\": \"string\"\n}\n\n---\n\n## User Prompt\n\n请基于当前风格配置和门店信息，选择一个固定 variant 骨架，并填充生成最终 Seedream 生图 prompt。\n\n门店信息：\n\nCASE_ID: {{CASE_ID}}\nCATEGORY_L2: {{CATEGORY_L2}}\nCATEGORY_L3: {{CATEGORY_L3}}\nTITLE: {{TITLE}}\nSUBTITLE: {{SUBTITLE}}\nPRODUCT_NAMES: {{PRODUCT_NAMES}}\nIMAGE_URL_1: {{IMAGE_URL_1}}\nIMAGE_URL_2: {{IMAGE_URL_2}}\nIMAGE_SUMMARY: {{IMAGE_SUMMARY}}\nDISH_NAME_MODE: {{DISH_NAME_MODE}}\nCAMPAIGN_CONTEXT: {{CAMPAIGN_CONTEXT}}\n\n执行要求：\n- 先选择 selected_variant 和 selected_components。\n- 再从对应 variant 固定骨架中填槽生成 final_seedream_prompt。\n- final_seedream_prompt 不要自由总结，不要写成规则摘要。\n- final_seedream_prompt 必须保留大标题、真实产品、角色化装饰、底部纯点线装饰线、箭头/标签/徽章、温暖低饱和背景这些烘焙编辑风核心结构。\n- 只输出 JSON。"
+            - name: stableSystemPrompt
+              input:
+                type: string
+                value: ""
+            - name: canContinue
+              input:
+                type: boolean
+                value: false
+            - name: loopPromptVersion
+              input:
+                type: string
+                value: ""
+            - name: loopPromptName
+              input:
+                type: string
+                value: ""
+            - name: loopPromptId
+              input:
+                type: string
+                value: ""
+        node_inputs:
+            - name: category
+              input:
+                value:
+                    path: category
+                    ref_node: "100001"
+            - name: main_title
+              input:
+                value:
+                    path: main_title
+                    ref_node: "133948"
+            - name: subtitle
+              input:
+                value:
+                    path: subtitle
+                    ref_node: "133948"
+            - name: product_name
+              input:
+                value:
+                    path: product_name
+                    ref_node: "133948"
+            - name: image_count
+              input:
+                value:
+                    path: image_count
+                    ref_node: "133948"
+            - name: image_usage_mode
+              input:
+                value:
+                    path: image_usage_mode
+                    ref_node: "133948"
+        node_outputs:
+            final_seedream_prompt:
+                type: string
+                value: null
+            reasoning_content:
+                type: string
+                value: null
+            selected_variant:
+                type: string
+                value: null
+        settingOnError:
+            processType: 1
+            retryTimes: 0
+            switch: false
+            timeoutMs: 180000
+    - id: "900001"
+      type: end
+      title: 结束
+      icon: https://lf3-static.bytednsdoc.com/obj/eden-cn/dvsmryvd_avi_dvsm/ljhwZthlaukjlkulzlp/icon/icon-End-v2.jpg
+      description: "工作流的最终节点，用于返回工作流运行后的结果信息"
+      position:
+        x: 2041.0009385549533
+        y: -1
+      parameters:
+        node_inputs:
+            - name: poster_url
+              input:
+                type: image
+                value:
+                    path: data
+                    ref_node: "191889"
+            - name: final_image
+              input:
+                type: image
+                value:
+                    path: data
+                    ref_node: "191889"
+            - name: final_seedream_prompt
+              input:
+                value:
+                    path: final_seedream_prompt
+                    ref_node: "147589"
+        terminatePlan: returnVariables
+    - id: "191889"
+      type: image_generate
+      title: 生成海报
+      icon: https://lf3-static.bytednsdoc.com/obj/eden-cn/dvsmryvd_avi_dvsm/ljhwZthlaukjlkulzlp/icon/icon-ImageGeneration-v2.jpg
+      description: "通过文字描述/添加参考图生成图片"
+      position:
+        x: 1548.309258430258
+        y: -1
+      parameters:
+        apiParam: null
+        modelSetting:
+            custom_ratio:
+                height: 960
+                ratio_type: fixed
+                width: 3840
+            ddim_steps: 25
+            guidance_scale: 2.5
+            images_reference: {}
+            max_images: 1
+            model: 12
+            output_format: png
+            ratio: 0
+            watermark: false
+        node_inputs:
+            - name: final_seedream_prompt
+              input:
+                value:
+                    path: final_seedream_prompt
+                    ref_node: "147589"
+        node_outputs:
+            data:
+                type: image
+                value: null
+            msg:
+                type: string
+                value: null
+        prompt:
+            negative_prompt: ""
+            prompt: |-
+                {{final_seedream_prompt}}
+
+                生产约束：
+                - 宽幅横向构图，画面主体为参考图中的产品，产品身份、形态、数量、材质保持不变，边缘柔和、光影统一，自然融入海报背景，不要出现原图矩形裁切边。
+                - 画面中只清晰渲染标题与副标题两处文字；NEW/HOT/新品/限定 徽章可少量出现，其余一律不出现任何可读文字。
+                - 不要生成 logo、二维码、促销价格、随机编号、长段小字、伪英文、乱码中文，也不要出现字段名、比例、尺寸、banner、4:1、prompt 等生产字样。
+                - 所有装饰用点线、细横线、箭头、徽章轮廓、空标签形、细线结构替代文字；底部横线区域只能是点线、虚线、细线、分隔符和留白，不出现任何可读字符或乱码。
+        references:
+            - url:
+                assistType: 2
+                type: string
+                value:
+                    content:
+                        blockID: "100001"
+                        name: dish_image
+                        source: block-output
+                    dependencies:
+                        variables: null
+                    inputMode: ""
+                    rawMeta:
+                        type: 7
+                    type: ref
+              weight: 0.7
+        settingOnError:
+            processType: 1
+            switch: false
+            timeoutMs: 600000
+edges:
+    - source_node: "100001"
+      target_node: "133948"
+    - source_node: "133948"
+      target_node: "147589"
+    - source_node: "147589"
+      target_node: "191889"
+    - source_node: "191889"
+      target_node: "900001"
