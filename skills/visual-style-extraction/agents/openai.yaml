@@ -1,0 +1,4 @@
+interface:
+  display_name: "Visual Style Extraction"
+  short_description: "Extract, transfer, and evaluate visual styles"
+  default_prompt: "Use $visual-style-extraction to extract a reference image style into YAML and an English image prompt."

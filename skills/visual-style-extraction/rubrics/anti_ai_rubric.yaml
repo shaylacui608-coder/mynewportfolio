@@ -1,0 +1,37 @@
+anti_ai_rubric:
+  total_score: 100
+  pass_threshold: 85
+
+  criteria:
+    object_intent:
+      weight: 20
+      question: 元素是否都有明确设计角色，而不是随机填充？
+
+    material_consistency:
+      weight: 15
+      question: 材质是否统一，是否出现不该有的 3D、玻璃、金属、塑料高光？
+
+    hierarchy_discipline:
+      weight: 20
+      question: 主体、辅助、信息层级是否清楚？
+
+    composition_control:
+      weight: 15
+      question: 是否有明确版式骨架，而不是平均铺满？
+
+    detail_restraint:
+      weight: 15
+      question: 细节是否克制，是否避免过度精致和过度装饰？
+
+    theme_specificity:
+      weight: 15
+      question: 主题是否被准确转译，而不是通用节日、通用电商或通用插画？
+
+  common_failures:
+    - random_cute_objects
+    - overdecorated_background
+    - generic_ai_gloss
+    - inconsistent_light_direction
+    - fake_premium_texture
+    - unreadable_or_fake_text
+    - no_clear_focal_point

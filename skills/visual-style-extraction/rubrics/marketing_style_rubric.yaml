@@ -1,0 +1,35 @@
+marketing_style_rubric:
+  total_score: 100
+  pass_threshold: 80
+
+  criteria:
+    campaign_fit:
+      weight: 20
+      question: 是否适合活动 KV、资源位、海报或平台运营场景？
+
+    immediate_readability:
+      weight: 20
+      question: 首屏扫视时主题、主视觉和主要利益点是否清楚？
+
+    brand_or_activity_space:
+      weight: 15
+      question: 是否预留活动名、关键信息或必要品牌信息空间？
+
+    visual_differentiation:
+      weight: 15
+      question: 是否有足够风格辨识度，而不是模板化营销图？
+
+    production_adaptability:
+      weight: 15
+      question: 是否容易适配不同尺寸、资源位和信息量？
+
+    commercial_polish:
+      weight: 15
+      question: 是否有成熟商业设计感，而不是纯情绪图或过度艺术化？
+
+  fail_if:
+    - no_clear_campaign_message
+    - key_visual_blocks_text
+    - brand_area_missing
+    - style_too_editorial_for_operation
+    - style_too_generic_for_campaign

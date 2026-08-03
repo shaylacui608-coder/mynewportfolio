@@ -1,0 +1,35 @@
+design_quality_rubric:
+  total_score: 100
+  pass_threshold: 80
+
+  criteria:
+    style_essence_match:
+      weight: 20
+      question: 是否准确保留原图的风格本质，而不是误判成其他风格？
+
+    design_relationship_preservation:
+      weight: 25
+      question: 是否保留原图最关键的设计关系？
+
+    hierarchy_control:
+      weight: 15
+      question: 主次是否清晰？是否所有元素都在抢主角？
+
+    layout_skeleton:
+      weight: 15
+      question: 版式骨架是否仍然成立？
+
+    theme_translation:
+      weight: 15
+      question: 新主题是否被图形化、符号化、版式化，而不是简单摆放？
+
+    anti_ai_quality:
+      weight: 10
+      question: 是否避免了随机堆砌、过度精致、错材质、假高级等 AI 感？
+
+  fail_if:
+    - only_replaced_elements_without_design_logic
+    - hierarchy_collapsed
+    - style_type_misclassified
+    - theme_became_generic_illustration
+    - too_many_random_elements
