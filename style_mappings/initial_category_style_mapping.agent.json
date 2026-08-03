@@ -1,0 +1,3299 @@
+{
+  "mapping_name": "initial_category_style_mapping",
+  "mapping_cn": "初版品类到风格映射",
+  "version": "initial_4char_style_mapping",
+  "source": {
+    "local_file": "outputs/evaluations/lark_category_style_mapping_4char.csv",
+    "lark_source_range": "A1:F110",
+    "description": "初版飞书品类 x 现有风格匹配表，使用四个中文字风格名；不适用风格已移除，不强行补满三种风格。"
+  },
+  "agent_usage": {
+    "primary_lookup_keys": [
+      "category_l2",
+      "category_l3",
+      "new_type_code"
+    ],
+    "selection_rule": "优先使用 recommended_style；如果要做多风格批测，则按 style_candidates 的 rank 顺序取候选。候选不足 3 个时不要补空。",
+    "missing_style_rule": "如果 style_candidates 为空或 known_gap_notes 指出缺专门风格，agent 应保留空位或提示需要新增风格，不要硬凑。",
+    "style_name_rule": "对接 YAML 或提示词系统时使用 style_name；对人展示时使用 style_cn。"
+  },
+  "style_aliases": [
+    {
+      "style_cn": "中式清新",
+      "style_name": "chinese_fresh_lifestyle"
+    },
+    {
+      "style_cn": "清新菜单",
+      "style_name": "chinese_fresh_catering_menu_poster"
+    },
+    {
+      "style_cn": "温补汤品",
+      "style_name": "warm_traditional_soup_catering_kv"
+    },
+    {
+      "style_cn": "暗调火锅",
+      "style_name": "dark_hotpot_warm_pot_feast_kv"
+    },
+    {
+      "style_cn": "鲜果茶饮",
+      "style_name": "fresh_fruit_beverage_lifestyle_kv"
+    },
+    {
+      "style_cn": "奶油菜单",
+      "style_name": "light_cream_food_menu_system"
+    },
+    {
+      "style_cn": "烘焙咖啡",
+      "style_name": "western_bakery_cafe_editorial"
+    },
+    {
+      "style_cn": "田园鲜蔬",
+      "style_name": "rustic_farm_fresh_produce_kv"
+    },
+    {
+      "style_cn": "玩趣字形",
+      "style_name": "playful_type_shape_festival_poster"
+    }
+  ],
+  "excluded_styles": [
+    {
+      "style_cn": "现代单品",
+      "style_name": "modernist_product_editorial",
+      "reason": "初版匹配中判定不适合作为当前餐饮品类海报推荐项"
+    },
+    {
+      "style_cn": "促销图形",
+      "style_name": "flat_hyper_sale_graphic_kv",
+      "reason": "初版匹配中判定不适合作为当前餐饮品类海报推荐项"
+    },
+    {
+      "style_cn": "黏土活动",
+      "style_name": "douyin_clay_3d_life_sale_kv",
+      "reason": "初版匹配中判定不适合作为当前餐饮品类海报推荐项"
+    }
+  ],
+  "category_l2_index": [
+    {
+      "category_l2": "东南亚菜",
+      "category_l3_values": [
+        "其他东南亚菜",
+        "印度菜",
+        "泰国菜",
+        "越南菜"
+      ]
+    },
+    {
+      "category_l2": "其他美食",
+      "category_l3_values": [
+        "其他美食"
+      ]
+    },
+    {
+      "category_l2": "地方菜",
+      "category_l3_values": [
+        "东北菜",
+        "云贵菜",
+        "其他地方菜",
+        "冀菜",
+        "北京菜",
+        "台湾菜",
+        "天津菜",
+        "山西菜",
+        "川菜",
+        "徽菜",
+        "新疆菜",
+        "本帮江浙菜",
+        "江湖菜",
+        "江西菜",
+        "海南菜",
+        "清真菜馆",
+        "湖北菜",
+        "湘菜",
+        "潮汕菜",
+        "烤鱼",
+        "福建菜",
+        "粤菜",
+        "茶餐厅",
+        "蒙古菜",
+        "西北菜",
+        "豫菜",
+        "酸菜鱼",
+        "陕菜",
+        "鲁菜"
+      ]
+    },
+    {
+      "category_l2": "快餐小吃",
+      "category_l3_values": [
+        "其他快餐小吃",
+        "小吃",
+        "快餐",
+        "炸鸡炸串",
+        "烧鸡",
+        "熟食",
+        "生煎/锅贴/小笼",
+        "米粉米线",
+        "粥",
+        "螺蛳粉",
+        "零食",
+        "面馆",
+        "饺子/馄饨",
+        "麻辣烫",
+        "黄焖鸡"
+      ]
+    },
+    {
+      "category_l2": "日韩料理",
+      "category_l3_values": [
+        "日料",
+        "韩国料理"
+      ]
+    },
+    {
+      "category_l2": "火锅",
+      "category_l3_values": [
+        "串串香",
+        "云南火锅",
+        "地锅鸡",
+        "小火锅",
+        "川渝火锅",
+        "打边炉/港式火锅",
+        "椰子鸡火锅",
+        "海鲜火锅",
+        "潮汕牛肉火锅",
+        "焖锅",
+        "牛羊肉火锅",
+        "特色火锅",
+        "猪肚鸡火锅",
+        "羊蝎子火锅",
+        "老北京火锅",
+        "鱼火锅"
+      ]
+    },
+    {
+      "category_l2": "热门/特色菜",
+      "category_l3_values": [
+        "农家菜",
+        "家常菜",
+        "小龙虾",
+        "干锅/香锅",
+        "海鲜",
+        "烤肉",
+        "烧烤",
+        "私房菜",
+        "素菜馆",
+        "肉蟹煲",
+        "融合菜",
+        "轻食沙拉"
+      ]
+    },
+    {
+      "category_l2": "生鲜果蔬",
+      "category_l3_values": [
+        "水果鲜货",
+        "生鲜",
+        "菜市场"
+      ]
+    },
+    {
+      "category_l2": "美食城",
+      "category_l3_values": [
+        "美食城"
+      ]
+    },
+    {
+      "category_l2": "自助餐",
+      "category_l3_values": [
+        "海鲜自助",
+        "火锅自助",
+        "烤肉自助",
+        "自助餐",
+        "西餐自助"
+      ]
+    },
+    {
+      "category_l2": "西餐",
+      "category_l3_values": [
+        "俄罗斯菜",
+        "其他西餐",
+        "地中海菜系",
+        "墨西哥菜",
+        "德国菜",
+        "意大利菜",
+        "披萨",
+        "法国菜",
+        "牛排",
+        "美式餐厅",
+        "英国菜",
+        "西式快餐",
+        "西式简餐"
+      ]
+    },
+    {
+      "category_l2": "面包甜点",
+      "category_l3_values": [
+        "其他面包甜品",
+        "甜品",
+        "面包烘焙"
+      ]
+    },
+    {
+      "category_l2": "音乐餐厅",
+      "category_l3_values": [
+        "音乐餐厅"
+      ]
+    },
+    {
+      "category_l2": "食品滋补",
+      "category_l3_values": [
+        "滋补品"
+      ]
+    },
+    {
+      "category_l2": "饮品",
+      "category_l3_values": [
+        "冰淇淋/酸奶",
+        "咖啡厅",
+        "茶饮果汁"
+      ]
+    }
+  ],
+  "mappings": [
+    {
+      "source_row_number": 2,
+      "new_type_code": "11208",
+      "new_type_name": "美食;快餐小吃;米粉米线",
+      "category_l1": "美食",
+      "category_l2": "快餐小吃",
+      "category_l3": "米粉米线",
+      "recommended_style": {
+        "style_cn": "中式清新",
+        "style_name": "chinese_fresh_lifestyle"
+      },
+      "style_candidates": [
+        {
+          "rank": 1,
+          "style_cn": "中式清新",
+          "style_name": "chinese_fresh_lifestyle"
+        },
+        {
+          "rank": 2,
+          "style_cn": "清新菜单",
+          "style_name": "chinese_fresh_catering_menu_poster"
+        },
+        {
+          "rank": 3,
+          "style_cn": "温补汤品",
+          "style_name": "warm_traditional_soup_catering_kv"
+        }
+      ],
+      "match_note": "中式粉面可走商业餐饮、清新菜单或温补汤面方向",
+      "known_gap_notes": []
+    },
+    {
+      "source_row_number": 3,
+      "new_type_code": "10129",
+      "new_type_name": "美食;地方菜;烤鱼",
+      "category_l1": "美食",
+      "category_l2": "地方菜",
+      "category_l3": "烤鱼",
+      "recommended_style": {
+        "style_cn": "暗调火锅",
+        "style_name": "dark_hotpot_warm_pot_feast_kv"
+      },
+      "style_candidates": [
+        {
+          "rank": 1,
+          "style_cn": "暗调火锅",
+          "style_name": "dark_hotpot_warm_pot_feast_kv"
+        },
+        {
+          "rank": 2,
+          "style_cn": "中式清新",
+          "style_name": "chinese_fresh_lifestyle"
+        },
+        {
+          "rank": 3,
+          "style_cn": "温补汤品",
+          "style_name": "warm_traditional_soup_catering_kv"
+        }
+      ],
+      "match_note": "热锅/鱼锅氛围优先",
+      "known_gap_notes": []
+    },
+    {
+      "source_row_number": 4,
+      "new_type_code": "10201",
+      "new_type_name": "美食;东南亚菜;泰国菜",
+      "category_l1": "美食",
+      "category_l2": "东南亚菜",
+      "category_l3": "泰国菜",
+      "recommended_style": {
+        "style_cn": "中式清新",
+        "style_name": "chinese_fresh_lifestyle"
+      },
+      "style_candidates": [
+        {
+          "rank": 1,
+          "style_cn": "中式清新",
+          "style_name": "chinese_fresh_lifestyle"
+        },
+        {
+          "rank": 2,
+          "style_cn": "奶油菜单",
+          "style_name": "light_cream_food_menu_system"
+        }
+      ],
+      "match_note": "可借中式清新里的南洋/花砖分支；缺专门东南亚风格",
+      "known_gap_notes": [
+        "缺专门东南亚风格"
+      ]
+    },
+    {
+      "source_row_number": 5,
+      "new_type_code": "10102",
+      "new_type_name": "美食;地方菜;川菜",
+      "category_l1": "美食",
+      "category_l2": "地方菜",
+      "category_l3": "川菜",
+      "recommended_style": {
+        "style_cn": "中式清新",
+        "style_name": "chinese_fresh_lifestyle"
+      },
+      "style_candidates": [
+        {
+          "rank": 1,
+          "style_cn": "中式清新",
+          "style_name": "chinese_fresh_lifestyle"
+        },
+        {
+          "rank": 2,
+          "style_cn": "暗调火锅",
+          "style_name": "dark_hotpot_warm_pot_feast_kv"
+        },
+        {
+          "rank": 3,
+          "style_cn": "温补汤品",
+          "style_name": "warm_traditional_soup_catering_kv"
+        }
+      ],
+      "match_note": "重口味地方菜可用中式商业、热锅、温补厚重三路",
+      "known_gap_notes": []
+    },
+    {
+      "source_row_number": 6,
+      "new_type_code": "11210",
+      "new_type_name": "美食;快餐小吃;麻辣烫",
+      "category_l1": "美食",
+      "category_l2": "快餐小吃",
+      "category_l3": "麻辣烫",
+      "recommended_style": {
+        "style_cn": "暗调火锅",
+        "style_name": "dark_hotpot_warm_pot_feast_kv"
+      },
+      "style_candidates": [
+        {
+          "rank": 1,
+          "style_cn": "暗调火锅",
+          "style_name": "dark_hotpot_warm_pot_feast_kv"
+        },
+        {
+          "rank": 2,
+          "style_cn": "中式清新",
+          "style_name": "chinese_fresh_lifestyle"
+        }
+      ],
+      "match_note": "热辣锅物和快餐促销都适配；已移除不适用风格：促销图形",
+      "known_gap_notes": []
+    },
+    {
+      "source_row_number": 7,
+      "new_type_code": "10808",
+      "new_type_name": "美食;西餐;西式简餐",
+      "category_l1": "美食",
+      "category_l2": "西餐",
+      "category_l3": "西式简餐",
+      "recommended_style": {
+        "style_cn": "烘焙咖啡",
+        "style_name": "western_bakery_cafe_editorial"
+      },
+      "style_candidates": [
+        {
+          "rank": 1,
+          "style_cn": "烘焙咖啡",
+          "style_name": "western_bakery_cafe_editorial"
+        },
+        {
+          "rank": 2,
+          "style_cn": "奶油菜单",
+          "style_name": "light_cream_food_menu_system"
+        }
+      ],
+      "match_note": "西式编辑、奶油菜单、现代产品都可承接；已移除不适用风格：现代单品",
+      "known_gap_notes": []
+    },
+    {
+      "source_row_number": 8,
+      "new_type_code": "10110",
+      "new_type_name": "美食;地方菜;云贵菜",
+      "category_l1": "美食",
+      "category_l2": "地方菜",
+      "category_l3": "云贵菜",
+      "recommended_style": {
+        "style_cn": "中式清新",
+        "style_name": "chinese_fresh_lifestyle"
+      },
+      "style_candidates": [
+        {
+          "rank": 1,
+          "style_cn": "中式清新",
+          "style_name": "chinese_fresh_lifestyle"
+        },
+        {
+          "rank": 2,
+          "style_cn": "田园鲜蔬",
+          "style_name": "rustic_farm_fresh_produce_kv"
+        },
+        {
+          "rank": 3,
+          "style_cn": "温补汤品",
+          "style_name": "warm_traditional_soup_catering_kv"
+        }
+      ],
+      "match_note": "地域/食材/传统温热都可展开",
+      "known_gap_notes": []
+    },
+    {
+      "source_row_number": 9,
+      "new_type_code": "10809",
+      "new_type_name": "美食;西餐;其他西餐",
+      "category_l1": "美食",
+      "category_l2": "西餐",
+      "category_l3": "其他西餐",
+      "recommended_style": {
+        "style_cn": "烘焙咖啡",
+        "style_name": "western_bakery_cafe_editorial"
+      },
+      "style_candidates": [
+        {
+          "rank": 1,
+          "style_cn": "烘焙咖啡",
+          "style_name": "western_bakery_cafe_editorial"
+        },
+        {
+          "rank": 2,
+          "style_cn": "奶油菜单",
+          "style_name": "light_cream_food_menu_system"
+        }
+      ],
+      "match_note": "泛西餐用编辑和菜单系统；已移除不适用风格：现代单品",
+      "known_gap_notes": []
+    },
+    {
+      "source_row_number": 10,
+      "new_type_code": "11604",
+      "new_type_name": "美食;热门/特色菜;烤肉",
+      "category_l1": "美食",
+      "category_l2": "热门/特色菜",
+      "category_l3": "烤肉",
+      "recommended_style": {
+        "style_cn": "暗调火锅",
+        "style_name": "dark_hotpot_warm_pot_feast_kv"
+      },
+      "style_candidates": [
+        {
+          "rank": 1,
+          "style_cn": "暗调火锅",
+          "style_name": "dark_hotpot_warm_pot_feast_kv"
+        },
+        {
+          "rank": 2,
+          "style_cn": "中式清新",
+          "style_name": "chinese_fresh_lifestyle"
+        }
+      ],
+      "match_note": "热烈聚餐与促销表达都合适；已移除不适用风格：促销图形",
+      "known_gap_notes": []
+    },
+    {
+      "source_row_number": 11,
+      "new_type_code": "11204",
+      "new_type_name": "美食;快餐小吃;熟食",
+      "category_l1": "美食",
+      "category_l2": "快餐小吃",
+      "category_l3": "熟食",
+      "recommended_style": {
+        "style_cn": "中式清新",
+        "style_name": "chinese_fresh_lifestyle"
+      },
+      "style_candidates": [
+        {
+          "rank": 1,
+          "style_cn": "中式清新",
+          "style_name": "chinese_fresh_lifestyle"
+        },
+        {
+          "rank": 2,
+          "style_cn": "清新菜单",
+          "style_name": "chinese_fresh_catering_menu_poster"
+        },
+        {
+          "rank": 3,
+          "style_cn": "温补汤品",
+          "style_name": "warm_traditional_soup_catering_kv"
+        }
+      ],
+      "match_note": "卤味/烧腊/熟食偏中式餐饮",
+      "known_gap_notes": []
+    },
+    {
+      "source_row_number": 12,
+      "new_type_code": "11611",
+      "new_type_name": "美食;热门/特色菜;轻食沙拉",
+      "category_l1": "美食",
+      "category_l2": "热门/特色菜",
+      "category_l3": "轻食沙拉",
+      "recommended_style": {
+        "style_cn": "田园鲜蔬",
+        "style_name": "rustic_farm_fresh_produce_kv"
+      },
+      "style_candidates": [
+        {
+          "rank": 1,
+          "style_cn": "田园鲜蔬",
+          "style_name": "rustic_farm_fresh_produce_kv"
+        },
+        {
+          "rank": 2,
+          "style_cn": "鲜果茶饮",
+          "style_name": "fresh_fruit_beverage_lifestyle_kv"
+        }
+      ],
+      "match_note": "新鲜食材、自然感、克制产品视觉；已移除不适用风格：现代单品",
+      "known_gap_notes": []
+    },
+    {
+      "source_row_number": 13,
+      "new_type_code": "11702",
+      "new_type_name": "美食;日韩料理;韩国料理",
+      "category_l1": "美食",
+      "category_l2": "日韩料理",
+      "category_l3": "韩国料理",
+      "recommended_style": {
+        "style_cn": "暗调火锅",
+        "style_name": "dark_hotpot_warm_pot_feast_kv"
+      },
+      "style_candidates": [
+        {
+          "rank": 1,
+          "style_cn": "暗调火锅",
+          "style_name": "dark_hotpot_warm_pot_feast_kv"
+        },
+        {
+          "rank": 2,
+          "style_cn": "奶油菜单",
+          "style_name": "light_cream_food_menu_system"
+        }
+      ],
+      "match_note": "可覆盖韩式烤肉/锅物或菜单；缺专门韩餐风格",
+      "known_gap_notes": [
+        "缺专门韩餐风格"
+      ]
+    },
+    {
+      "source_row_number": 14,
+      "new_type_code": "11003",
+      "new_type_name": "美食;面包甜点;其他面包甜品",
+      "category_l1": "美食",
+      "category_l2": "面包甜点",
+      "category_l3": "其他面包甜品",
+      "recommended_style": {
+        "style_cn": "烘焙咖啡",
+        "style_name": "western_bakery_cafe_editorial"
+      },
+      "style_candidates": [
+        {
+          "rank": 1,
+          "style_cn": "烘焙咖啡",
+          "style_name": "western_bakery_cafe_editorial"
+        },
+        {
+          "rank": 2,
+          "style_cn": "奶油菜单",
+          "style_name": "light_cream_food_menu_system"
+        }
+      ],
+      "match_note": "烘焙甜品强匹配；已移除不适用风格：现代单品",
+      "known_gap_notes": []
+    },
+    {
+      "source_row_number": 15,
+      "new_type_code": "10802",
+      "new_type_name": "美食;西餐;牛排",
+      "category_l1": "美食",
+      "category_l2": "西餐",
+      "category_l3": "牛排",
+      "recommended_style": {
+        "style_cn": "烘焙咖啡",
+        "style_name": "western_bakery_cafe_editorial"
+      },
+      "style_candidates": [
+        {
+          "rank": 1,
+          "style_cn": "烘焙咖啡",
+          "style_name": "western_bakery_cafe_editorial"
+        },
+        {
+          "rank": 2,
+          "style_cn": "奶油菜单",
+          "style_name": "light_cream_food_menu_system"
+        }
+      ],
+      "match_note": "西餐产品与菜单表达；已移除不适用风格：现代单品",
+      "known_gap_notes": []
+    },
+    {
+      "source_row_number": 16,
+      "new_type_code": "10813",
+      "new_type_name": "美食;西餐;披萨",
+      "category_l1": "美食",
+      "category_l2": "西餐",
+      "category_l3": "披萨",
+      "recommended_style": {
+        "style_cn": "烘焙咖啡",
+        "style_name": "western_bakery_cafe_editorial"
+      },
+      "style_candidates": [
+        {
+          "rank": 1,
+          "style_cn": "烘焙咖啡",
+          "style_name": "western_bakery_cafe_editorial"
+        },
+        {
+          "rank": 2,
+          "style_cn": "奶油菜单",
+          "style_name": "light_cream_food_menu_system"
+        }
+      ],
+      "match_note": "西式餐饮与快餐促销；已移除不适用风格：促销图形",
+      "known_gap_notes": []
+    },
+    {
+      "source_row_number": 17,
+      "new_type_code": "10811",
+      "new_type_name": "美食;西餐;俄罗斯菜",
+      "category_l1": "美食",
+      "category_l2": "西餐",
+      "category_l3": "俄罗斯菜",
+      "recommended_style": {
+        "style_cn": "烘焙咖啡",
+        "style_name": "western_bakery_cafe_editorial"
+      },
+      "style_candidates": [
+        {
+          "rank": 1,
+          "style_cn": "烘焙咖啡",
+          "style_name": "western_bakery_cafe_editorial"
+        }
+      ],
+      "match_note": "只能用泛西餐编辑/产品风；缺专门俄餐风格；已移除不适用风格：现代单品",
+      "known_gap_notes": [
+        "缺专门俄餐风格"
+      ]
+    },
+    {
+      "source_row_number": 18,
+      "new_type_code": "10204",
+      "new_type_name": "美食;东南亚菜;其他东南亚菜",
+      "category_l1": "美食",
+      "category_l2": "东南亚菜",
+      "category_l3": "其他东南亚菜",
+      "recommended_style": {
+        "style_cn": "中式清新",
+        "style_name": "chinese_fresh_lifestyle"
+      },
+      "style_candidates": [
+        {
+          "rank": 1,
+          "style_cn": "中式清新",
+          "style_name": "chinese_fresh_lifestyle"
+        },
+        {
+          "rank": 2,
+          "style_cn": "奶油菜单",
+          "style_name": "light_cream_food_menu_system"
+        }
+      ],
+      "match_note": "可借南洋分支；缺专门东南亚风格",
+      "known_gap_notes": [
+        "缺专门东南亚风格"
+      ]
+    },
+    {
+      "source_row_number": 19,
+      "new_type_code": "11209",
+      "new_type_name": "美食;快餐小吃;粥",
+      "category_l1": "美食",
+      "category_l2": "快餐小吃",
+      "category_l3": "粥",
+      "recommended_style": {
+        "style_cn": "温补汤品",
+        "style_name": "warm_traditional_soup_catering_kv"
+      },
+      "style_candidates": [
+        {
+          "rank": 1,
+          "style_cn": "温补汤品",
+          "style_name": "warm_traditional_soup_catering_kv"
+        },
+        {
+          "rank": 2,
+          "style_cn": "中式清新",
+          "style_name": "chinese_fresh_lifestyle"
+        },
+        {
+          "rank": 3,
+          "style_cn": "清新菜单",
+          "style_name": "chinese_fresh_catering_menu_poster"
+        }
+      ],
+      "match_note": "温补、传统早餐/小吃均适配",
+      "known_gap_notes": []
+    },
+    {
+      "source_row_number": 20,
+      "new_type_code": "10404",
+      "new_type_name": "美食;自助餐;海鲜自助",
+      "category_l1": "美食",
+      "category_l2": "自助餐",
+      "category_l3": "海鲜自助",
+      "recommended_style": {
+        "style_cn": "暗调火锅",
+        "style_name": "dark_hotpot_warm_pot_feast_kv"
+      },
+      "style_candidates": [
+        {
+          "rank": 1,
+          "style_cn": "暗调火锅",
+          "style_name": "dark_hotpot_warm_pot_feast_kv"
+        }
+      ],
+      "match_note": "海鲜宴席/自助促销/产品化陈列；已移除不适用风格：促销图形、现代单品",
+      "known_gap_notes": []
+    },
+    {
+      "source_row_number": 21,
+      "new_type_code": "10127",
+      "new_type_name": "美食;地方菜;山西菜",
+      "category_l1": "美食",
+      "category_l2": "地方菜",
+      "category_l3": "山西菜",
+      "recommended_style": {
+        "style_cn": "中式清新",
+        "style_name": "chinese_fresh_lifestyle"
+      },
+      "style_candidates": [
+        {
+          "rank": 1,
+          "style_cn": "中式清新",
+          "style_name": "chinese_fresh_lifestyle"
+        },
+        {
+          "rank": 2,
+          "style_cn": "温补汤品",
+          "style_name": "warm_traditional_soup_catering_kv"
+        },
+        {
+          "rank": 3,
+          "style_cn": "清新菜单",
+          "style_name": "chinese_fresh_catering_menu_poster"
+        }
+      ],
+      "match_note": "地方中餐强匹配",
+      "known_gap_notes": []
+    },
+    {
+      "source_row_number": 22,
+      "new_type_code": "10135",
+      "new_type_name": "美食;地方菜;海南菜",
+      "category_l1": "美食",
+      "category_l2": "地方菜",
+      "category_l3": "海南菜",
+      "recommended_style": {
+        "style_cn": "中式清新",
+        "style_name": "chinese_fresh_lifestyle"
+      },
+      "style_candidates": [
+        {
+          "rank": 1,
+          "style_cn": "中式清新",
+          "style_name": "chinese_fresh_lifestyle"
+        },
+        {
+          "rank": 2,
+          "style_cn": "田园鲜蔬",
+          "style_name": "rustic_farm_fresh_produce_kv"
+        }
+      ],
+      "match_note": "可借南洋/地域自然，但缺专门海南风格",
+      "known_gap_notes": [
+        "缺专门海南风格"
+      ]
+    },
+    {
+      "source_row_number": 23,
+      "new_type_code": "10501",
+      "new_type_name": "美食;火锅;川渝火锅",
+      "category_l1": "美食",
+      "category_l2": "火锅",
+      "category_l3": "川渝火锅",
+      "recommended_style": {
+        "style_cn": "暗调火锅",
+        "style_name": "dark_hotpot_warm_pot_feast_kv"
+      },
+      "style_candidates": [
+        {
+          "rank": 1,
+          "style_cn": "暗调火锅",
+          "style_name": "dark_hotpot_warm_pot_feast_kv"
+        },
+        {
+          "rank": 2,
+          "style_cn": "中式清新",
+          "style_name": "chinese_fresh_lifestyle"
+        },
+        {
+          "rank": 3,
+          "style_cn": "温补汤品",
+          "style_name": "warm_traditional_soup_catering_kv"
+        }
+      ],
+      "match_note": "火锅强匹配",
+      "known_gap_notes": []
+    },
+    {
+      "source_row_number": 24,
+      "new_type_code": "10133",
+      "new_type_name": "美食;地方菜;天津菜",
+      "category_l1": "美食",
+      "category_l2": "地方菜",
+      "category_l3": "天津菜",
+      "recommended_style": {
+        "style_cn": "中式清新",
+        "style_name": "chinese_fresh_lifestyle"
+      },
+      "style_candidates": [
+        {
+          "rank": 1,
+          "style_cn": "中式清新",
+          "style_name": "chinese_fresh_lifestyle"
+        },
+        {
+          "rank": 2,
+          "style_cn": "清新菜单",
+          "style_name": "chinese_fresh_catering_menu_poster"
+        },
+        {
+          "rank": 3,
+          "style_cn": "温补汤品",
+          "style_name": "warm_traditional_soup_catering_kv"
+        }
+      ],
+      "match_note": "地方中餐强匹配",
+      "known_gap_notes": []
+    },
+    {
+      "source_row_number": 25,
+      "new_type_code": "10126",
+      "new_type_name": "美食;地方菜;江西菜",
+      "category_l1": "美食",
+      "category_l2": "地方菜",
+      "category_l3": "江西菜",
+      "recommended_style": {
+        "style_cn": "中式清新",
+        "style_name": "chinese_fresh_lifestyle"
+      },
+      "style_candidates": [
+        {
+          "rank": 1,
+          "style_cn": "中式清新",
+          "style_name": "chinese_fresh_lifestyle"
+        },
+        {
+          "rank": 2,
+          "style_cn": "暗调火锅",
+          "style_name": "dark_hotpot_warm_pot_feast_kv"
+        },
+        {
+          "rank": 3,
+          "style_cn": "温补汤品",
+          "style_name": "warm_traditional_soup_catering_kv"
+        }
+      ],
+      "match_note": "辣味地方菜可偏热烈",
+      "known_gap_notes": []
+    },
+    {
+      "source_row_number": 26,
+      "new_type_code": "10128",
+      "new_type_name": "美食;地方菜;酸菜鱼",
+      "category_l1": "美食",
+      "category_l2": "地方菜",
+      "category_l3": "酸菜鱼",
+      "recommended_style": {
+        "style_cn": "暗调火锅",
+        "style_name": "dark_hotpot_warm_pot_feast_kv"
+      },
+      "style_candidates": [
+        {
+          "rank": 1,
+          "style_cn": "暗调火锅",
+          "style_name": "dark_hotpot_warm_pot_feast_kv"
+        },
+        {
+          "rank": 2,
+          "style_cn": "温补汤品",
+          "style_name": "warm_traditional_soup_catering_kv"
+        },
+        {
+          "rank": 3,
+          "style_cn": "中式清新",
+          "style_name": "chinese_fresh_lifestyle"
+        }
+      ],
+      "match_note": "鱼锅/汤锅/中式商业都适配",
+      "known_gap_notes": []
+    },
+    {
+      "source_row_number": 27,
+      "new_type_code": "11202",
+      "new_type_name": "美食;快餐小吃;小吃",
+      "category_l1": "美食",
+      "category_l2": "快餐小吃",
+      "category_l3": "小吃",
+      "recommended_style": {
+        "style_cn": "奶油菜单",
+        "style_name": "light_cream_food_menu_system"
+      },
+      "style_candidates": [
+        {
+          "rank": 1,
+          "style_cn": "奶油菜单",
+          "style_name": "light_cream_food_menu_system"
+        },
+        {
+          "rank": 2,
+          "style_cn": "清新菜单",
+          "style_name": "chinese_fresh_catering_menu_poster"
+        }
+      ],
+      "match_note": "快餐菜单和促销都适配；已移除不适用风格：促销图形",
+      "known_gap_notes": []
+    },
+    {
+      "source_row_number": 28,
+      "new_type_code": "10120",
+      "new_type_name": "美食;地方菜;新疆菜",
+      "category_l1": "美食",
+      "category_l2": "地方菜",
+      "category_l3": "新疆菜",
+      "recommended_style": {
+        "style_cn": "田园鲜蔬",
+        "style_name": "rustic_farm_fresh_produce_kv"
+      },
+      "style_candidates": [
+        {
+          "rank": 1,
+          "style_cn": "田园鲜蔬",
+          "style_name": "rustic_farm_fresh_produce_kv"
+        },
+        {
+          "rank": 2,
+          "style_cn": "暗调火锅",
+          "style_name": "dark_hotpot_warm_pot_feast_kv"
+        },
+        {
+          "rank": 3,
+          "style_cn": "中式清新",
+          "style_name": "chinese_fresh_lifestyle"
+        }
+      ],
+      "match_note": "地域食材、烤肉聚餐、中式商业",
+      "known_gap_notes": []
+    },
+    {
+      "source_row_number": 29,
+      "new_type_code": "10509",
+      "new_type_name": "美食;火锅;老北京火锅",
+      "category_l1": "美食",
+      "category_l2": "火锅",
+      "category_l3": "老北京火锅",
+      "recommended_style": {
+        "style_cn": "暗调火锅",
+        "style_name": "dark_hotpot_warm_pot_feast_kv"
+      },
+      "style_candidates": [
+        {
+          "rank": 1,
+          "style_cn": "暗调火锅",
+          "style_name": "dark_hotpot_warm_pot_feast_kv"
+        },
+        {
+          "rank": 2,
+          "style_cn": "温补汤品",
+          "style_name": "warm_traditional_soup_catering_kv"
+        },
+        {
+          "rank": 3,
+          "style_cn": "中式清新",
+          "style_name": "chinese_fresh_lifestyle"
+        }
+      ],
+      "match_note": "火锅强匹配",
+      "known_gap_notes": []
+    },
+    {
+      "source_row_number": 30,
+      "new_type_code": "10134",
+      "new_type_name": "美食;地方菜;蒙古菜",
+      "category_l1": "美食",
+      "category_l2": "地方菜",
+      "category_l3": "蒙古菜",
+      "recommended_style": {
+        "style_cn": "田园鲜蔬",
+        "style_name": "rustic_farm_fresh_produce_kv"
+      },
+      "style_candidates": [
+        {
+          "rank": 1,
+          "style_cn": "田园鲜蔬",
+          "style_name": "rustic_farm_fresh_produce_kv"
+        },
+        {
+          "rank": 2,
+          "style_cn": "暗调火锅",
+          "style_name": "dark_hotpot_warm_pot_feast_kv"
+        },
+        {
+          "rank": 3,
+          "style_cn": "温补汤品",
+          "style_name": "warm_traditional_soup_catering_kv"
+        }
+      ],
+      "match_note": "草原/牛羊肉/热锅方向",
+      "known_gap_notes": []
+    },
+    {
+      "source_row_number": 31,
+      "new_type_code": "11701",
+      "new_type_name": "美食;日韩料理;日料",
+      "category_l1": "美食",
+      "category_l2": "日韩料理",
+      "category_l3": "日料",
+      "recommended_style": {
+        "style_cn": "奶油菜单",
+        "style_name": "light_cream_food_menu_system"
+      },
+      "style_candidates": [
+        {
+          "rank": 1,
+          "style_cn": "奶油菜单",
+          "style_name": "light_cream_food_menu_system"
+        }
+      ],
+      "match_note": "可做清爽菜单/产品编辑；缺专门日料风格；已移除不适用风格：现代单品",
+      "known_gap_notes": [
+        "缺专门日料风格"
+      ]
+    },
+    {
+      "source_row_number": 32,
+      "new_type_code": "11603",
+      "new_type_name": "美食;热门/特色菜;烧烤",
+      "category_l1": "美食",
+      "category_l2": "热门/特色菜",
+      "category_l3": "烧烤",
+      "recommended_style": {
+        "style_cn": "暗调火锅",
+        "style_name": "dark_hotpot_warm_pot_feast_kv"
+      },
+      "style_candidates": [
+        {
+          "rank": 1,
+          "style_cn": "暗调火锅",
+          "style_name": "dark_hotpot_warm_pot_feast_kv"
+        },
+        {
+          "rank": 2,
+          "style_cn": "中式清新",
+          "style_name": "chinese_fresh_lifestyle"
+        }
+      ],
+      "match_note": "热烈聚餐和促销适配；已移除不适用风格：促销图形",
+      "known_gap_notes": []
+    },
+    {
+      "source_row_number": 33,
+      "new_type_code": "11104",
+      "new_type_name": "美食;饮品;冰淇淋/酸奶",
+      "category_l1": "美食",
+      "category_l2": "饮品",
+      "category_l3": "冰淇淋/酸奶",
+      "recommended_style": {
+        "style_cn": "鲜果茶饮",
+        "style_name": "fresh_fruit_beverage_lifestyle_kv"
+      },
+      "style_candidates": [
+        {
+          "rank": 1,
+          "style_cn": "鲜果茶饮",
+          "style_name": "fresh_fruit_beverage_lifestyle_kv"
+        },
+        {
+          "rank": 2,
+          "style_cn": "奶油菜单",
+          "style_name": "light_cream_food_menu_system"
+        },
+        {
+          "rank": 3,
+          "style_cn": "烘焙咖啡",
+          "style_name": "western_bakery_cafe_editorial"
+        }
+      ],
+      "match_note": "清新饮品甜品强匹配",
+      "known_gap_notes": []
+    },
+    {
+      "source_row_number": 34,
+      "new_type_code": "11002",
+      "new_type_name": "美食;面包甜点;甜品",
+      "category_l1": "美食",
+      "category_l2": "面包甜点",
+      "category_l3": "甜品",
+      "recommended_style": {
+        "style_cn": "烘焙咖啡",
+        "style_name": "western_bakery_cafe_editorial"
+      },
+      "style_candidates": [
+        {
+          "rank": 1,
+          "style_cn": "烘焙咖啡",
+          "style_name": "western_bakery_cafe_editorial"
+        },
+        {
+          "rank": 2,
+          "style_cn": "奶油菜单",
+          "style_name": "light_cream_food_menu_system"
+        },
+        {
+          "rank": 3,
+          "style_cn": "鲜果茶饮",
+          "style_name": "fresh_fruit_beverage_lifestyle_kv"
+        }
+      ],
+      "match_note": "甜品/烘焙/清新风格都可用",
+      "known_gap_notes": []
+    },
+    {
+      "source_row_number": 35,
+      "new_type_code": "10512",
+      "new_type_name": "美食;火锅;猪肚鸡火锅",
+      "category_l1": "美食",
+      "category_l2": "火锅",
+      "category_l3": "猪肚鸡火锅",
+      "recommended_style": {
+        "style_cn": "暗调火锅",
+        "style_name": "dark_hotpot_warm_pot_feast_kv"
+      },
+      "style_candidates": [
+        {
+          "rank": 1,
+          "style_cn": "暗调火锅",
+          "style_name": "dark_hotpot_warm_pot_feast_kv"
+        },
+        {
+          "rank": 2,
+          "style_cn": "温补汤品",
+          "style_name": "warm_traditional_soup_catering_kv"
+        },
+        {
+          "rank": 3,
+          "style_cn": "中式清新",
+          "style_name": "chinese_fresh_lifestyle"
+        }
+      ],
+      "match_note": "汤锅与滋补都适配",
+      "known_gap_notes": []
+    },
+    {
+      "source_row_number": 36,
+      "new_type_code": "10804",
+      "new_type_name": "美食;西餐;美式餐厅",
+      "category_l1": "美食",
+      "category_l2": "西餐",
+      "category_l3": "美式餐厅",
+      "recommended_style": {
+        "style_cn": "烘焙咖啡",
+        "style_name": "western_bakery_cafe_editorial"
+      },
+      "style_candidates": [
+        {
+          "rank": 1,
+          "style_cn": "烘焙咖啡",
+          "style_name": "western_bakery_cafe_editorial"
+        }
+      ],
+      "match_note": "西式编辑、快餐促销、产品视觉；已移除不适用风格：促销图形、现代单品",
+      "known_gap_notes": []
+    },
+    {
+      "source_row_number": 37,
+      "new_type_code": "11211",
+      "new_type_name": "美食;快餐小吃;螺蛳粉",
+      "category_l1": "美食",
+      "category_l2": "快餐小吃",
+      "category_l3": "螺蛳粉",
+      "recommended_style": {
+        "style_cn": "温补汤品",
+        "style_name": "warm_traditional_soup_catering_kv"
+      },
+      "style_candidates": [
+        {
+          "rank": 1,
+          "style_cn": "温补汤品",
+          "style_name": "warm_traditional_soup_catering_kv"
+        },
+        {
+          "rank": 2,
+          "style_cn": "暗调火锅",
+          "style_name": "dark_hotpot_warm_pot_feast_kv"
+        },
+        {
+          "rank": 3,
+          "style_cn": "中式清新",
+          "style_name": "chinese_fresh_lifestyle"
+        }
+      ],
+      "match_note": "粉面汤底/重口味都适配",
+      "known_gap_notes": []
+    },
+    {
+      "source_row_number": 38,
+      "new_type_code": "10118",
+      "new_type_name": "美食;地方菜;其他地方菜",
+      "category_l1": "美食",
+      "category_l2": "地方菜",
+      "category_l3": "其他地方菜",
+      "recommended_style": {
+        "style_cn": "中式清新",
+        "style_name": "chinese_fresh_lifestyle"
+      },
+      "style_candidates": [
+        {
+          "rank": 1,
+          "style_cn": "中式清新",
+          "style_name": "chinese_fresh_lifestyle"
+        },
+        {
+          "rank": 2,
+          "style_cn": "清新菜单",
+          "style_name": "chinese_fresh_catering_menu_poster"
+        },
+        {
+          "rank": 3,
+          "style_cn": "温补汤品",
+          "style_name": "warm_traditional_soup_catering_kv"
+        }
+      ],
+      "match_note": "泛地方中餐",
+      "known_gap_notes": []
+    },
+    {
+      "source_row_number": 39,
+      "new_type_code": "10806",
+      "new_type_name": "美食;西餐;德国菜",
+      "category_l1": "美食",
+      "category_l2": "西餐",
+      "category_l3": "德国菜",
+      "recommended_style": {
+        "style_cn": "烘焙咖啡",
+        "style_name": "western_bakery_cafe_editorial"
+      },
+      "style_candidates": [
+        {
+          "rank": 1,
+          "style_cn": "烘焙咖啡",
+          "style_name": "western_bakery_cafe_editorial"
+        }
+      ],
+      "match_note": "泛西餐编辑/产品风；缺专门德国餐风格；已移除不适用风格：现代单品",
+      "known_gap_notes": [
+        "缺专门德国餐风格"
+      ]
+    },
+    {
+      "source_row_number": 40,
+      "new_type_code": "10507",
+      "new_type_name": "美食;火锅;潮汕牛肉火锅",
+      "category_l1": "美食",
+      "category_l2": "火锅",
+      "category_l3": "潮汕牛肉火锅",
+      "recommended_style": {
+        "style_cn": "暗调火锅",
+        "style_name": "dark_hotpot_warm_pot_feast_kv"
+      },
+      "style_candidates": [
+        {
+          "rank": 1,
+          "style_cn": "暗调火锅",
+          "style_name": "dark_hotpot_warm_pot_feast_kv"
+        },
+        {
+          "rank": 2,
+          "style_cn": "温补汤品",
+          "style_name": "warm_traditional_soup_catering_kv"
+        },
+        {
+          "rank": 3,
+          "style_cn": "中式清新",
+          "style_name": "chinese_fresh_lifestyle"
+        }
+      ],
+      "match_note": "火锅强匹配",
+      "known_gap_notes": []
+    },
+    {
+      "source_row_number": 41,
+      "new_type_code": "10401",
+      "new_type_name": "美食;自助餐;自助餐",
+      "category_l1": "美食",
+      "category_l2": "自助餐",
+      "category_l3": "自助餐",
+      "recommended_style": {
+        "style_cn": "奶油菜单",
+        "style_name": "light_cream_food_menu_system"
+      },
+      "style_candidates": [
+        {
+          "rank": 1,
+          "style_cn": "奶油菜单",
+          "style_name": "light_cream_food_menu_system"
+        }
+      ],
+      "match_note": "多品类/平台活动/菜单系统；已移除不适用风格：促销图形、黏土活动",
+      "known_gap_notes": []
+    },
+    {
+      "source_row_number": 42,
+      "new_type_code": "10513",
+      "new_type_name": "美食;火锅;地锅鸡",
+      "category_l1": "美食",
+      "category_l2": "火锅",
+      "category_l3": "地锅鸡",
+      "recommended_style": {
+        "style_cn": "温补汤品",
+        "style_name": "warm_traditional_soup_catering_kv"
+      },
+      "style_candidates": [
+        {
+          "rank": 1,
+          "style_cn": "温补汤品",
+          "style_name": "warm_traditional_soup_catering_kv"
+        },
+        {
+          "rank": 2,
+          "style_cn": "暗调火锅",
+          "style_name": "dark_hotpot_warm_pot_feast_kv"
+        },
+        {
+          "rank": 3,
+          "style_cn": "中式清新",
+          "style_name": "chinese_fresh_lifestyle"
+        }
+      ],
+      "match_note": "传统热锅/中式餐饮强匹配",
+      "known_gap_notes": []
+    },
+    {
+      "source_row_number": 43,
+      "new_type_code": "11501",
+      "new_type_name": "美食;音乐餐厅;音乐餐厅",
+      "category_l1": "美食",
+      "category_l2": "音乐餐厅",
+      "category_l3": "音乐餐厅",
+      "recommended_style": {
+        "style_cn": "玩趣字形",
+        "style_name": "playful_type_shape_festival_poster"
+      },
+      "style_candidates": [
+        {
+          "rank": 1,
+          "style_cn": "玩趣字形",
+          "style_name": "playful_type_shape_festival_poster"
+        }
+      ],
+      "match_note": "音乐主题可用玩趣字形或活动 KV；缺餐饮音乐专属风格；已移除不适用风格：黏土活动",
+      "known_gap_notes": []
+    },
+    {
+      "source_row_number": 44,
+      "new_type_code": "10502",
+      "new_type_name": "美食;火锅;串串香",
+      "category_l1": "美食",
+      "category_l2": "火锅",
+      "category_l3": "串串香",
+      "recommended_style": {
+        "style_cn": "暗调火锅",
+        "style_name": "dark_hotpot_warm_pot_feast_kv"
+      },
+      "style_candidates": [
+        {
+          "rank": 1,
+          "style_cn": "暗调火锅",
+          "style_name": "dark_hotpot_warm_pot_feast_kv"
+        },
+        {
+          "rank": 2,
+          "style_cn": "中式清新",
+          "style_name": "chinese_fresh_lifestyle"
+        }
+      ],
+      "match_note": "热辣锅物和促销适配；已移除不适用风格：促销图形",
+      "known_gap_notes": []
+    },
+    {
+      "source_row_number": 45,
+      "new_type_code": "10505",
+      "new_type_name": "美食;火锅;羊蝎子火锅",
+      "category_l1": "美食",
+      "category_l2": "火锅",
+      "category_l3": "羊蝎子火锅",
+      "recommended_style": {
+        "style_cn": "暗调火锅",
+        "style_name": "dark_hotpot_warm_pot_feast_kv"
+      },
+      "style_candidates": [
+        {
+          "rank": 1,
+          "style_cn": "暗调火锅",
+          "style_name": "dark_hotpot_warm_pot_feast_kv"
+        },
+        {
+          "rank": 2,
+          "style_cn": "温补汤品",
+          "style_name": "warm_traditional_soup_catering_kv"
+        },
+        {
+          "rank": 3,
+          "style_cn": "中式清新",
+          "style_name": "chinese_fresh_lifestyle"
+        }
+      ],
+      "match_note": "火锅/温补强匹配",
+      "known_gap_notes": []
+    },
+    {
+      "source_row_number": 46,
+      "new_type_code": "10803",
+      "new_type_name": "美食;西餐;法国菜",
+      "category_l1": "美食",
+      "category_l2": "西餐",
+      "category_l3": "法国菜",
+      "recommended_style": {
+        "style_cn": "烘焙咖啡",
+        "style_name": "western_bakery_cafe_editorial"
+      },
+      "style_candidates": [
+        {
+          "rank": 1,
+          "style_cn": "烘焙咖啡",
+          "style_name": "western_bakery_cafe_editorial"
+        },
+        {
+          "rank": 2,
+          "style_cn": "奶油菜单",
+          "style_name": "light_cream_food_menu_system"
+        }
+      ],
+      "match_note": "西式精品餐饮；已移除不适用风格：现代单品",
+      "known_gap_notes": []
+    },
+    {
+      "source_row_number": 47,
+      "new_type_code": "11901",
+      "new_type_name": "美食;美食城;美食城",
+      "category_l1": "美食",
+      "category_l2": "美食城",
+      "category_l3": "美食城",
+      "recommended_style": {
+        "style_cn": "奶油菜单",
+        "style_name": "light_cream_food_menu_system"
+      },
+      "style_candidates": [
+        {
+          "rank": 1,
+          "style_cn": "奶油菜单",
+          "style_name": "light_cream_food_menu_system"
+        }
+      ],
+      "match_note": "多商家/平台活动/菜单聚合；已移除不适用风格：促销图形、黏土活动",
+      "known_gap_notes": []
+    },
+    {
+      "source_row_number": 48,
+      "new_type_code": "10111",
+      "new_type_name": "美食;地方菜;湖北菜",
+      "category_l1": "美食",
+      "category_l2": "地方菜",
+      "category_l3": "湖北菜",
+      "recommended_style": {
+        "style_cn": "中式清新",
+        "style_name": "chinese_fresh_lifestyle"
+      },
+      "style_candidates": [
+        {
+          "rank": 1,
+          "style_cn": "中式清新",
+          "style_name": "chinese_fresh_lifestyle"
+        },
+        {
+          "rank": 2,
+          "style_cn": "温补汤品",
+          "style_name": "warm_traditional_soup_catering_kv"
+        },
+        {
+          "rank": 3,
+          "style_cn": "清新菜单",
+          "style_name": "chinese_fresh_catering_menu_poster"
+        }
+      ],
+      "match_note": "地方中餐",
+      "known_gap_notes": []
+    },
+    {
+      "source_row_number": 49,
+      "new_type_code": "11206",
+      "new_type_name": "美食;快餐小吃;面馆",
+      "category_l1": "美食",
+      "category_l2": "快餐小吃",
+      "category_l3": "面馆",
+      "recommended_style": {
+        "style_cn": "温补汤品",
+        "style_name": "warm_traditional_soup_catering_kv"
+      },
+      "style_candidates": [
+        {
+          "rank": 1,
+          "style_cn": "温补汤品",
+          "style_name": "warm_traditional_soup_catering_kv"
+        },
+        {
+          "rank": 2,
+          "style_cn": "中式清新",
+          "style_name": "chinese_fresh_lifestyle"
+        },
+        {
+          "rank": 3,
+          "style_cn": "清新菜单",
+          "style_name": "chinese_fresh_catering_menu_poster"
+        }
+      ],
+      "match_note": "粉面汤品/中式菜单",
+      "known_gap_notes": []
+    },
+    {
+      "source_row_number": 50,
+      "new_type_code": "10132",
+      "new_type_name": "美食;地方菜;潮汕菜",
+      "category_l1": "美食",
+      "category_l2": "地方菜",
+      "category_l3": "潮汕菜",
+      "recommended_style": {
+        "style_cn": "中式清新",
+        "style_name": "chinese_fresh_lifestyle"
+      },
+      "style_candidates": [
+        {
+          "rank": 1,
+          "style_cn": "中式清新",
+          "style_name": "chinese_fresh_lifestyle"
+        },
+        {
+          "rank": 2,
+          "style_cn": "清新菜单",
+          "style_name": "chinese_fresh_catering_menu_poster"
+        },
+        {
+          "rank": 3,
+          "style_cn": "温补汤品",
+          "style_name": "warm_traditional_soup_catering_kv"
+        }
+      ],
+      "match_note": "地方中餐",
+      "known_gap_notes": []
+    },
+    {
+      "source_row_number": 51,
+      "new_type_code": "10506",
+      "new_type_name": "美食;火锅;打边炉/港式火锅",
+      "category_l1": "美食",
+      "category_l2": "火锅",
+      "category_l3": "打边炉/港式火锅",
+      "recommended_style": {
+        "style_cn": "暗调火锅",
+        "style_name": "dark_hotpot_warm_pot_feast_kv"
+      },
+      "style_candidates": [
+        {
+          "rank": 1,
+          "style_cn": "暗调火锅",
+          "style_name": "dark_hotpot_warm_pot_feast_kv"
+        },
+        {
+          "rank": 2,
+          "style_cn": "中式清新",
+          "style_name": "chinese_fresh_lifestyle"
+        },
+        {
+          "rank": 3,
+          "style_cn": "温补汤品",
+          "style_name": "warm_traditional_soup_catering_kv"
+        }
+      ],
+      "match_note": "港式锅物/火锅强匹配",
+      "known_gap_notes": []
+    },
+    {
+      "source_row_number": 52,
+      "new_type_code": "10511",
+      "new_type_name": "美食;火锅;焖锅",
+      "category_l1": "美食",
+      "category_l2": "火锅",
+      "category_l3": "焖锅",
+      "recommended_style": {
+        "style_cn": "暗调火锅",
+        "style_name": "dark_hotpot_warm_pot_feast_kv"
+      },
+      "style_candidates": [
+        {
+          "rank": 1,
+          "style_cn": "暗调火锅",
+          "style_name": "dark_hotpot_warm_pot_feast_kv"
+        },
+        {
+          "rank": 2,
+          "style_cn": "温补汤品",
+          "style_name": "warm_traditional_soup_catering_kv"
+        },
+        {
+          "rank": 3,
+          "style_cn": "中式清新",
+          "style_name": "chinese_fresh_lifestyle"
+        }
+      ],
+      "match_note": "锅物强匹配",
+      "known_gap_notes": []
+    },
+    {
+      "source_row_number": 53,
+      "new_type_code": "10403",
+      "new_type_name": "美食;自助餐;火锅自助",
+      "category_l1": "美食",
+      "category_l2": "自助餐",
+      "category_l3": "火锅自助",
+      "recommended_style": {
+        "style_cn": "暗调火锅",
+        "style_name": "dark_hotpot_warm_pot_feast_kv"
+      },
+      "style_candidates": [
+        {
+          "rank": 1,
+          "style_cn": "暗调火锅",
+          "style_name": "dark_hotpot_warm_pot_feast_kv"
+        }
+      ],
+      "match_note": "火锅+自助促销；已移除不适用风格：促销图形、黏土活动",
+      "known_gap_notes": []
+    },
+    {
+      "source_row_number": 54,
+      "new_type_code": "10402",
+      "new_type_name": "美食;自助餐;烤肉自助",
+      "category_l1": "美食",
+      "category_l2": "自助餐",
+      "category_l3": "烤肉自助",
+      "recommended_style": {
+        "style_cn": "暗调火锅",
+        "style_name": "dark_hotpot_warm_pot_feast_kv"
+      },
+      "style_candidates": [
+        {
+          "rank": 1,
+          "style_cn": "暗调火锅",
+          "style_name": "dark_hotpot_warm_pot_feast_kv"
+        }
+      ],
+      "match_note": "烤肉+自助促销；已移除不适用风格：促销图形、黏土活动",
+      "known_gap_notes": []
+    },
+    {
+      "source_row_number": 55,
+      "new_type_code": "10114",
+      "new_type_name": "美食;地方菜;徽菜",
+      "category_l1": "美食",
+      "category_l2": "地方菜",
+      "category_l3": "徽菜",
+      "recommended_style": {
+        "style_cn": "中式清新",
+        "style_name": "chinese_fresh_lifestyle"
+      },
+      "style_candidates": [
+        {
+          "rank": 1,
+          "style_cn": "中式清新",
+          "style_name": "chinese_fresh_lifestyle"
+        },
+        {
+          "rank": 2,
+          "style_cn": "温补汤品",
+          "style_name": "warm_traditional_soup_catering_kv"
+        },
+        {
+          "rank": 3,
+          "style_cn": "清新菜单",
+          "style_name": "chinese_fresh_catering_menu_poster"
+        }
+      ],
+      "match_note": "地方中餐",
+      "known_gap_notes": []
+    },
+    {
+      "source_row_number": 56,
+      "new_type_code": "10108",
+      "new_type_name": "美食;地方菜;福建菜",
+      "category_l1": "美食",
+      "category_l2": "地方菜",
+      "category_l3": "福建菜",
+      "recommended_style": {
+        "style_cn": "中式清新",
+        "style_name": "chinese_fresh_lifestyle"
+      },
+      "style_candidates": [
+        {
+          "rank": 1,
+          "style_cn": "中式清新",
+          "style_name": "chinese_fresh_lifestyle"
+        },
+        {
+          "rank": 2,
+          "style_cn": "清新菜单",
+          "style_name": "chinese_fresh_catering_menu_poster"
+        },
+        {
+          "rank": 3,
+          "style_cn": "温补汤品",
+          "style_name": "warm_traditional_soup_catering_kv"
+        }
+      ],
+      "match_note": "地方中餐",
+      "known_gap_notes": []
+    },
+    {
+      "source_row_number": 57,
+      "new_type_code": "10121",
+      "new_type_name": "美食;地方菜;江湖菜",
+      "category_l1": "美食",
+      "category_l2": "地方菜",
+      "category_l3": "江湖菜",
+      "recommended_style": {
+        "style_cn": "暗调火锅",
+        "style_name": "dark_hotpot_warm_pot_feast_kv"
+      },
+      "style_candidates": [
+        {
+          "rank": 1,
+          "style_cn": "暗调火锅",
+          "style_name": "dark_hotpot_warm_pot_feast_kv"
+        },
+        {
+          "rank": 2,
+          "style_cn": "中式清新",
+          "style_name": "chinese_fresh_lifestyle"
+        }
+      ],
+      "match_note": "重口味/热烈餐饮；已移除不适用风格：促销图形",
+      "known_gap_notes": []
+    },
+    {
+      "source_row_number": 58,
+      "new_type_code": "10101",
+      "new_type_name": "美食;地方菜;北京菜",
+      "category_l1": "美食",
+      "category_l2": "地方菜",
+      "category_l3": "北京菜",
+      "recommended_style": {
+        "style_cn": "中式清新",
+        "style_name": "chinese_fresh_lifestyle"
+      },
+      "style_candidates": [
+        {
+          "rank": 1,
+          "style_cn": "中式清新",
+          "style_name": "chinese_fresh_lifestyle"
+        },
+        {
+          "rank": 2,
+          "style_cn": "温补汤品",
+          "style_name": "warm_traditional_soup_catering_kv"
+        },
+        {
+          "rank": 3,
+          "style_cn": "清新菜单",
+          "style_name": "chinese_fresh_catering_menu_poster"
+        }
+      ],
+      "match_note": "地方中餐",
+      "known_gap_notes": []
+    },
+    {
+      "source_row_number": 59,
+      "new_type_code": "10516",
+      "new_type_name": "美食;火锅;椰子鸡火锅",
+      "category_l1": "美食",
+      "category_l2": "火锅",
+      "category_l3": "椰子鸡火锅",
+      "recommended_style": {
+        "style_cn": "暗调火锅",
+        "style_name": "dark_hotpot_warm_pot_feast_kv"
+      },
+      "style_candidates": [
+        {
+          "rank": 1,
+          "style_cn": "暗调火锅",
+          "style_name": "dark_hotpot_warm_pot_feast_kv"
+        },
+        {
+          "rank": 2,
+          "style_cn": "温补汤品",
+          "style_name": "warm_traditional_soup_catering_kv"
+        },
+        {
+          "rank": 3,
+          "style_cn": "中式清新",
+          "style_name": "chinese_fresh_lifestyle"
+        }
+      ],
+      "match_note": "汤锅/滋补/中式商业",
+      "known_gap_notes": []
+    },
+    {
+      "source_row_number": 60,
+      "new_type_code": "11001",
+      "new_type_name": "美食;面包甜点;面包烘焙",
+      "category_l1": "美食",
+      "category_l2": "面包甜点",
+      "category_l3": "面包烘焙",
+      "recommended_style": {
+        "style_cn": "烘焙咖啡",
+        "style_name": "western_bakery_cafe_editorial"
+      },
+      "style_candidates": [
+        {
+          "rank": 1,
+          "style_cn": "烘焙咖啡",
+          "style_name": "western_bakery_cafe_editorial"
+        },
+        {
+          "rank": 2,
+          "style_cn": "奶油菜单",
+          "style_name": "light_cream_food_menu_system"
+        }
+      ],
+      "match_note": "烘焙强匹配；已移除不适用风格：现代单品",
+      "known_gap_notes": []
+    },
+    {
+      "source_row_number": 61,
+      "new_type_code": "11207",
+      "new_type_name": "美食;快餐小吃;饺子/馄饨",
+      "category_l1": "美食",
+      "category_l2": "快餐小吃",
+      "category_l3": "饺子/馄饨",
+      "recommended_style": {
+        "style_cn": "清新菜单",
+        "style_name": "chinese_fresh_catering_menu_poster"
+      },
+      "style_candidates": [
+        {
+          "rank": 1,
+          "style_cn": "清新菜单",
+          "style_name": "chinese_fresh_catering_menu_poster"
+        },
+        {
+          "rank": 2,
+          "style_cn": "中式清新",
+          "style_name": "chinese_fresh_lifestyle"
+        },
+        {
+          "rank": 3,
+          "style_cn": "温补汤品",
+          "style_name": "warm_traditional_soup_catering_kv"
+        }
+      ],
+      "match_note": "中式小吃/汤品",
+      "known_gap_notes": []
+    },
+    {
+      "source_row_number": 62,
+      "new_type_code": "11213",
+      "new_type_name": "美食;快餐小吃;黄焖鸡",
+      "category_l1": "美食",
+      "category_l2": "快餐小吃",
+      "category_l3": "黄焖鸡",
+      "recommended_style": {
+        "style_cn": "温补汤品",
+        "style_name": "warm_traditional_soup_catering_kv"
+      },
+      "style_candidates": [
+        {
+          "rank": 1,
+          "style_cn": "温补汤品",
+          "style_name": "warm_traditional_soup_catering_kv"
+        },
+        {
+          "rank": 2,
+          "style_cn": "中式清新",
+          "style_name": "chinese_fresh_lifestyle"
+        }
+      ],
+      "match_note": "传统热食/快餐促销；已移除不适用风格：促销图形",
+      "known_gap_notes": []
+    },
+    {
+      "source_row_number": 63,
+      "new_type_code": "10203",
+      "new_type_name": "美食;东南亚菜;印度菜",
+      "category_l1": "美食",
+      "category_l2": "东南亚菜",
+      "category_l3": "印度菜",
+      "recommended_style": {
+        "style_cn": "",
+        "style_name": ""
+      },
+      "style_candidates": [],
+      "match_note": "仅可用现代产品编辑兜底；缺专门印度餐风格；已移除不适用风格：现代单品",
+      "known_gap_notes": [
+        "缺专门印度餐风格"
+      ]
+    },
+    {
+      "source_row_number": 64,
+      "new_type_code": "10405",
+      "new_type_name": "美食;自助餐;西餐自助",
+      "category_l1": "美食",
+      "category_l2": "自助餐",
+      "category_l3": "西餐自助",
+      "recommended_style": {
+        "style_cn": "烘焙咖啡",
+        "style_name": "western_bakery_cafe_editorial"
+      },
+      "style_candidates": [
+        {
+          "rank": 1,
+          "style_cn": "烘焙咖啡",
+          "style_name": "western_bakery_cafe_editorial"
+        },
+        {
+          "rank": 2,
+          "style_cn": "奶油菜单",
+          "style_name": "light_cream_food_menu_system"
+        }
+      ],
+      "match_note": "西式餐饮和自助促销；已移除不适用风格：促销图形",
+      "known_gap_notes": []
+    },
+    {
+      "source_row_number": 65,
+      "new_type_code": "10812",
+      "new_type_name": "美食;西餐;墨西哥菜",
+      "category_l1": "美食",
+      "category_l2": "西餐",
+      "category_l3": "墨西哥菜",
+      "recommended_style": {
+        "style_cn": "烘焙咖啡",
+        "style_name": "western_bakery_cafe_editorial"
+      },
+      "style_candidates": [
+        {
+          "rank": 1,
+          "style_cn": "烘焙咖啡",
+          "style_name": "western_bakery_cafe_editorial"
+        }
+      ],
+      "match_note": "可用高饱和促销或泛西餐；缺专门墨西哥风格；已移除不适用风格：促销图形",
+      "known_gap_notes": [
+        "缺专门墨西哥风格"
+      ]
+    },
+    {
+      "source_row_number": 66,
+      "new_type_code": "10104",
+      "new_type_name": "美食;地方菜;粤菜",
+      "category_l1": "美食",
+      "category_l2": "地方菜",
+      "category_l3": "粤菜",
+      "recommended_style": {
+        "style_cn": "中式清新",
+        "style_name": "chinese_fresh_lifestyle"
+      },
+      "style_candidates": [
+        {
+          "rank": 1,
+          "style_cn": "中式清新",
+          "style_name": "chinese_fresh_lifestyle"
+        },
+        {
+          "rank": 2,
+          "style_cn": "清新菜单",
+          "style_name": "chinese_fresh_catering_menu_poster"
+        },
+        {
+          "rank": 3,
+          "style_cn": "温补汤品",
+          "style_name": "warm_traditional_soup_catering_kv"
+        }
+      ],
+      "match_note": "中式清新和菜单系统强匹配",
+      "known_gap_notes": []
+    },
+    {
+      "source_row_number": 67,
+      "new_type_code": "10107",
+      "new_type_name": "美食;地方菜;清真菜馆",
+      "category_l1": "美食",
+      "category_l2": "地方菜",
+      "category_l3": "清真菜馆",
+      "recommended_style": {
+        "style_cn": "田园鲜蔬",
+        "style_name": "rustic_farm_fresh_produce_kv"
+      },
+      "style_candidates": [
+        {
+          "rank": 1,
+          "style_cn": "田园鲜蔬",
+          "style_name": "rustic_farm_fresh_produce_kv"
+        },
+        {
+          "rank": 2,
+          "style_cn": "中式清新",
+          "style_name": "chinese_fresh_lifestyle"
+        },
+        {
+          "rank": 3,
+          "style_cn": "温补汤品",
+          "style_name": "warm_traditional_soup_catering_kv"
+        }
+      ],
+      "match_note": "地域食材/中式餐饮/牛羊热食",
+      "known_gap_notes": []
+    },
+    {
+      "source_row_number": 68,
+      "new_type_code": "10810",
+      "new_type_name": "美食;西餐;西式快餐",
+      "category_l1": "美食",
+      "category_l2": "西餐",
+      "category_l3": "西式快餐",
+      "recommended_style": {
+        "style_cn": "烘焙咖啡",
+        "style_name": "western_bakery_cafe_editorial"
+      },
+      "style_candidates": [
+        {
+          "rank": 1,
+          "style_cn": "烘焙咖啡",
+          "style_name": "western_bakery_cafe_editorial"
+        },
+        {
+          "rank": 2,
+          "style_cn": "奶油菜单",
+          "style_name": "light_cream_food_menu_system"
+        }
+      ],
+      "match_note": "快餐促销和西式菜单；已移除不适用风格：促销图形",
+      "known_gap_notes": []
+    },
+    {
+      "source_row_number": 69,
+      "new_type_code": "11601",
+      "new_type_name": "美食;热门/特色菜;小龙虾",
+      "category_l1": "美食",
+      "category_l2": "热门/特色菜",
+      "category_l3": "小龙虾",
+      "recommended_style": {
+        "style_cn": "暗调火锅",
+        "style_name": "dark_hotpot_warm_pot_feast_kv"
+      },
+      "style_candidates": [
+        {
+          "rank": 1,
+          "style_cn": "暗调火锅",
+          "style_name": "dark_hotpot_warm_pot_feast_kv"
+        },
+        {
+          "rank": 2,
+          "style_cn": "中式清新",
+          "style_name": "chinese_fresh_lifestyle"
+        }
+      ],
+      "match_note": "热辣聚餐/促销；已移除不适用风格：促销图形",
+      "known_gap_notes": []
+    },
+    {
+      "source_row_number": 70,
+      "new_type_code": "10514",
+      "new_type_name": "美食;火锅;云南火锅",
+      "category_l1": "美食",
+      "category_l2": "火锅",
+      "category_l3": "云南火锅",
+      "recommended_style": {
+        "style_cn": "暗调火锅",
+        "style_name": "dark_hotpot_warm_pot_feast_kv"
+      },
+      "style_candidates": [
+        {
+          "rank": 1,
+          "style_cn": "暗调火锅",
+          "style_name": "dark_hotpot_warm_pot_feast_kv"
+        },
+        {
+          "rank": 2,
+          "style_cn": "田园鲜蔬",
+          "style_name": "rustic_farm_fresh_produce_kv"
+        },
+        {
+          "rank": 3,
+          "style_cn": "中式清新",
+          "style_name": "chinese_fresh_lifestyle"
+        }
+      ],
+      "match_note": "火锅+地域食材",
+      "known_gap_notes": []
+    },
+    {
+      "source_row_number": 71,
+      "new_type_code": "11214",
+      "new_type_name": "美食;快餐小吃;炸鸡炸串",
+      "category_l1": "美食",
+      "category_l2": "快餐小吃",
+      "category_l3": "炸鸡炸串",
+      "recommended_style": {
+        "style_cn": "奶油菜单",
+        "style_name": "light_cream_food_menu_system"
+      },
+      "style_candidates": [
+        {
+          "rank": 1,
+          "style_cn": "奶油菜单",
+          "style_name": "light_cream_food_menu_system"
+        },
+        {
+          "rank": 2,
+          "style_cn": "烘焙咖啡",
+          "style_name": "western_bakery_cafe_editorial"
+        }
+      ],
+      "match_note": "快餐促销/菜单/西式快餐；已移除不适用风格：促销图形",
+      "known_gap_notes": []
+    },
+    {
+      "source_row_number": 72,
+      "new_type_code": "11608",
+      "new_type_name": "美食;热门/特色菜;素菜馆",
+      "category_l1": "美食",
+      "category_l2": "热门/特色菜",
+      "category_l3": "素菜馆",
+      "recommended_style": {
+        "style_cn": "田园鲜蔬",
+        "style_name": "rustic_farm_fresh_produce_kv"
+      },
+      "style_candidates": [
+        {
+          "rank": 1,
+          "style_cn": "田园鲜蔬",
+          "style_name": "rustic_farm_fresh_produce_kv"
+        },
+        {
+          "rank": 2,
+          "style_cn": "鲜果茶饮",
+          "style_name": "fresh_fruit_beverage_lifestyle_kv"
+        }
+      ],
+      "match_note": "自然食材和清爽克制；已移除不适用风格：现代单品",
+      "known_gap_notes": []
+    },
+    {
+      "source_row_number": 73,
+      "new_type_code": "10124",
+      "new_type_name": "美食;地方菜;豫菜",
+      "category_l1": "美食",
+      "category_l2": "地方菜",
+      "category_l3": "豫菜",
+      "recommended_style": {
+        "style_cn": "中式清新",
+        "style_name": "chinese_fresh_lifestyle"
+      },
+      "style_candidates": [
+        {
+          "rank": 1,
+          "style_cn": "中式清新",
+          "style_name": "chinese_fresh_lifestyle"
+        },
+        {
+          "rank": 2,
+          "style_cn": "温补汤品",
+          "style_name": "warm_traditional_soup_catering_kv"
+        },
+        {
+          "rank": 3,
+          "style_cn": "清新菜单",
+          "style_name": "chinese_fresh_catering_menu_poster"
+        }
+      ],
+      "match_note": "地方中餐",
+      "known_gap_notes": []
+    },
+    {
+      "source_row_number": 74,
+      "new_type_code": "10131",
+      "new_type_name": "美食;地方菜;茶餐厅",
+      "category_l1": "美食",
+      "category_l2": "地方菜",
+      "category_l3": "茶餐厅",
+      "recommended_style": {
+        "style_cn": "中式清新",
+        "style_name": "chinese_fresh_lifestyle"
+      },
+      "style_candidates": [
+        {
+          "rank": 1,
+          "style_cn": "中式清新",
+          "style_name": "chinese_fresh_lifestyle"
+        },
+        {
+          "rank": 2,
+          "style_cn": "清新菜单",
+          "style_name": "chinese_fresh_catering_menu_poster"
+        },
+        {
+          "rank": 3,
+          "style_cn": "烘焙咖啡",
+          "style_name": "western_bakery_cafe_editorial"
+        }
+      ],
+      "match_note": "港式/中西混合菜单",
+      "known_gap_notes": []
+    },
+    {
+      "source_row_number": 75,
+      "new_type_code": "11205",
+      "new_type_name": "美食;快餐小吃;其他快餐小吃",
+      "category_l1": "美食",
+      "category_l2": "快餐小吃",
+      "category_l3": "其他快餐小吃",
+      "recommended_style": {
+        "style_cn": "奶油菜单",
+        "style_name": "light_cream_food_menu_system"
+      },
+      "style_candidates": [
+        {
+          "rank": 1,
+          "style_cn": "奶油菜单",
+          "style_name": "light_cream_food_menu_system"
+        },
+        {
+          "rank": 2,
+          "style_cn": "清新菜单",
+          "style_name": "chinese_fresh_catering_menu_poster"
+        }
+      ],
+      "match_note": "泛快餐菜单与促销；已移除不适用风格：促销图形",
+      "known_gap_notes": []
+    },
+    {
+      "source_row_number": 76,
+      "new_type_code": "10510",
+      "new_type_name": "美食;火锅;海鲜火锅",
+      "category_l1": "美食",
+      "category_l2": "火锅",
+      "category_l3": "海鲜火锅",
+      "recommended_style": {
+        "style_cn": "暗调火锅",
+        "style_name": "dark_hotpot_warm_pot_feast_kv"
+      },
+      "style_candidates": [
+        {
+          "rank": 1,
+          "style_cn": "暗调火锅",
+          "style_name": "dark_hotpot_warm_pot_feast_kv"
+        },
+        {
+          "rank": 2,
+          "style_cn": "中式清新",
+          "style_name": "chinese_fresh_lifestyle"
+        },
+        {
+          "rank": 3,
+          "style_cn": "温补汤品",
+          "style_name": "warm_traditional_soup_catering_kv"
+        }
+      ],
+      "match_note": "海鲜锅物",
+      "known_gap_notes": []
+    },
+    {
+      "source_row_number": 77,
+      "new_type_code": "10109",
+      "new_type_name": "美食;地方菜;湘菜",
+      "category_l1": "美食",
+      "category_l2": "地方菜",
+      "category_l3": "湘菜",
+      "recommended_style": {
+        "style_cn": "暗调火锅",
+        "style_name": "dark_hotpot_warm_pot_feast_kv"
+      },
+      "style_candidates": [
+        {
+          "rank": 1,
+          "style_cn": "暗调火锅",
+          "style_name": "dark_hotpot_warm_pot_feast_kv"
+        },
+        {
+          "rank": 2,
+          "style_cn": "中式清新",
+          "style_name": "chinese_fresh_lifestyle"
+        },
+        {
+          "rank": 3,
+          "style_cn": "温补汤品",
+          "style_name": "warm_traditional_soup_catering_kv"
+        }
+      ],
+      "match_note": "辣味地方菜",
+      "known_gap_notes": []
+    },
+    {
+      "source_row_number": 78,
+      "new_type_code": "10130",
+      "new_type_name": "美食;地方菜;陕菜",
+      "category_l1": "美食",
+      "category_l2": "地方菜",
+      "category_l3": "陕菜",
+      "recommended_style": {
+        "style_cn": "中式清新",
+        "style_name": "chinese_fresh_lifestyle"
+      },
+      "style_candidates": [
+        {
+          "rank": 1,
+          "style_cn": "中式清新",
+          "style_name": "chinese_fresh_lifestyle"
+        },
+        {
+          "rank": 2,
+          "style_cn": "温补汤品",
+          "style_name": "warm_traditional_soup_catering_kv"
+        },
+        {
+          "rank": 3,
+          "style_cn": "清新菜单",
+          "style_name": "chinese_fresh_catering_menu_poster"
+        }
+      ],
+      "match_note": "地方中餐",
+      "known_gap_notes": []
+    },
+    {
+      "source_row_number": 79,
+      "new_type_code": "11616",
+      "new_type_name": "美食;热门/特色菜;干锅/香锅",
+      "category_l1": "美食",
+      "category_l2": "热门/特色菜",
+      "category_l3": "干锅/香锅",
+      "recommended_style": {
+        "style_cn": "暗调火锅",
+        "style_name": "dark_hotpot_warm_pot_feast_kv"
+      },
+      "style_candidates": [
+        {
+          "rank": 1,
+          "style_cn": "暗调火锅",
+          "style_name": "dark_hotpot_warm_pot_feast_kv"
+        },
+        {
+          "rank": 2,
+          "style_cn": "中式清新",
+          "style_name": "chinese_fresh_lifestyle"
+        }
+      ],
+      "match_note": "热辣锅物；已移除不适用风格：促销图形",
+      "known_gap_notes": []
+    },
+    {
+      "source_row_number": 80,
+      "new_type_code": "11215",
+      "new_type_name": "美食;快餐小吃;烧鸡",
+      "category_l1": "美食",
+      "category_l2": "快餐小吃",
+      "category_l3": "烧鸡",
+      "recommended_style": {
+        "style_cn": "温补汤品",
+        "style_name": "warm_traditional_soup_catering_kv"
+      },
+      "style_candidates": [
+        {
+          "rank": 1,
+          "style_cn": "温补汤品",
+          "style_name": "warm_traditional_soup_catering_kv"
+        },
+        {
+          "rank": 2,
+          "style_cn": "中式清新",
+          "style_name": "chinese_fresh_lifestyle"
+        }
+      ],
+      "match_note": "传统热食/促销；已移除不适用风格：促销图形",
+      "known_gap_notes": []
+    },
+    {
+      "source_row_number": 81,
+      "new_type_code": "11605",
+      "new_type_name": "美食;热门/特色菜;海鲜",
+      "category_l1": "美食",
+      "category_l2": "热门/特色菜",
+      "category_l3": "海鲜",
+      "recommended_style": {
+        "style_cn": "暗调火锅",
+        "style_name": "dark_hotpot_warm_pot_feast_kv"
+      },
+      "style_candidates": [
+        {
+          "rank": 1,
+          "style_cn": "暗调火锅",
+          "style_name": "dark_hotpot_warm_pot_feast_kv"
+        },
+        {
+          "rank": 2,
+          "style_cn": "中式清新",
+          "style_name": "chinese_fresh_lifestyle"
+        }
+      ],
+      "match_note": "宴席/产品/中式海鲜；已移除不适用风格：现代单品",
+      "known_gap_notes": []
+    },
+    {
+      "source_row_number": 82,
+      "new_type_code": "10805",
+      "new_type_name": "美食;西餐;英国菜",
+      "category_l1": "美食",
+      "category_l2": "西餐",
+      "category_l3": "英国菜",
+      "recommended_style": {
+        "style_cn": "烘焙咖啡",
+        "style_name": "western_bakery_cafe_editorial"
+      },
+      "style_candidates": [
+        {
+          "rank": 1,
+          "style_cn": "烘焙咖啡",
+          "style_name": "western_bakery_cafe_editorial"
+        },
+        {
+          "rank": 2,
+          "style_cn": "奶油菜单",
+          "style_name": "light_cream_food_menu_system"
+        }
+      ],
+      "match_note": "泛西餐编辑；已移除不适用风格：现代单品",
+      "known_gap_notes": []
+    },
+    {
+      "source_row_number": 83,
+      "new_type_code": "10807",
+      "new_type_name": "美食;西餐;地中海菜系",
+      "category_l1": "美食",
+      "category_l2": "西餐",
+      "category_l3": "地中海菜系",
+      "recommended_style": {
+        "style_cn": "烘焙咖啡",
+        "style_name": "western_bakery_cafe_editorial"
+      },
+      "style_candidates": [
+        {
+          "rank": 1,
+          "style_cn": "烘焙咖啡",
+          "style_name": "western_bakery_cafe_editorial"
+        },
+        {
+          "rank": 2,
+          "style_cn": "奶油菜单",
+          "style_name": "light_cream_food_menu_system"
+        }
+      ],
+      "match_note": "西式编辑和清爽菜单；已移除不适用风格：现代单品",
+      "known_gap_notes": []
+    },
+    {
+      "source_row_number": 84,
+      "new_type_code": "10901",
+      "new_type_name": "美食;其他美食;其他美食",
+      "category_l1": "美食",
+      "category_l2": "其他美食",
+      "category_l3": "其他美食",
+      "recommended_style": {
+        "style_cn": "",
+        "style_name": ""
+      },
+      "style_candidates": [],
+      "match_note": "泛促销/平台活动/产品编辑；已移除不适用风格：促销图形、黏土活动、现代单品",
+      "known_gap_notes": []
+    },
+    {
+      "source_row_number": 85,
+      "new_type_code": "10125",
+      "new_type_name": "美食;地方菜;冀菜",
+      "category_l1": "美食",
+      "category_l2": "地方菜",
+      "category_l3": "冀菜",
+      "recommended_style": {
+        "style_cn": "中式清新",
+        "style_name": "chinese_fresh_lifestyle"
+      },
+      "style_candidates": [
+        {
+          "rank": 1,
+          "style_cn": "中式清新",
+          "style_name": "chinese_fresh_lifestyle"
+        },
+        {
+          "rank": 2,
+          "style_cn": "温补汤品",
+          "style_name": "warm_traditional_soup_catering_kv"
+        },
+        {
+          "rank": 3,
+          "style_cn": "清新菜单",
+          "style_name": "chinese_fresh_catering_menu_poster"
+        }
+      ],
+      "match_note": "地方中餐",
+      "known_gap_notes": []
+    },
+    {
+      "source_row_number": 86,
+      "new_type_code": "11612",
+      "new_type_name": "美食;热门/特色菜;家常菜",
+      "category_l1": "美食",
+      "category_l2": "热门/特色菜",
+      "category_l3": "家常菜",
+      "recommended_style": {
+        "style_cn": "中式清新",
+        "style_name": "chinese_fresh_lifestyle"
+      },
+      "style_candidates": [
+        {
+          "rank": 1,
+          "style_cn": "中式清新",
+          "style_name": "chinese_fresh_lifestyle"
+        },
+        {
+          "rank": 2,
+          "style_cn": "清新菜单",
+          "style_name": "chinese_fresh_catering_menu_poster"
+        },
+        {
+          "rank": 3,
+          "style_cn": "温补汤品",
+          "style_name": "warm_traditional_soup_catering_kv"
+        }
+      ],
+      "match_note": "中式家常强匹配",
+      "known_gap_notes": []
+    },
+    {
+      "source_row_number": 87,
+      "new_type_code": "10503",
+      "new_type_name": "美食;火锅;牛羊肉火锅",
+      "category_l1": "美食",
+      "category_l2": "火锅",
+      "category_l3": "牛羊肉火锅",
+      "recommended_style": {
+        "style_cn": "暗调火锅",
+        "style_name": "dark_hotpot_warm_pot_feast_kv"
+      },
+      "style_candidates": [
+        {
+          "rank": 1,
+          "style_cn": "暗调火锅",
+          "style_name": "dark_hotpot_warm_pot_feast_kv"
+        },
+        {
+          "rank": 2,
+          "style_cn": "温补汤品",
+          "style_name": "warm_traditional_soup_catering_kv"
+        },
+        {
+          "rank": 3,
+          "style_cn": "中式清新",
+          "style_name": "chinese_fresh_lifestyle"
+        }
+      ],
+      "match_note": "火锅强匹配",
+      "known_gap_notes": []
+    },
+    {
+      "source_row_number": 88,
+      "new_type_code": "10801",
+      "new_type_name": "美食;西餐;意大利菜",
+      "category_l1": "美食",
+      "category_l2": "西餐",
+      "category_l3": "意大利菜",
+      "recommended_style": {
+        "style_cn": "烘焙咖啡",
+        "style_name": "western_bakery_cafe_editorial"
+      },
+      "style_candidates": [
+        {
+          "rank": 1,
+          "style_cn": "烘焙咖啡",
+          "style_name": "western_bakery_cafe_editorial"
+        },
+        {
+          "rank": 2,
+          "style_cn": "奶油菜单",
+          "style_name": "light_cream_food_menu_system"
+        }
+      ],
+      "match_note": "西式编辑/菜单；已移除不适用风格：现代单品",
+      "known_gap_notes": []
+    },
+    {
+      "source_row_number": 89,
+      "new_type_code": "10202",
+      "new_type_name": "美食;东南亚菜;越南菜",
+      "category_l1": "美食",
+      "category_l2": "东南亚菜",
+      "category_l3": "越南菜",
+      "recommended_style": {
+        "style_cn": "中式清新",
+        "style_name": "chinese_fresh_lifestyle"
+      },
+      "style_candidates": [
+        {
+          "rank": 1,
+          "style_cn": "中式清新",
+          "style_name": "chinese_fresh_lifestyle"
+        },
+        {
+          "rank": 2,
+          "style_cn": "鲜果茶饮",
+          "style_name": "fresh_fruit_beverage_lifestyle_kv"
+        },
+        {
+          "rank": 3,
+          "style_cn": "奶油菜单",
+          "style_name": "light_cream_food_menu_system"
+        }
+      ],
+      "match_note": "可借南洋/清新草本；缺专门越南风格",
+      "known_gap_notes": [
+        "缺专门越南风格"
+      ]
+    },
+    {
+      "source_row_number": 90,
+      "new_type_code": "11103",
+      "new_type_name": "美食;饮品;茶饮果汁",
+      "category_l1": "美食",
+      "category_l2": "饮品",
+      "category_l3": "茶饮果汁",
+      "recommended_style": {
+        "style_cn": "鲜果茶饮",
+        "style_name": "fresh_fruit_beverage_lifestyle_kv"
+      },
+      "style_candidates": [
+        {
+          "rank": 1,
+          "style_cn": "鲜果茶饮",
+          "style_name": "fresh_fruit_beverage_lifestyle_kv"
+        },
+        {
+          "rank": 2,
+          "style_cn": "奶油菜单",
+          "style_name": "light_cream_food_menu_system"
+        },
+        {
+          "rank": 3,
+          "style_cn": "烘焙咖啡",
+          "style_name": "western_bakery_cafe_editorial"
+        }
+      ],
+      "match_note": "鲜果饮品强匹配",
+      "known_gap_notes": []
+    },
+    {
+      "source_row_number": 91,
+      "new_type_code": "11212",
+      "new_type_name": "美食;快餐小吃;生煎/锅贴/小笼",
+      "category_l1": "美食",
+      "category_l2": "快餐小吃",
+      "category_l3": "生煎/锅贴/小笼",
+      "recommended_style": {
+        "style_cn": "清新菜单",
+        "style_name": "chinese_fresh_catering_menu_poster"
+      },
+      "style_candidates": [
+        {
+          "rank": 1,
+          "style_cn": "清新菜单",
+          "style_name": "chinese_fresh_catering_menu_poster"
+        },
+        {
+          "rank": 2,
+          "style_cn": "中式清新",
+          "style_name": "chinese_fresh_lifestyle"
+        },
+        {
+          "rank": 3,
+          "style_cn": "温补汤品",
+          "style_name": "warm_traditional_soup_catering_kv"
+        }
+      ],
+      "match_note": "中式小吃",
+      "known_gap_notes": []
+    },
+    {
+      "source_row_number": 92,
+      "new_type_code": "10103",
+      "new_type_name": "美食;地方菜;本帮江浙菜",
+      "category_l1": "美食",
+      "category_l2": "地方菜",
+      "category_l3": "本帮江浙菜",
+      "recommended_style": {
+        "style_cn": "中式清新",
+        "style_name": "chinese_fresh_lifestyle"
+      },
+      "style_candidates": [
+        {
+          "rank": 1,
+          "style_cn": "中式清新",
+          "style_name": "chinese_fresh_lifestyle"
+        },
+        {
+          "rank": 2,
+          "style_cn": "清新菜单",
+          "style_name": "chinese_fresh_catering_menu_poster"
+        },
+        {
+          "rank": 3,
+          "style_cn": "温补汤品",
+          "style_name": "warm_traditional_soup_catering_kv"
+        }
+      ],
+      "match_note": "中式清新和地方菜",
+      "known_gap_notes": []
+    },
+    {
+      "source_row_number": 93,
+      "new_type_code": "10508",
+      "new_type_name": "美食;火锅;鱼火锅",
+      "category_l1": "美食",
+      "category_l2": "火锅",
+      "category_l3": "鱼火锅",
+      "recommended_style": {
+        "style_cn": "暗调火锅",
+        "style_name": "dark_hotpot_warm_pot_feast_kv"
+      },
+      "style_candidates": [
+        {
+          "rank": 1,
+          "style_cn": "暗调火锅",
+          "style_name": "dark_hotpot_warm_pot_feast_kv"
+        },
+        {
+          "rank": 2,
+          "style_cn": "温补汤品",
+          "style_name": "warm_traditional_soup_catering_kv"
+        },
+        {
+          "rank": 3,
+          "style_cn": "中式清新",
+          "style_name": "chinese_fresh_lifestyle"
+        }
+      ],
+      "match_note": "鱼锅强匹配",
+      "known_gap_notes": []
+    },
+    {
+      "source_row_number": 94,
+      "new_type_code": "11613",
+      "new_type_name": "美食;热门/特色菜;私房菜",
+      "category_l1": "美食",
+      "category_l2": "热门/特色菜",
+      "category_l3": "私房菜",
+      "recommended_style": {
+        "style_cn": "中式清新",
+        "style_name": "chinese_fresh_lifestyle"
+      },
+      "style_candidates": [
+        {
+          "rank": 1,
+          "style_cn": "中式清新",
+          "style_name": "chinese_fresh_lifestyle"
+        },
+        {
+          "rank": 2,
+          "style_cn": "温补汤品",
+          "style_name": "warm_traditional_soup_catering_kv"
+        }
+      ],
+      "match_note": "中式精致/传统/克制高端；已移除不适用风格：现代单品",
+      "known_gap_notes": []
+    },
+    {
+      "source_row_number": 95,
+      "new_type_code": "10515",
+      "new_type_name": "美食;火锅;特色火锅",
+      "category_l1": "美食",
+      "category_l2": "火锅",
+      "category_l3": "特色火锅",
+      "recommended_style": {
+        "style_cn": "暗调火锅",
+        "style_name": "dark_hotpot_warm_pot_feast_kv"
+      },
+      "style_candidates": [
+        {
+          "rank": 1,
+          "style_cn": "暗调火锅",
+          "style_name": "dark_hotpot_warm_pot_feast_kv"
+        },
+        {
+          "rank": 2,
+          "style_cn": "中式清新",
+          "style_name": "chinese_fresh_lifestyle"
+        },
+        {
+          "rank": 3,
+          "style_cn": "温补汤品",
+          "style_name": "warm_traditional_soup_catering_kv"
+        }
+      ],
+      "match_note": "火锅强匹配",
+      "known_gap_notes": []
+    },
+    {
+      "source_row_number": 96,
+      "new_type_code": "11101",
+      "new_type_name": "美食;饮品;咖啡厅",
+      "category_l1": "美食",
+      "category_l2": "饮品",
+      "category_l3": "咖啡厅",
+      "recommended_style": {
+        "style_cn": "烘焙咖啡",
+        "style_name": "western_bakery_cafe_editorial"
+      },
+      "style_candidates": [
+        {
+          "rank": 1,
+          "style_cn": "烘焙咖啡",
+          "style_name": "western_bakery_cafe_editorial"
+        },
+        {
+          "rank": 2,
+          "style_cn": "奶油菜单",
+          "style_name": "light_cream_food_menu_system"
+        }
+      ],
+      "match_note": "咖啡烘焙强匹配；已移除不适用风格：现代单品",
+      "known_gap_notes": []
+    },
+    {
+      "source_row_number": 97,
+      "new_type_code": "11607",
+      "new_type_name": "美食;热门/特色菜;农家菜",
+      "category_l1": "美食",
+      "category_l2": "热门/特色菜",
+      "category_l3": "农家菜",
+      "recommended_style": {
+        "style_cn": "田园鲜蔬",
+        "style_name": "rustic_farm_fresh_produce_kv"
+      },
+      "style_candidates": [
+        {
+          "rank": 1,
+          "style_cn": "田园鲜蔬",
+          "style_name": "rustic_farm_fresh_produce_kv"
+        },
+        {
+          "rank": 2,
+          "style_cn": "中式清新",
+          "style_name": "chinese_fresh_lifestyle"
+        },
+        {
+          "rank": 3,
+          "style_cn": "温补汤品",
+          "style_name": "warm_traditional_soup_catering_kv"
+        }
+      ],
+      "match_note": "产地/中式/传统",
+      "known_gap_notes": []
+    },
+    {
+      "source_row_number": 98,
+      "new_type_code": "10106",
+      "new_type_name": "美食;地方菜;东北菜",
+      "category_l1": "美食",
+      "category_l2": "地方菜",
+      "category_l3": "东北菜",
+      "recommended_style": {
+        "style_cn": "温补汤品",
+        "style_name": "warm_traditional_soup_catering_kv"
+      },
+      "style_candidates": [
+        {
+          "rank": 1,
+          "style_cn": "温补汤品",
+          "style_name": "warm_traditional_soup_catering_kv"
+        },
+        {
+          "rank": 2,
+          "style_cn": "中式清新",
+          "style_name": "chinese_fresh_lifestyle"
+        },
+        {
+          "rank": 3,
+          "style_cn": "暗调火锅",
+          "style_name": "dark_hotpot_warm_pot_feast_kv"
+        }
+      ],
+      "match_note": "厚重热食/地方中餐",
+      "known_gap_notes": []
+    },
+    {
+      "source_row_number": 99,
+      "new_type_code": "11615",
+      "new_type_name": "美食;热门/特色菜;肉蟹煲",
+      "category_l1": "美食",
+      "category_l2": "热门/特色菜",
+      "category_l3": "肉蟹煲",
+      "recommended_style": {
+        "style_cn": "暗调火锅",
+        "style_name": "dark_hotpot_warm_pot_feast_kv"
+      },
+      "style_candidates": [
+        {
+          "rank": 1,
+          "style_cn": "暗调火锅",
+          "style_name": "dark_hotpot_warm_pot_feast_kv"
+        },
+        {
+          "rank": 2,
+          "style_cn": "温补汤品",
+          "style_name": "warm_traditional_soup_catering_kv"
+        },
+        {
+          "rank": 3,
+          "style_cn": "中式清新",
+          "style_name": "chinese_fresh_lifestyle"
+        }
+      ],
+      "match_note": "热锅煲类",
+      "known_gap_notes": []
+    },
+    {
+      "source_row_number": 100,
+      "new_type_code": "10105",
+      "new_type_name": "美食;地方菜;台湾菜",
+      "category_l1": "美食",
+      "category_l2": "地方菜",
+      "category_l3": "台湾菜",
+      "recommended_style": {
+        "style_cn": "中式清新",
+        "style_name": "chinese_fresh_lifestyle"
+      },
+      "style_candidates": [
+        {
+          "rank": 1,
+          "style_cn": "中式清新",
+          "style_name": "chinese_fresh_lifestyle"
+        },
+        {
+          "rank": 2,
+          "style_cn": "奶油菜单",
+          "style_name": "light_cream_food_menu_system"
+        },
+        {
+          "rank": 3,
+          "style_cn": "清新菜单",
+          "style_name": "chinese_fresh_catering_menu_poster"
+        }
+      ],
+      "match_note": "中式/茶餐厅式菜单",
+      "known_gap_notes": []
+    },
+    {
+      "source_row_number": 101,
+      "new_type_code": "10504",
+      "new_type_name": "美食;火锅;小火锅",
+      "category_l1": "美食",
+      "category_l2": "火锅",
+      "category_l3": "小火锅",
+      "recommended_style": {
+        "style_cn": "暗调火锅",
+        "style_name": "dark_hotpot_warm_pot_feast_kv"
+      },
+      "style_candidates": [
+        {
+          "rank": 1,
+          "style_cn": "暗调火锅",
+          "style_name": "dark_hotpot_warm_pot_feast_kv"
+        },
+        {
+          "rank": 2,
+          "style_cn": "中式清新",
+          "style_name": "chinese_fresh_lifestyle"
+        }
+      ],
+      "match_note": "火锅和小份促销；已移除不适用风格：促销图形",
+      "known_gap_notes": []
+    },
+    {
+      "source_row_number": 102,
+      "new_type_code": "10112",
+      "new_type_name": "美食;地方菜;西北菜",
+      "category_l1": "美食",
+      "category_l2": "地方菜",
+      "category_l3": "西北菜",
+      "recommended_style": {
+        "style_cn": "田园鲜蔬",
+        "style_name": "rustic_farm_fresh_produce_kv"
+      },
+      "style_candidates": [
+        {
+          "rank": 1,
+          "style_cn": "田园鲜蔬",
+          "style_name": "rustic_farm_fresh_produce_kv"
+        },
+        {
+          "rank": 2,
+          "style_cn": "温补汤品",
+          "style_name": "warm_traditional_soup_catering_kv"
+        },
+        {
+          "rank": 3,
+          "style_cn": "中式清新",
+          "style_name": "chinese_fresh_lifestyle"
+        }
+      ],
+      "match_note": "地域食材/传统热食",
+      "known_gap_notes": []
+    },
+    {
+      "source_row_number": 103,
+      "new_type_code": "10113",
+      "new_type_name": "美食;地方菜;鲁菜",
+      "category_l1": "美食",
+      "category_l2": "地方菜",
+      "category_l3": "鲁菜",
+      "recommended_style": {
+        "style_cn": "中式清新",
+        "style_name": "chinese_fresh_lifestyle"
+      },
+      "style_candidates": [
+        {
+          "rank": 1,
+          "style_cn": "中式清新",
+          "style_name": "chinese_fresh_lifestyle"
+        },
+        {
+          "rank": 2,
+          "style_cn": "温补汤品",
+          "style_name": "warm_traditional_soup_catering_kv"
+        },
+        {
+          "rank": 3,
+          "style_cn": "清新菜单",
+          "style_name": "chinese_fresh_catering_menu_poster"
+        }
+      ],
+      "match_note": "地方中餐",
+      "known_gap_notes": []
+    },
+    {
+      "source_row_number": 104,
+      "new_type_code": "11201",
+      "new_type_name": "美食;快餐小吃;快餐",
+      "category_l1": "美食",
+      "category_l2": "快餐小吃",
+      "category_l3": "快餐",
+      "recommended_style": {
+        "style_cn": "奶油菜单",
+        "style_name": "light_cream_food_menu_system"
+      },
+      "style_candidates": [
+        {
+          "rank": 1,
+          "style_cn": "奶油菜单",
+          "style_name": "light_cream_food_menu_system"
+        }
+      ],
+      "match_note": "快餐促销/菜单/平台活动；已移除不适用风格：促销图形、黏土活动",
+      "known_gap_notes": []
+    },
+    {
+      "source_row_number": 105,
+      "new_type_code": "11614",
+      "new_type_name": "美食;热门/特色菜;融合菜",
+      "category_l1": "美食",
+      "category_l2": "热门/特色菜",
+      "category_l3": "融合菜",
+      "recommended_style": {
+        "style_cn": "中式清新",
+        "style_name": "chinese_fresh_lifestyle"
+      },
+      "style_candidates": [
+        {
+          "rank": 1,
+          "style_cn": "中式清新",
+          "style_name": "chinese_fresh_lifestyle"
+        },
+        {
+          "rank": 2,
+          "style_cn": "烘焙咖啡",
+          "style_name": "western_bakery_cafe_editorial"
+        }
+      ],
+      "match_note": "现代编辑、泛中餐或西式均可；已移除不适用风格：现代单品",
+      "known_gap_notes": []
+    },
+    {
+      "source_row_number": 106,
+      "new_type_code": "11203",
+      "new_type_name": "美食;快餐小吃;零食",
+      "category_l1": "美食",
+      "category_l2": "快餐小吃",
+      "category_l3": "零食",
+      "recommended_style": {
+        "style_cn": "",
+        "style_name": ""
+      },
+      "style_candidates": [],
+      "match_note": "产品化和促销活动；已移除不适用风格：现代单品、促销图形、黏土活动",
+      "known_gap_notes": []
+    },
+    {
+      "source_row_number": 107,
+      "new_type_code": "11802",
+      "new_type_name": "美食;生鲜果蔬;生鲜",
+      "category_l1": "美食",
+      "category_l2": "生鲜果蔬",
+      "category_l3": "生鲜",
+      "recommended_style": {
+        "style_cn": "田园鲜蔬",
+        "style_name": "rustic_farm_fresh_produce_kv"
+      },
+      "style_candidates": [
+        {
+          "rank": 1,
+          "style_cn": "田园鲜蔬",
+          "style_name": "rustic_farm_fresh_produce_kv"
+        },
+        {
+          "rank": 2,
+          "style_cn": "鲜果茶饮",
+          "style_name": "fresh_fruit_beverage_lifestyle_kv"
+        }
+      ],
+      "match_note": "产地食材强匹配；已移除不适用风格：现代单品",
+      "known_gap_notes": []
+    },
+    {
+      "source_row_number": 108,
+      "new_type_code": "11803",
+      "new_type_name": "美食;生鲜果蔬;水果鲜货",
+      "category_l1": "美食",
+      "category_l2": "生鲜果蔬",
+      "category_l3": "水果鲜货",
+      "recommended_style": {
+        "style_cn": "鲜果茶饮",
+        "style_name": "fresh_fruit_beverage_lifestyle_kv"
+      },
+      "style_candidates": [
+        {
+          "rank": 1,
+          "style_cn": "鲜果茶饮",
+          "style_name": "fresh_fruit_beverage_lifestyle_kv"
+        },
+        {
+          "rank": 2,
+          "style_cn": "田园鲜蔬",
+          "style_name": "rustic_farm_fresh_produce_kv"
+        }
+      ],
+      "match_note": "水果/产地/产品视觉；已移除不适用风格：现代单品",
+      "known_gap_notes": []
+    },
+    {
+      "source_row_number": 109,
+      "new_type_code": "11801",
+      "new_type_name": "美食;生鲜果蔬;菜市场",
+      "category_l1": "美食",
+      "category_l2": "生鲜果蔬",
+      "category_l3": "菜市场",
+      "recommended_style": {
+        "style_cn": "田园鲜蔬",
+        "style_name": "rustic_farm_fresh_produce_kv"
+      },
+      "style_candidates": [
+        {
+          "rank": 1,
+          "style_cn": "田园鲜蔬",
+          "style_name": "rustic_farm_fresh_produce_kv"
+        }
+      ],
+      "match_note": "产地菜市场和本地促销；不硬凑第三个；已移除不适用风格：促销图形",
+      "known_gap_notes": []
+    },
+    {
+      "source_row_number": 110,
+      "new_type_code": "12001",
+      "new_type_name": "美食;食品滋补;滋补品",
+      "category_l1": "美食",
+      "category_l2": "食品滋补",
+      "category_l3": "滋补品",
+      "recommended_style": {
+        "style_cn": "温补汤品",
+        "style_name": "warm_traditional_soup_catering_kv"
+      },
+      "style_candidates": [
+        {
+          "rank": 1,
+          "style_cn": "温补汤品",
+          "style_name": "warm_traditional_soup_catering_kv"
+        },
+        {
+          "rank": 2,
+          "style_cn": "田园鲜蔬",
+          "style_name": "rustic_farm_fresh_produce_kv"
+        },
+        {
+          "rank": 3,
+          "style_cn": "中式清新",
+          "style_name": "chinese_fresh_lifestyle"
+        }
+      ],
+      "match_note": "温补、食材产地、中式商业",
+      "known_gap_notes": []
+    }
+  ]
+}
